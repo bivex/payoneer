@@ -1,0 +1,142 @@
+# Payoneer Infringement Policy - Copyright, Trademarks, License and Access
+# Last updated: May 2026
+# Source: https://www.payoneer.com/legal/infringement-policy/
+
+# --- Copyright ---
+
+scope InfringementCopyright =
+  output allContentIsPropertyOfPayoneer : Boolean
+  output includesLogos : Boolean
+  output includesText : Boolean
+  output includesGraphics : Boolean
+  output includesImages : Boolean
+  output protectedByUSCopyrightLaw : Boolean
+  output protectedByInternationalCopyrightLaws : Boolean
+
+  definition allContentIsPropertyOfPayoneer equals true
+  definition includesLogos equals true
+  definition includesText equals true
+  definition includesGraphics equals true
+  definition includesImages equals true
+  definition protectedByUSCopyrightLaw equals true
+  definition protectedByInternationalCopyrightLaws equals true
+
+# --- Copyright Restrictions ---
+
+scope InfringementCopyrightRestrictions =
+  input hasPriorWrittenConsent : Boolean
+  output mayCopyContent : Boolean
+  output mayImitateContent : Boolean
+  output mayUseContent : Boolean
+
+  definition mayCopyContent equals hasPriorWrittenConsent
+  definition mayImitateContent equals hasPriorWrittenConsent
+  definition mayUseContent equals hasPriorWrittenConsent
+
+# --- Trademarks ---
+
+scope InfringementTrademarks =
+  output trademarksIncludeLogos : Boolean
+  output trademarksIncludeSlogans : Boolean
+  output trademarksIncludeRegisteredAndUnregistered : Boolean
+  output payoneerIsRegisteredInUS : Boolean
+  output thirdPartyTrademarksBelongToRespectiveOwners : Boolean
+  output thirdPartyOwnersMayOrMayNotBeAffiliated : Boolean
+
+  definition trademarksIncludeLogos equals true
+  definition trademarksIncludeSlogans equals true
+  definition trademarksIncludeRegisteredAndUnregistered equals true
+  definition payoneerIsRegisteredInUS equals true
+  definition thirdPartyTrademarksBelongToRespectiveOwners equals true
+  definition thirdPartyOwnersMayOrMayNotBeAffiliated equals true
+
+# --- Trademark Use Restrictions ---
+
+scope InfringementTrademarkRestrictions =
+  input hasSpecificWrittenConsent : Boolean
+  output mayUseTrademarks : Boolean
+  output noImplicitLicenseGranted : Boolean
+  output noLicenseByEstoppel : Boolean
+  output misuseOfTrademarksProhibited : Boolean
+
+  definition mayUseTrademarks equals hasSpecificWrittenConsent
+  definition noImplicitLicenseGranted equals true
+  definition noLicenseByEstoppel equals true
+  definition misuseOfTrademarksProhibited equals true
+
+# --- Trademark Written Permission Required ---
+
+scope InfringementWrittenPermission =
+  output writtenPermissionRequiredFromPayoneer : Boolean
+  output writtenPermissionRequiredFromThirdPartyOwner : Boolean
+
+  definition writtenPermissionRequiredFromPayoneer equals true
+  definition writtenPermissionRequiredFromThirdPartyOwner equals true
+
+# --- Trademark Enforcement ---
+
+scope InfringementEnforcement =
+  output payoneerWillEnforceIPRights : Boolean
+  output civilProceedingsMayBeInitiated : Boolean
+  output criminalProceedingsMayBeInitiated : Boolean
+
+  definition payoneerWillEnforceIPRights equals true
+  definition civilProceedingsMayBeInitiated equals true
+  definition criminalProceedingsMayBeInitiated equals true
+
+# --- License and Access ---
+
+scope InfringementLicenseAccess =
+  output allRightsNotExpresslyGrantedAreReserved : Boolean
+  output rightsRetainedByPayoneer : Boolean
+
+  definition allRightsNotExpresslyGrantedAreReserved equals true
+  definition rightsRetainedByPayoneer equals true
+
+# --- Proprietary Information Restrictions ---
+
+scope InfringementProprietaryRestrictions =
+  input hasExpressWrittenConsent : Boolean
+  output mayUseTrademarksWithoutConsent : Boolean
+  output mayUseLogosWithoutConsent : Boolean
+  output mayUseProprietaryInfoWithoutConsent : Boolean
+
+  definition mayUseTrademarksWithoutConsent equals hasExpressWrittenConsent
+  definition mayUseLogosWithoutConsent equals hasExpressWrittenConsent
+  definition mayUseProprietaryInfoWithoutConsent equals hasExpressWrittenConsent
+
+# --- Proprietary Information Scope ---
+
+scope InfringementProprietaryScope =
+  output proprietaryInfoIncludesImages : Boolean
+  output proprietaryInfoIncludesText : Boolean
+  output proprietaryInfoIncludesPageLayout : Boolean
+  output proprietaryInfoIncludesForm : Boolean
+
+  definition proprietaryInfoIncludesImages equals true
+  definition proprietaryInfoIncludesText equals true
+  definition proprietaryInfoIncludesPageLayout equals true
+  definition proprietaryInfoIncludesForm equals true
+
+# --- Service Misuse ---
+
+scope InfringementServiceMisuse =
+  output mayNotMisusePayoneerServices : Boolean
+  output mayUseOnlyAsPermittedByLaw : Boolean
+
+  definition mayNotMisusePayoneerServices equals true
+  definition mayUseOnlyAsPermittedByLaw equals true
+
+# --- Third Party Infringement Reporting ---
+
+scope InfringementThirdPartyReporting =
+  input awareOfUnauthorizedUseOfNameOrLogo : Boolean
+  input awareOfUnauthorizedSellingOrMarketing : Boolean
+  output shouldNotifyPayoneer : Boolean
+  output notificationEmailCommunityAtPayoneer : Boolean
+
+  definition shouldNotifyPayoneer equals
+    awareOfUnauthorizedUseOfNameOrLogo or
+    awareOfUnauthorizedSellingOrMarketing
+  definition notificationEmailCommunityAtPayoneer equals
+    shouldNotifyPayoneer
