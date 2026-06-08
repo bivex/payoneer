@@ -1,0 +1,700 @@
+# Payoneer Data Processing Addendum (DPA)
+# Last updated: May 2026
+# Source: Payoneer Data Processing Addendum (Supplier Agreement)
+
+# --- Section 1: Definitions ---
+
+scope DPADefinitions =
+  output addendumFormsPartOfAgreement : Boolean
+  output appliesToSupplierAndPayoneer : Boolean
+  output addendumEffectiveDateSpecified : Boolean
+
+  definition addendumFormsPartOfAgreement equals true
+  definition appliesToSupplierAndPayoneer equals true
+  definition addendumEffectiveDateSpecified equals true
+
+scope DPADefinitionAuthorisedSubprocessors =
+  output subprocessorsInAnnex3 : Boolean
+  output additionalSubprocessorsRequireWrittenConsent : Boolean
+
+  definition subprocessorsInAnnex3 equals true
+  definition additionalSubprocessorsRequireWrittenConsent equals true
+
+scope DPADefinitionDelete =
+  output deleteMeansRemovalOrObliteration : Boolean
+  output cannotBeRecoveredOrReconstructed : Boolean
+
+  definition deleteMeansRemovalOrObliteration equals true
+  definition cannotBeRecoveredOrReconstructed equals true
+
+scope DPADefinitionPayoneerPersonalData =
+  output dataDescribedInAnnex1 : Boolean
+  output payoneerIsDataControllerOrBusiness : Boolean
+  output supplierIsDataProcessorOrServiceProvider : Boolean
+
+  definition dataDescribedInAnnex1 equals true
+  definition payoneerIsDataControllerOrBusiness equals true
+  definition supplierIsDataProcessorOrServiceProvider equals true
+
+scope DPADefinitionPersonalDataBreach =
+  output includesAccidentalDestruction : Boolean
+  output includesUnauthorizedDisclosure : Boolean
+  output includesBreachOfSection5 : Boolean
+  output includesBreachOfConfidentialityProvisions : Boolean
+
+  definition includesAccidentalDestruction equals true
+  definition includesUnauthorizedDisclosure equals true
+  definition includesBreachOfSection5 equals true
+  definition includesBreachOfConfidentialityProvisions equals true
+
+scope DPADefinitionRelevantDate =
+  output earlierOfCessationOrTermination : Boolean
+
+  definition earlierOfCessationOrTermination equals true
+
+scope DPADefinitionRestrictedTransfer =
+  output includesEURestrictedTransfer : Boolean
+  output includesUKRestrictedTransfer : Boolean
+
+  definition includesEURestrictedTransfer equals true
+  definition includesUKRestrictedTransfer equals true
+
+scope DPADefinitionThirdCountry =
+  output countryNotUKOrEEA : Boolean
+
+  definition countryNotUKOrEEA equals true
+
+# --- Section 2: Data Processing Terms ---
+
+scope DPADataProcessingTerms =
+  output supplierProcessesOnBehalfOfPayoneer : Boolean
+  output implementsAppropriateMeasures : Boolean
+  output compliesWithDataProtectionLaws : Boolean
+  output ensuresProtectionOfDataSubjectRights : Boolean
+
+  definition supplierProcessesOnBehalfOfPayoneer equals true
+  definition implementsAppropriateMeasures equals true
+  definition compliesWithDataProtectionLaws equals true
+  definition ensuresProtectionOfDataSubjectRights equals true
+
+# --- Section 3: Processing of Payoneer Personal Data ---
+
+scope DPAProcessingScope =
+  output processesOnlyForPurposesInAnnex1 : Boolean
+  output doesNotProcessBeyondDocumentedInstructions : Boolean
+  output doesNotSellOrShareUnderCCPA : Boolean
+  output doesNotProcessOutsideDirectRelationship : Boolean
+
+  definition processesOnlyForPurposesInAnnex1 equals true
+  definition doesNotProcessBeyondDocumentedInstructions equals true
+  definition doesNotSellOrShareUnderCCPA equals true
+  definition doesNotProcessOutsideDirectRelationship equals true
+
+scope DPAAIProhibition =
+  output doesNotUseForAITraining : Boolean
+  output doesNotProcessWithAIOrMLModels : Boolean
+
+  definition doesNotUseForAITraining equals true
+  definition doesNotProcessWithAIOrMLModels equals true
+
+scope DPADataCombining =
+  output doesNotCombineWithOtherPersonData : Boolean
+  output mayCombineToPerformServices : Boolean
+
+  definition doesNotCombineWithOtherPersonData equals true
+  definition mayCombineToPerformServices equals true
+
+scope DPAInabilityNotification =
+  input supplierCanNoLongerMeetObligations : Boolean
+  output mustNotifyPayoneerWithin5BusinessDays : Boolean
+  output payoneerMayStopUnauthorizedUse : Boolean
+
+  definition mustNotifyPayoneerWithin5BusinessDays equals supplierCanNoLongerMeetObligations
+  definition payoneerMayStopUnauthorizedUse equals supplierCanNoLongerMeetObligations
+
+scope DPAInabilityNotificationDeadline =
+  output notificationDeadlineBusinessDays : Integer
+
+  definition notificationDeadlineBusinessDays equals 5
+
+scope DPATransferRecipients =
+  output transfersOnlyToListedCountries : Boolean
+  output mustComplyWithSection6And12 : Boolean
+
+  definition transfersOnlyToListedCountries equals true
+  definition mustComplyWithSection6And12 equals true
+
+scope DPADeidentifiedData =
+  input payoneerProvidesDeidentifiedData : Boolean
+  output mustTakeReasonableMeasuresToPreventReidentification : Boolean
+  output mustPubliclyCommitToDeidentifiedForm : Boolean
+  output mustContractuallyObligateRecipients : Boolean
+  output mustMeetMinimumLegalStandard : Boolean
+
+  definition mustTakeReasonableMeasuresToPreventReidentification equals payoneerProvidesDeidentifiedData
+  definition mustPubliclyCommitToDeidentifiedForm equals payoneerProvidesDeidentifiedData
+  definition mustContractuallyObligateRecipients equals payoneerProvidesDeidentifiedData
+  definition mustMeetMinimumLegalStandard equals payoneerProvidesDeidentifiedData
+
+# --- Section 4: Supplier Personnel ---
+
+scope DPAPersonnel =
+  output ensuresReliabilityOfPersonnel : Boolean
+  output limitsAccessToThoseWhoNeedIt : Boolean
+  output personnelInformedOfConfidentialNature : Boolean
+  output personnelHaveUndergoneTraining : Boolean
+  output personnelSubjectToConfidentiality : Boolean
+  output personnelSubjectToUserAuthentication : Boolean
+  output authenticationBasedOnPhysicalMeansWhereApplicable : Boolean
+
+  definition ensuresReliabilityOfPersonnel equals true
+  definition limitsAccessToThoseWhoNeedIt equals true
+  definition personnelInformedOfConfidentialNature equals true
+  definition personnelHaveUndergoneTraining equals true
+  definition personnelSubjectToConfidentiality equals true
+  definition personnelSubjectToUserAuthentication equals true
+  definition authenticationBasedOnPhysicalMeansWhereApplicable equals true
+
+# --- Section 5: Security ---
+
+scope DPASecurityMeasures =
+  output implementsAppropriateTechnicalPhysicalOrganisational : Boolean
+  output includesArticle32GDPRMeasures : Boolean
+  output maintainsMeasuresInAnnex2 : Boolean
+
+  definition implementsAppropriateTechnicalPhysicalOrganisational equals true
+  definition includesArticle32GDPRMeasures equals true
+  definition maintainsMeasuresInAnnex2 equals true
+
+scope DPASecurityRiskAssessment =
+  output accountsForAccidentalDestruction : Boolean
+  output accountsForUnauthorizedDisclosure : Boolean
+  output accountsForUnauthorizedAccess : Boolean
+
+  definition accountsForAccidentalDestruction equals true
+  definition accountsForUnauthorizedDisclosure equals true
+  definition accountsForUnauthorizedAccess equals true
+
+# --- Section 6: Subprocessing ---
+
+scope DPASubprocessingConsent =
+  output requiresPriorWrittenConsent : Boolean
+  output payoneerMayRefuseInAbsoluteDiscretion : Boolean
+
+  definition requiresPriorWrittenConsent equals true
+  definition payoneerMayRefuseInAbsoluteDiscretion equals true
+
+scope DPASubprocessorDueDiligence =
+  output mustProvideFullDetails : Boolean
+  output mustProvideNames : Boolean
+  output mustProvidePurposes : Boolean
+  output mustProvideCategories : Boolean
+  output mustCarryOutDueDiligence : Boolean
+  output mustProvideEvidenceOnRequest : Boolean
+
+  definition mustProvideFullDetails equals true
+  definition mustProvideNames equals true
+  definition mustProvidePurposes equals true
+  definition mustProvideCategories equals true
+  definition mustCarryOutDueDiligence equals true
+  definition mustProvideEvidenceOnRequest equals true
+
+scope DPASubprocessorContract =
+  output mustIncludeSameTermsAsAddendum : Boolean
+  output mustProvideCopyOnRequest : Boolean
+  output mustIncludeSCCsForRestrictedTransfers : Boolean
+  output supplierRemainsFullyLiable : Boolean
+
+  definition mustIncludeSameTermsAsAddendum equals true
+  definition mustProvideCopyOnRequest equals true
+  definition mustIncludeSCCsForRestrictedTransfers equals true
+  definition supplierRemainsFullyLiable equals true
+
+scope DPAExistingSubprocessorAuthorisation =
+  output annex3SubprocessorsAuthorised : Boolean
+
+  definition annex3SubprocessorsAuthorised equals true
+
+# --- Section 7: Data Subject Rights ---
+
+scope DPADataSubjectRightsAssistance =
+  output assistsPayoneerWithDSARRequests : Boolean
+  output implementsAppropriateMeasures : Boolean
+  output compliesWithWrittenRequest : Boolean
+
+  definition assistsPayoneerWithDSARRequests equals true
+  definition implementsAppropriateMeasures equals true
+  definition compliesWithWrittenRequest equals true
+
+scope DPADataSubjectRightsNotification =
+  input receivesDataSubjectRequest : Boolean
+  output mustNotifyPayoneerWithin5CalendarDays : Boolean
+  output doesNotRespondWithoutInstruction : Boolean
+
+  definition mustNotifyPayoneerWithin5CalendarDays equals receivesDataSubjectRequest
+  definition doesNotRespondWithoutInstruction equals receivesDataSubjectRequest
+
+scope DPADataSubjectRightsNotificationDeadline =
+  output notificationDeadlineCalendarDays : Integer
+
+  definition notificationDeadlineCalendarDays equals 5
+
+scope DPADataSubjectRightsCooperation =
+  output providesAllDataRequested : Boolean
+  output providesAssistanceWithinTimescales : Boolean
+  output implementsAdditionalMeasuresOnRequest : Boolean
+
+  definition providesAllDataRequested equals true
+  definition providesAssistanceWithinTimescales equals true
+  definition implementsAdditionalMeasuresOnRequest equals true
+
+# --- Section 8: Personal Data Breach ---
+
+scope DPABreachNotificationTiming =
+  input becomesAwareOfBreach : Boolean
+  output mustNotifyWithin24Hours : Boolean
+
+  definition mustNotifyWithin24Hours equals becomesAwareOfBreach
+
+scope DPABreachNotificationDeadline =
+  output notificationDeadlineHours : Integer
+
+  definition notificationDeadlineHours equals 24
+
+scope DPABreachNotificationContent =
+  output describesNatureOfBreach : Boolean
+  output includesCategoriesAndNumbersOfDataSubjects : Boolean
+  output includesCategoriesAndNumbersOfRecords : Boolean
+  output providesContactDetails : Boolean
+  output describesLikelyConsequences : Boolean
+  output describesMeasuresTaken : Boolean
+
+  definition describesNatureOfBreach equals true
+  definition includesCategoriesAndNumbersOfDataSubjects equals true
+  definition includesCategoriesAndNumbersOfRecords equals true
+  definition providesContactDetails equals true
+  definition describesLikelyConsequences equals true
+  definition describesMeasuresTaken equals true
+
+scope DPABreachCooperation =
+  output cooperatesWithPayoneer : Boolean
+  output takesDirectedSteps : Boolean
+  output mayProvideInformationInPhases : Boolean
+  output mustProvideReasonsForDelay : Boolean
+
+  definition cooperatesWithPayoneer equals true
+  definition takesDirectedSteps equals true
+  definition mayProvideInformationInPhases equals true
+  definition mustProvideReasonsForDelay equals true
+
+scope DPABreachDocumentation =
+  output documentsBreach : Boolean
+  output includesFactsEffectsAndRemedialActions : Boolean
+
+  definition documentsBreach equals true
+  definition includesFactsEffectsAndRemedialActions equals true
+
+scope DPABreachThirdPartyNotification =
+  output doesNotInformThirdPartiesWithoutConsent : Boolean
+  output payoneerControlsNotification : Boolean
+  output payoneerDeterminesWhatToNotify : Boolean
+
+  definition doesNotInformThirdPartiesWithoutConsent equals true
+  definition payoneerControlsNotification equals true
+  definition payoneerDeterminesWhatToNotify equals true
+
+# --- Section 9: DPIA and Prior Consultation ---
+
+scope DPADPIA =
+  output providesAssistanceWithDPIA : Boolean
+  output providesAssistanceWithPriorConsultation : Boolean
+
+  definition providesAssistanceWithDPIA equals true
+  definition providesAssistanceWithPriorConsultation equals true
+
+scope DPARecordOfProcessing =
+  output maintainsRecordOfProcessing : Boolean
+  output includesCategoriesOfProcessing : Boolean
+  output includesRestrictedTransferDetails : Boolean
+  output includesTechnicalOrganisationalMeasures : Boolean
+  output mustProvideWithin48Hours : Boolean
+
+  definition maintainsRecordOfProcessing equals true
+  definition includesCategoriesOfProcessing equals true
+  definition includesRestrictedTransferDetails equals true
+  definition includesTechnicalOrganisationalMeasures equals true
+  definition mustProvideWithin48Hours equals true
+
+scope DPARecordOfProcessingDeadline =
+  output recordRequestDeadlineHours : Integer
+
+  definition recordRequestDeadlineHours equals 48
+
+scope DPADPOAppointment =
+  output appointsDPO : Boolean
+  output dpoHasAppropriateQualifications : Boolean
+  output makesContactDetailsAvailable : Boolean
+
+  definition appointsDPO equals true
+  definition dpoHasAppropriateQualifications equals true
+  definition makesContactDetailsAvailable equals true
+
+scope DPAEUUKRepresentative =
+  input subjectToGDPR : Boolean
+  input subjectToUKGDPR : Boolean
+  output designatesEURepresentative : Boolean
+  output designatesUKRepresentative : Boolean
+
+  definition designatesEURepresentative equals subjectToGDPR
+  definition designatesUKRepresentative equals subjectToUKGDPR
+
+# --- Section 10: Deletion or Return ---
+
+scope DPADeletionReturn =
+  output returnsCopyBySecureTransfer : Boolean
+  output deletesAllOtherCopies : Boolean
+  output deadlineCalendarDays : Integer
+
+  definition returnsCopyBySecureTransfer equals true
+  definition deletesAllOtherCopies equals true
+  definition deadlineCalendarDays equals 30
+
+scope DPASubprocessorDeletion =
+  input payoneerRequestsSubprocessorDeletion : Boolean
+  output procuresSubprocessorCompliance : Boolean
+
+  definition procuresSubprocessorCompliance equals payoneerRequestsSubprocessorDeletion
+
+scope DPAEarlyDeletion =
+  input payoneerRequestsEarlyDeletion : Boolean
+  output mustDeleteWithoutUndueDelay : Boolean
+  output notRequiredToProvideCopy : Boolean
+
+  definition mustDeleteWithoutUndueDelay equals payoneerRequestsEarlyDeletion
+  definition notRequiredToProvideCopy equals payoneerRequestsEarlyDeletion
+
+scope DPALawfulRetention =
+  output mayRetainAsRequiredByLaw : Boolean
+  output retainsOnlyForRequiredPeriod : Boolean
+  output ensuresConfidentiality : Boolean
+  output processesOnlyForLegalPurpose : Boolean
+
+  definition mayRetainAsRequiredByLaw equals true
+  definition retainsOnlyForRequiredPeriod equals true
+  definition ensuresConfidentiality equals true
+  definition processesOnlyForLegalPurpose equals true
+
+scope DPADeletionCertification =
+  output mustProvideWrittenCertification : Boolean
+  output certificationDeadlineDays : Integer
+
+  definition mustProvideWrittenCertification equals true
+  definition certificationDeadlineDays equals 30
+
+# --- Section 11: Audit Rights ---
+
+scope DPAAuditRights =
+  output makesInformationAvailableOnRequest : Boolean
+  output allowsAuditsAndInspections : Boolean
+  output permitsInspectionOfRecords : Boolean
+  output includesOngoingManualReviews : Boolean
+  output includesAutomatedScans : Boolean
+  output annualAssessmentsRequired : Boolean
+  output fullCooperationRequired : Boolean
+
+  definition makesInformationAvailableOnRequest equals true
+  definition allowsAuditsAndInspections equals true
+  definition permitsInspectionOfRecords equals true
+  definition includesOngoingManualReviews equals true
+  definition includesAutomatedScans equals true
+  definition annualAssessmentsRequired equals true
+  definition fullCooperationRequired equals true
+
+scope DPAAuditFrequency =
+  output minimumAssessmentFrequencyMonths : Integer
+
+  definition minimumAssessmentFrequencyMonths equals 12
+
+scope DPASecurityQuestionnaires =
+  input payoneerRequestsQuestionnaire : Boolean
+  output completesSecurityQuestionnaires : Boolean
+
+  definition completesSecurityQuestionnaires equals payoneerRequestsQuestionnaire
+
+scope DPAAuditInstructionInfringement =
+  input instructionInfringesDataProtectionLaws : Boolean
+  output mustInformPayoneer : Boolean
+
+  definition mustInformPayoneer equals instructionInfringesDataProtectionLaws
+
+# --- Section 12: Restricted Transfers ---
+
+scope DPARestrictedTransferMechanism =
+  output standardContractualClausesSelected : Boolean
+  output sccsComeIntoEffectOnLaterDate : Boolean
+
+  definition standardContractualClausesSelected equals true
+  definition sccsComeIntoEffectOnLaterDate equals true
+
+scope DPASCCCommencement =
+  output effectiveOnLaterOf : Boolean
+  output exporterBecomingParty : Boolean
+  output importerBecomingParty : Boolean
+  output commencementOfTransfer : Boolean
+
+  definition effectiveOnLaterOf equals true
+  definition exporterBecomingParty equals true
+  definition importerBecomingParty equals true
+  definition commencementOfTransfer equals true
+
+scope DPARestrictedTransferOtherMethods =
+  output bindingCorporateRulesOption : Boolean
+  output adequacyDecisionOption : Boolean
+
+  definition bindingCorporateRulesOption equals false
+  definition adequacyDecisionOption equals false
+
+scope DPARestrictedTransferRestriction =
+  output noTransferWithoutWrittenConsent : Boolean
+  output recipientsBoundBySameConditions : Boolean
+
+  definition noTransferWithoutWrittenConsent equals true
+  definition recipientsBoundBySameConditions equals true
+
+scope DPASCCChangeNotice =
+  output payoneerMayChangeSCCs : Boolean
+  output noticePeriodDays : Integer
+
+  definition payoneerMayChangeSCCs equals true
+  definition noticePeriodDays equals 14
+
+scope DPASCCChangeCooperation =
+  input receivesSCCChangeNotice : Boolean
+  output mustCooperateWithChanges : Boolean
+  output mustProcureSubprocessorCooperation : Boolean
+
+  definition mustCooperateWithChanges equals receivesSCCChangeNotice
+  definition mustProcureSubprocessorCooperation equals receivesSCCChangeNotice
+
+scope DPARestrictedTransferInvalidity =
+  input transferMechanismNoLongerAppropriate : Boolean
+  output mustTakeStepsForAlternativeMechanism : Boolean
+  output payoneerMayTerminateTransfers : Boolean
+
+  definition mustTakeStepsForAlternativeMechanism equals transferMechanismNoLongerAppropriate
+  definition payoneerMayTerminateTransfers equals transferMechanismNoLongerAppropriate
+
+# --- Section 13: Standard Contractual Clauses ---
+
+scope DPASCCModule =
+  output appliesModule2 : Boolean
+
+  definition appliesModule2 equals true
+
+scope DPASCCEUChanges =
+  output clause7DockingDoesNotApply : Boolean
+  output clause9SubprocessorsOption1 : Boolean
+  output clause9TimePeriodDays : Integer
+  output clause11RedressOptionalDoesNotApply : Boolean
+  output clause13SupervisoryAuthority : Boolean
+  output clause17GoverningLawOption2 : Boolean
+  output clause17MemberStateIreland : Boolean
+  output clause18ForumIreland : Boolean
+
+  definition clause7DockingDoesNotApply equals true
+  definition clause9SubprocessorsOption1 equals true
+  definition clause9TimePeriodDays equals 30
+  definition clause11RedressOptionalDoesNotApply equals true
+  definition clause13SupervisoryAuthority equals true
+  definition clause17GoverningLawOption2 equals true
+  definition clause17MemberStateIreland equals true
+  definition clause18ForumIreland equals true
+
+scope DPASCCAnnexes =
+  output annex1PrepopulatedFromAddendum : Boolean
+  output annex2PrepopulatedFromAddendum : Boolean
+  output annex3PrepopulatedFromAddendum : Boolean
+
+  definition annex1PrepopulatedFromAddendum equals true
+  definition annex2PrepopulatedFromAddendum equals true
+  definition annex3PrepopulatedFromAddendum equals true
+
+scope DPASCCUK =
+  output entersUKSCCsForUKTransfers : Boolean
+  output appliesModule2ForUK : Boolean
+  output appliesEUClauseChangesToUK : Boolean
+  output table4NeitherPartyTicked : Boolean
+
+  definition entersUKSCCsForUKTransfers equals true
+  definition appliesModule2ForUK equals true
+  definition appliesEUClauseChangesToUK equals true
+  definition table4NeitherPartyTicked equals true
+
+# --- Section 14: Legal Process ---
+
+scope DPALegalProcessResponse =
+  input receivesLegalProcess : Boolean
+  output attemptsToRedirectToPayoneer : Boolean
+  output givesPayoneerControlOfResponse : Boolean
+
+  definition attemptsToRedirectToPayoneer equals receivesLegalProcess
+  definition givesPayoneerControlOfResponse equals receivesLegalProcess
+
+scope DPALegalProcessNotification =
+  input unableToComplyWithRedirect : Boolean
+  output mustNotifyPayoneer : Boolean
+
+  definition mustNotifyPayoneer equals unableToComplyWithRedirect
+
+# --- Section 15: Appropriate Policies ---
+
+scope DPAAppropriatePolicies =
+  output adoptsAppropriatePoliciesForLegalProcess : Boolean
+  output policiesAlignedWithAddendum : Boolean
+  output providesTrainingToPersonnel : Boolean
+
+  definition adoptsAppropriatePoliciesForLegalProcess equals true
+  definition policiesAlignedWithAddendum equals true
+  definition providesTrainingToPersonnel equals true
+
+# --- Section 16: Technical Safeguards ---
+
+scope DPATechnicalSafeguards =
+  output hasNotDeliberatelyFacilitatedAccess : Boolean
+  output hasNotCreatedBackDoors : Boolean
+  output hasNotChangedProcessesToFacilitateAccess : Boolean
+  output notSubjectToLawRequiringBackDoors : Boolean
+
+  definition hasNotDeliberatelyFacilitatedAccess equals true
+  definition hasNotCreatedBackDoors equals true
+  definition hasNotChangedProcessesToFacilitateAccess equals true
+  definition notSubjectToLawRequiringBackDoors equals true
+
+# --- Section 17: Further Assurance ---
+
+scope DPAFurtherAssistance =
+  output providesFurtherAssuranceOnRequest : Boolean
+  output assistsWithTransferAssessments : Boolean
+  output assistsWithCertification : Boolean
+
+  definition providesFurtherAssuranceOnRequest equals true
+  definition assistsWithTransferAssessments equals true
+  definition assistsWithCertification equals true
+
+# --- Section 18: Indemnity ---
+
+scope DPAIndemnity =
+  output indemnifiesPayoneerAgainstLosses : Boolean
+  output coversThirdPartyClaims : Boolean
+  output coversSupervisoryAuthorityClaims : Boolean
+  output coversBreachOfAddendum : Boolean
+
+  definition indemnifiesPayoneerAgainstLosses equals true
+  definition coversThirdPartyClaims equals true
+  definition coversSupervisoryAuthorityClaims equals true
+  definition coversBreachOfAddendum equals true
+
+# --- Section 19: Liability ---
+
+scope DPALiabilityCap =
+  output liabilityLimitedToAggregateCap : Boolean
+  output liabilityCapUSD : Integer
+
+  definition liabilityLimitedToAggregateCap equals true
+  definition liabilityCapUSD equals 10000000
+
+# --- Section 20: Miscellaneous ---
+
+scope DPATermination =
+  output terminatesOnAgreementTermination : Boolean
+  output terminatesOnExpiryOfAllContracts : Boolean
+  output whicheverIsLater : Boolean
+
+  definition terminatesOnAgreementTermination equals true
+  definition terminatesOnExpiryOfAllContracts equals true
+  definition whicheverIsLater equals true
+
+scope DPASurvival =
+  output processingObligationsSurviveTermination : Boolean
+
+  definition processingObligationsSurviveTermination equals true
+
+scope DPAGoverningLaw =
+  output governingLawNewYork : Boolean
+  output brazilianDecreeLawNoted : Boolean
+
+  definition governingLawNewYork equals true
+  definition brazilianDecreeLawNoted equals true
+
+scope DPAJurisdiction =
+  output jurisdictionPerAgreement : Boolean
+
+  definition jurisdictionPerAgreement equals true
+
+scope DPACrossDefault =
+  output breachConstitutesMaterialBreachOfAgreement : Boolean
+
+  definition breachConstitutesMaterialBreachOfAgreement equals true
+
+scope DPAOrderOfPrecedence =
+  output addendumPrevailsOverOtherAgreements : Boolean
+  output sCCsPrevailOverAddendum : Boolean
+
+  definition addendumPrevailsOverOtherAgreements equals true
+  definition sCCsPrevailOverAddendum equals true
+
+scope DPACostOfCompliance =
+  output complianceAtNoAdditionalCost : Boolean
+
+  definition complianceAtNoAdditionalCost equals true
+
+scope DPAThirdPartyRights =
+  output noThirdPartyRightsExceptAffiliates : Boolean
+  output payoneerAffiliatesMayEnforce : Boolean
+  output noConsentRequiredForRescissionOrVariation : Boolean
+
+  definition noThirdPartyRightsExceptAffiliates equals true
+  definition payoneerAffiliatesMayEnforce equals true
+  definition noConsentRequiredForRescissionOrVariation equals true
+
+scope DPAChangesInDataProtectionLaws =
+  output payoneerMayNotifyVariations : Boolean
+  output variationsEffectiveAfter30Days : Boolean
+  output subprocessorTermsAmendedWithinSamePeriod : Boolean
+
+  definition payoneerMayNotifyVariations equals true
+  definition variationsEffectiveAfter30Days equals true
+  definition subprocessorTermsAmendedWithinSamePeriod equals true
+
+scope DPAChangesInLawDeadline =
+  output variationEffectiveDeadlineDays : Integer
+
+  definition variationEffectiveDeadlineDays equals 30
+
+scope DPASeverance =
+  output remainderValidIfProvisionInvalid : Boolean
+  output invalidProvisionAmendedToPreserveIntent : Boolean
+
+  definition remainderValidIfProvisionInvalid equals true
+  definition invalidProvisionAmendedToPreserveIntent equals true
+
+scope DPACertification =
+  output supplierCertifiesUnderstanding : Boolean
+  output supplierCertifiesCompliance : Boolean
+
+  definition supplierCertifiesUnderstanding equals true
+  definition supplierCertifiesCompliance equals true
+
+scope DPAAmendments =
+  output payoneerMayAmendByPosting : Boolean
+  output effectiveUponPostingOrAsStated : Boolean
+
+  definition payoneerMayAmendByPosting equals true
+  definition effectiveUponPostingOrAsStated equals true
+
+scope DPAExecution =
+  output effectiveAsOfAddendumEffectiveDate : Boolean
+  output becomesBindingPartOfAgreement : Boolean
+
+  definition effectiveAsOfAddendumEffectiveDate equals true
+  definition becomesBindingPartOfAgreement equals true
