@@ -1,0 +1,465 @@
+# Payoneer Australia Target Market Determination
+# Last updated: May 2026
+# Source: Payoneer Payment Service Target Market Determination
+
+# --- General: Regulatory Framework ---
+
+scope AustraliaTMDRegulatoryFramework =
+  output underCorporationsActPart7_8A : Boolean
+  output designAndDistributionObligations : Boolean
+  output tmdRequiredUnderSection994G : Boolean
+  output tmdDescribesTargetMarketOfClassOfConsumers : Boolean
+  output tmdSetsConditions : Boolean
+  output tmdSetsReviewTriggers : Boolean
+
+  definition underCorporationsActPart7_8A equals true
+  definition designAndDistributionObligations equals true
+  definition tmdRequiredUnderSection994G equals true
+  definition tmdDescribesTargetMarketOfClassOfConsumers equals true
+  definition tmdSetsConditions equals true
+  definition tmdSetsReviewTriggers equals true
+
+# --- Product 1: Payoneer Payment Service ---
+
+scope AustraliaTMD1ProductIdentification =
+  output productName : Boolean
+  output issuerIsPayoneerAustralia : Boolean
+  output productIsPayoneerPaymentService : Boolean
+
+  definition productName equals true
+  definition issuerIsPayoneerAustralia equals true
+  definition productIsPayoneerPaymentService equals true
+
+scope AustraliaTMD1IssuerDetails =
+  output issuerNamePayoneerAustraliaPtyLtd : Boolean
+  output acn : Integer
+  output afslNumber : Integer
+
+  definition issuerNamePayoneerAustraliaPtyLtd equals true
+  definition acn equals 621926501
+  definition afslNumber equals 504803
+
+scope AustraliaTMD1ProductType =
+  output isNonCashPaymentFacility : Boolean
+  output allowsReceivingPayments : Boolean
+  output allowsStoringFunds : Boolean
+  output allowsWithdrawingFunds : Boolean
+  output multipleCurrencies : Boolean
+  output includesUSD : Boolean
+  output includesEUR : Boolean
+  output includesGBP : Boolean
+  output includesJPY : Boolean
+
+  definition isNonCashPaymentFacility equals true
+  definition allowsReceivingPayments equals true
+  definition allowsStoringFunds equals true
+  definition allowsWithdrawingFunds equals true
+  definition multipleCurrencies equals true
+  definition includesUSD equals true
+  definition includesEUR equals true
+  definition includesGBP equals true
+  definition includesJPY equals true
+
+# --- Product 1: Target Market ---
+
+scope AustraliaTMD1TargetMarket =
+  output businessesOperatingInternationally : Boolean
+  output individualsOperatingBusinessesInternationally : Boolean
+  output whoNeedToReceivePayments : Boolean
+  output whoNeedToStoreFunds : Boolean
+  output whoNeedToWithdrawFunds : Boolean
+  output whoNeedToSendPayments : Boolean
+  output inMultipleCurrencies : Boolean
+  output notForPersonalUse : Boolean
+  output notForDomesticOnlyUse : Boolean
+
+  definition businessesOperatingInternationally equals true
+  definition individualsOperatingBusinessesInternationally equals true
+  definition whoNeedToReceivePayments equals true
+  definition whoNeedToStoreFunds equals true
+  definition whoNeedToWithdrawFunds equals true
+  definition whoNeedToSendPayments equals true
+  definition inMultipleCurrencies equals true
+  definition notForPersonalUse equals true
+  definition notForDomesticOnlyUse equals true
+
+# --- Product 1: Distribution Conditions ---
+
+scope AustraliaTMD1DistributionChannels =
+  output marketingViaMediaChannels : Boolean
+  output marketingViaSocialMedia : Boolean
+  output marketingViaPhysicalMaterials : Boolean
+  output distributionViaDigitalPlatforms : Boolean
+  output distributionViaApprovedChannels : Boolean
+
+  definition marketingViaMediaChannels equals true
+  definition marketingViaSocialMedia equals true
+  definition marketingViaPhysicalMaterials equals true
+  definition distributionViaDigitalPlatforms equals true
+  definition distributionViaApprovedChannels equals true
+
+scope AustraliaTMD1DistributionConditions =
+  output mustNotDistributeOutsideTargetMarket : Boolean
+  output mustComplyWithTMD : Boolean
+  output mustTakeReasonableSteps : Boolean
+
+  definition mustNotDistributeOutsideTargetMarket equals true
+  definition mustComplyWithTMD equals true
+  definition mustTakeReasonableSteps equals true
+
+# --- Product 1: Review Triggers ---
+
+scope AustraliaTMD1ReviewTriggers =
+  output materialComplaintsReceived : Boolean
+  output productPerformanceIssues : Boolean
+  output distributorFeedback : Boolean
+  output substantialProductChanges : Boolean
+  output significantDealingsOutsideTargetMarket : Boolean
+  output asicNotifications : Boolean
+  output periodicReview : Boolean
+
+  definition materialComplaintsReceived equals true
+  definition productPerformanceIssues equals true
+  definition distributorFeedback equals true
+  definition substantialProductChanges equals true
+  definition significantDealingsOutsideTargetMarket equals true
+  definition asicNotifications equals true
+  definition periodicReview equals true
+
+scope AustraliaTMD1ReviewPeriods =
+  output periodicReviewPeriodMonths : Integer
+  output cessationDeadlineBusinessDays : Integer
+
+  definition periodicReviewPeriodMonths equals 12
+  definition cessationDeadlineBusinessDays equals 10
+
+scope AustraliaTMD1CessationTrigger =
+  output mustCeaseDistributionIfTriggered : Boolean
+  output mustReviewWithinCessationDeadline : Boolean
+  output mayAmendTMDAfterReview : Boolean
+  output mayReaffirmTMDAfterReview : Boolean
+  output mayCeaseDistributionPermanently : Boolean
+
+  definition mustCeaseDistributionIfTriggered equals true
+  definition mustReviewWithinCessationDeadline equals true
+  definition mayAmendTMDAfterReview equals true
+  definition mayReaffirmTMDAfterReview equals true
+  definition mayCeaseDistributionPermanently equals true
+
+# --- Product 1: Reporting ---
+
+scope AustraliaTMD1ReportingRequirements =
+  output distributorMustReportToIssuer : Boolean
+  output reportingPeriodMonths : Integer
+  output reportingDeadlineBusinessDays : Integer
+  output complaintInfoPerRG271_182 : Boolean
+
+  definition distributorMustReportToIssuer equals true
+  definition reportingPeriodMonths equals 6
+  definition reportingDeadlineBusinessDays equals 10
+  definition complaintInfoPerRG271_182 equals true
+
+# --- Product 1: Amendments ---
+
+scope AustraliaTMD1Amendments =
+  output issuerMayAmendTMDAtAnyTime : Boolean
+  output amendedTMDPublishedOnWebsite : Boolean
+  output distributorsNotifiedOfMaterialChanges : Boolean
+
+  definition issuerMayAmendTMDAtAnyTime equals true
+  definition amendedTMDPublishedOnWebsite equals true
+  definition distributorsNotifiedOfMaterialChanges equals true
+
+# --- Product 2: Payoneer Business Premium Debit Mastercard ---
+
+scope AustraliaTMD2ProductIdentification =
+  output productName : Boolean
+  output issuerIsPEL : Boolean
+  output intermediaryPayoneerAustralia : Boolean
+  output productIsBusinessPremiumDebitMastercard : Boolean
+
+  definition productName equals true
+  definition issuerIsPEL equals true
+  definition intermediaryPayoneerAustralia equals true
+  definition productIsBusinessPremiumDebitMastercard equals true
+
+scope AustraliaTMD2IssuerDetails =
+  output issuerNamePEL : Boolean
+  output payoneerAustraliaACN : Integer
+  output payoneerAustraliaAFSL : Integer
+
+  definition issuerNamePEL equals true
+  definition payoneerAustraliaACN equals 621926501
+  definition payoneerAustraliaAFSL equals 504803
+
+scope AustraliaTMD2ProductType =
+  output isDebitCard : Boolean
+  output connectedToPayoneerAccount : Boolean
+  output usableAtMerchantsWorldwide : Boolean
+  output usableAtATMsWorldwide : Boolean
+  output notACreditCard : Boolean
+  output notABankAccount : Boolean
+
+  definition isDebitCard equals true
+  definition connectedToPayoneerAccount equals true
+  definition usableAtMerchantsWorldwide equals true
+  definition usableAtATMsWorldwide equals true
+  definition notACreditCard equals true
+  definition notABankAccount equals true
+
+# --- Product 2: Target Market ---
+
+scope AustraliaTMD2TargetMarket =
+  output businessesOperatingInternationally : Boolean
+  output individualsOperatingBusinessesInternationally : Boolean
+  output whoNeedToMakePurchases : Boolean
+  output whoNeedToWithdrawCash : Boolean
+  output whoNeedToAccessPayoneerAccountFunds : Boolean
+  output atMastercardMerchants : Boolean
+  output atATMsWorldwide : Boolean
+  output notForPersonalDomesticUse : Boolean
+  output notForCreditPurposes : Boolean
+
+  definition businessesOperatingInternationally equals true
+  definition individualsOperatingBusinessesInternationally equals true
+  definition whoNeedToMakePurchases equals true
+  definition whoNeedToWithdrawCash equals true
+  definition whoNeedToAccessPayoneerAccountFunds equals true
+  definition atMastercardMerchants equals true
+  definition atATMsWorldwide equals true
+  definition notForPersonalDomesticUse equals true
+  definition notForCreditPurposes equals true
+
+# --- Product 2: Distribution Conditions ---
+
+scope AustraliaTMD2DistributionChannels =
+  output marketingViaMediaChannels : Boolean
+  output marketingViaSocialMedia : Boolean
+  output marketingViaPhysicalMaterials : Boolean
+  output distributionViaDigitalPlatforms : Boolean
+  output distributionViaApprovedChannels : Boolean
+
+  definition marketingViaMediaChannels equals true
+  definition marketingViaSocialMedia equals true
+  definition marketingViaPhysicalMaterials equals true
+  definition distributionViaDigitalPlatforms equals true
+  definition distributionViaApprovedChannels equals true
+
+scope AustraliaTMD2DistributionConditions =
+  output mustNotDistributeOutsideTargetMarket : Boolean
+  output mustComplyWithTMD : Boolean
+  output mustTakeReasonableSteps : Boolean
+
+  definition mustNotDistributeOutsideTargetMarket equals true
+  definition mustComplyWithTMD equals true
+  definition mustTakeReasonableSteps equals true
+
+# --- Product 2: Review Triggers ---
+
+scope AustraliaTMD2ReviewTriggers =
+  output materialComplaintsReceived : Boolean
+  output productPerformanceIssues : Boolean
+  output distributorFeedback : Boolean
+  output substantialProductChanges : Boolean
+  output significantDealingsOutsideTargetMarket : Boolean
+  output asicNotifications : Boolean
+  output periodicReview : Boolean
+
+  definition materialComplaintsReceived equals true
+  definition productPerformanceIssues equals true
+  definition distributorFeedback equals true
+  definition substantialProductChanges equals true
+  definition significantDealingsOutsideTargetMarket equals true
+  definition asicNotifications equals true
+  definition periodicReview equals true
+
+scope AustraliaTMD2ReviewPeriods =
+  output periodicReviewPeriodMonths : Integer
+  output cessationDeadlineBusinessDays : Integer
+
+  definition periodicReviewPeriodMonths equals 12
+  definition cessationDeadlineBusinessDays equals 10
+
+scope AustraliaTMD2CessationTrigger =
+  output mustCeaseDistributionIfTriggered : Boolean
+  output mustReviewWithinCessationDeadline : Boolean
+  output mayAmendTMDAfterReview : Boolean
+  output mayReaffirmTMDAfterReview : Boolean
+  output mayCeaseDistributionPermanently : Boolean
+
+  definition mustCeaseDistributionIfTriggered equals true
+  definition mustReviewWithinCessationDeadline equals true
+  definition mayAmendTMDAfterReview equals true
+  definition mayReaffirmTMDAfterReview equals true
+  definition mayCeaseDistributionPermanently equals true
+
+# --- Product 2: Reporting ---
+
+scope AustraliaTMD2ReportingRequirements =
+  output distributorMustReportToIssuer : Boolean
+  output reportingPeriodMonths : Integer
+  output reportingDeadlineBusinessDays : Integer
+  output complaintInfoPerRG271_182 : Boolean
+
+  definition distributorMustReportToIssuer equals true
+  definition reportingPeriodMonths equals 6
+  definition reportingDeadlineBusinessDays equals 10
+  definition complaintInfoPerRG271_182 equals true
+
+# --- Product 2: Amendments ---
+
+scope AustraliaTMD2Amendments =
+  output issuerMayAmendTMDAtAnyTime : Boolean
+  output amendedTMDPublishedOnWebsite : Boolean
+  output distributorsNotifiedOfMaterialChanges : Boolean
+
+  definition issuerMayAmendTMDAtAnyTime equals true
+  definition amendedTMDPublishedOnWebsite equals true
+  definition distributorsNotifiedOfMaterialChanges equals true
+
+# --- Product 3: Payoneer Corporate Purchasing Mastercard ---
+
+scope AustraliaTMD3ProductIdentification =
+  output productName : Boolean
+  output issuerIsPayoneerInc : Boolean
+  output intermediaryPayoneerAustralia : Boolean
+  output productIsCorporatePurchasingMastercard : Boolean
+
+  definition productName equals true
+  definition issuerIsPayoneerInc equals true
+  definition intermediaryPayoneerAustralia equals true
+  definition productIsCorporatePurchasingMastercard equals true
+
+scope AustraliaTMD3IssuerDetails =
+  output issuerNamePayoneerInc : Boolean
+  output payoneerAustraliaACN : Integer
+  output payoneerAustraliaAFSL : Integer
+
+  definition issuerNamePayoneerInc equals true
+  definition payoneerAustraliaACN equals 621926501
+  definition payoneerAustraliaAFSL equals 504803
+
+scope AustraliaTMD3ProductType =
+  output providesVirtualCardCredentials : Boolean
+  output forOnlineTransactions : Boolean
+  output connectedToPayoneerAccount : Boolean
+  output notACreditCard : Boolean
+  output notABankAccount : Boolean
+  output usableAtMastercardMerchantsOnline : Boolean
+
+  definition providesVirtualCardCredentials equals true
+  definition forOnlineTransactions equals true
+  definition connectedToPayoneerAccount equals true
+  definition notACreditCard equals true
+  definition notABankAccount equals true
+  definition usableAtMastercardMerchantsOnline equals true
+
+# --- Product 3: Target Market ---
+
+scope AustraliaTMD3TargetMarket =
+  output businessesOperatingInternationally : Boolean
+  output individualsOperatingBusinessesInternationally : Boolean
+  output whoNeedToMakeOnlinePurchases : Boolean
+  output whoNeedToPaySuppliers : Boolean
+  output whoNeedToAccessPayoneerAccountFunds : Boolean
+  output atMastercardMerchantsOnline : Boolean
+  output notForPersonalDomesticUse : Boolean
+  output notForCreditPurposes : Boolean
+  output notForInPersonTransactions : Boolean
+
+  definition businessesOperatingInternationally equals true
+  definition individualsOperatingBusinessesInternationally equals true
+  definition whoNeedToMakeOnlinePurchases equals true
+  definition whoNeedToPaySuppliers equals true
+  definition whoNeedToAccessPayoneerAccountFunds equals true
+  definition atMastercardMerchantsOnline equals true
+  definition notForPersonalDomesticUse equals true
+  definition notForCreditPurposes equals true
+  definition notForInPersonTransactions equals true
+
+# --- Product 3: Distribution Conditions ---
+
+scope AustraliaTMD3DistributionChannels =
+  output marketingViaMediaChannels : Boolean
+  output marketingViaSocialMedia : Boolean
+  output marketingViaPhysicalMaterials : Boolean
+  output distributionViaDigitalPlatforms : Boolean
+  output distributionViaApprovedChannels : Boolean
+
+  definition marketingViaMediaChannels equals true
+  definition marketingViaSocialMedia equals true
+  definition marketingViaPhysicalMaterials equals true
+  definition distributionViaDigitalPlatforms equals true
+  definition distributionViaApprovedChannels equals true
+
+scope AustraliaTMD3DistributionConditions =
+  output mustNotDistributeOutsideTargetMarket : Boolean
+  output mustComplyWithTMD : Boolean
+  output mustTakeReasonableSteps : Boolean
+
+  definition mustNotDistributeOutsideTargetMarket equals true
+  definition mustComplyWithTMD equals true
+  definition mustTakeReasonableSteps equals true
+
+# --- Product 3: Review Triggers ---
+
+scope AustraliaTMD3ReviewTriggers =
+  output materialComplaintsReceived : Boolean
+  output productPerformanceIssues : Boolean
+  output distributorFeedback : Boolean
+  output substantialProductChanges : Boolean
+  output significantDealingsOutsideTargetMarket : Boolean
+  output asicNotifications : Boolean
+  output periodicReview : Boolean
+
+  definition materialComplaintsReceived equals true
+  definition productPerformanceIssues equals true
+  definition distributorFeedback equals true
+  definition substantialProductChanges equals true
+  definition significantDealingsOutsideTargetMarket equals true
+  definition asicNotifications equals true
+  definition periodicReview equals true
+
+scope AustraliaTMD3ReviewPeriods =
+  output periodicReviewPeriodMonths : Integer
+  output cessationDeadlineBusinessDays : Integer
+
+  definition periodicReviewPeriodMonths equals 12
+  definition cessationDeadlineBusinessDays equals 10
+
+scope AustraliaTMD3CessationTrigger =
+  output mustCeaseDistributionIfTriggered : Boolean
+  output mustReviewWithinCessationDeadline : Boolean
+  output mayAmendTMDAfterReview : Boolean
+  output mayReaffirmTMDAfterReview : Boolean
+  output mayCeaseDistributionPermanently : Boolean
+
+  definition mustCeaseDistributionIfTriggered equals true
+  definition mustReviewWithinCessationDeadline equals true
+  definition mayAmendTMDAfterReview equals true
+  definition mayReaffirmTMDAfterReview equals true
+  definition mayCeaseDistributionPermanently equals true
+
+# --- Product 3: Reporting ---
+
+scope AustraliaTMD3ReportingRequirements =
+  output distributorMustReportToIssuer : Boolean
+  output reportingPeriodMonths : Integer
+  output reportingDeadlineBusinessDays : Integer
+  output complaintInfoPerRG271_182 : Boolean
+
+  definition distributorMustReportToIssuer equals true
+  definition reportingPeriodMonths equals 6
+  definition reportingDeadlineBusinessDays equals 10
+  definition complaintInfoPerRG271_182 equals true
+
+# --- Product 3: Amendments ---
+
+scope AustraliaTMD3Amendments =
+  output issuerMayAmendTMDAtAnyTime : Boolean
+  output amendedTMDPublishedOnWebsite : Boolean
+  output distributorsNotifiedOfMaterialChanges : Boolean
+
+  definition issuerMayAmendTMDAtAnyTime equals true
+  definition amendedTMDPublishedOnWebsite equals true
+  definition distributorsNotifiedOfMaterialChanges equals true
