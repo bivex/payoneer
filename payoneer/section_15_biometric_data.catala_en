@@ -1,0 +1,109 @@
+# Payoneer Biometric Data Processing Notice
+# Last updated: May 2026
+# Source: Payoneer Biometric Data Processing Notice
+
+# --- Notice Relationship ---
+
+scope BiometricNoticeRelationship =
+  output supplementsPrivacyPolicy : Boolean
+  output describesBiometricDataProcessing : Boolean
+
+  definition supplementsPrivacyPolicy equals true
+  definition describesBiometricDataProcessing equals true
+
+# --- Biometric Data Collection ---
+
+scope BiometricDataCollection =
+  output collectedDuringOnboarding : Boolean
+  output usesFacialScanSoftware : Boolean
+  output extractsFacialScanFromPhotos : Boolean
+  output extractsFacialScanFromVideos : Boolean
+  output comparesWithIDDocumentImage : Boolean
+  output facialDataMayBeTreatedAsBiometric : Boolean
+
+  definition collectedDuringOnboarding equals true
+  definition usesFacialScanSoftware equals true
+  definition extractsFacialScanFromPhotos equals true
+  definition extractsFacialScanFromVideos equals true
+  definition comparesWithIDDocumentImage equals true
+  definition facialDataMayBeTreatedAsBiometric equals true
+
+# --- Processing Purpose ---
+
+scope BiometricDataPurpose =
+  output processedForIdentityVerification : Boolean
+  output processedForKYCCompliance : Boolean
+  output processedForAntiMoneyLaundering : Boolean
+  output doesNotProcessForOtherPurposes : Boolean
+
+  definition processedForIdentityVerification equals true
+  definition processedForKYCCompliance equals true
+  definition processedForAntiMoneyLaundering equals true
+  definition doesNotProcessForOtherPurposes equals true
+
+# --- Repeated Verification ---
+
+scope BiometricRepeatedVerification =
+  output mayBeRepeatedDuringRelationship : Boolean
+  output notLimitedToOnboarding : Boolean
+
+  definition mayBeRepeatedDuringRelationship equals true
+  definition notLimitedToOnboarding equals true
+
+# --- Consent Requirements ---
+
+scope BiometricConsent =
+  input consentRequiredByApplicableLaw : Boolean
+  output explicitConsentObtained : Boolean
+  output manualVerificationAlternative : Boolean
+  output canRefuseConsent : Boolean
+
+  definition explicitConsentObtained equals consentRequiredByApplicableLaw
+  definition manualVerificationAlternative equals not consentRequiredByApplicableLaw or true
+  definition canRefuseConsent equals true
+
+# --- Manual Verification Alternative ---
+
+scope BiometricManualVerification =
+  input doesNotWishToConsent : Boolean
+  output canChooseManualVerification : Boolean
+
+  definition canChooseManualVerification equals doesNotWishToConsent
+
+# --- Third Party Service Providers ---
+
+scope BiometricServiceProviders =
+  output usesThirdPartyServiceProviders : Boolean
+  output providersPerformCollection : Boolean
+  output providersPerformProcessing : Boolean
+  output processingForIdentityVerificationOnly : Boolean
+  output contractedByPayoneer : Boolean
+
+  definition usesThirdPartyServiceProviders equals true
+  definition providersPerformCollection equals true
+  definition providersPerformProcessing equals true
+  definition processingForIdentityVerificationOnly equals true
+  definition contractedByPayoneer equals true
+
+# --- Au10tix Provider ---
+
+scope BiometricProviderAu10tix =
+  output au10tixUsed : Boolean
+  output au10tixHasBiometricDataPolicy : Boolean
+  output au10tixPolicyAvailableOnWebsite : Boolean
+
+  definition au10tixUsed equals true
+  definition au10tixHasBiometricDataPolicy equals true
+  definition au10tixPolicyAvailableOnWebsite equals true
+
+# --- Tencent Provider (China and Hong Kong) ---
+
+scope BiometricProviderTencent =
+  input dataSubjectInChina : Boolean
+  input dataSubjectInHongKong : Boolean
+  output tencentUsedForChinaAndHongKong : Boolean
+  output tencentPolicyAvailableOnWebsite : Boolean
+
+  definition tencentUsedForChinaAndHongKong equals
+    dataSubjectInChina or dataSubjectInHongKong
+  definition tencentPolicyAvailableOnWebsite equals true
