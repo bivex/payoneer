@@ -1,0 +1,101 @@
+# Payoneer Privacy Policy - Appendix 6: Hong Kong (PDPO)
+# Last updated: May 2026
+
+# --- PDPO Applicability ---
+
+scope HKPDPOApplicability =
+  input dataSubjectInHongKong : Boolean
+  output pdpoApplies : Boolean
+  output sixDataProtectionPrinciplesApply : Boolean
+
+  definition pdpoApplies equals dataSubjectInHongKong
+  definition sixDataProtectionPrinciplesApply equals dataSubjectInHongKong
+
+# --- DPP1: Purpose and Manner of Collection ---
+
+scope HKDPP1Collection =
+  output collectionMustBeLawful : Boolean
+  output collectionMustBeFair : Boolean
+  output dataSubjectMustBeNotifiedOfPurpose : Boolean
+  output dataSubjectMustBeNotifiedOfClassesOfRecipients : Boolean
+  output dataSubjectMustBeNotifiedOfRightToAccessAndCorrection : Boolean
+
+  definition collectionMustBeLawful equals true
+  definition collectionMustBeFair equals true
+  definition dataSubjectMustBeNotifiedOfPurpose equals true
+  definition dataSubjectMustBeNotifiedOfClassesOfRecipients equals true
+  definition dataSubjectMustBeNotifiedOfRightToAccessAndCorrection equals true
+
+# --- DPP2: Accuracy and Retention ---
+
+scope HKDPP2AccuracyRetention =
+  output mustTakePracticalStepsToEnsureAccuracy : Boolean
+  output mustNotKeepDataLongerThanNecessary : Boolean
+
+  definition mustTakePracticalStepsToEnsureAccuracy equals true
+  definition mustNotKeepDataLongerThanNecessary equals true
+
+# --- DPP3: Use of Personal Data ---
+
+scope HKDPP3Use =
+  input useForPurposeOtherThanCollectionPurpose : Boolean
+  input dataSubjectHasGivenPrescribedConsent : Boolean
+  output mayUseForNewPurpose : Boolean
+
+  definition mayUseForNewPurpose equals
+    useForPurposeOtherThanCollectionPurpose implies dataSubjectHasGivenPrescribedConsent
+
+# --- DPP4: Security of Personal Data ---
+
+scope HKDPP4Security =
+  output mustTakePracticalStepsToSafeguardData : Boolean
+  output includesProtectionAgainstUnauthorizedAccess : Boolean
+  output includesProtectionAgainstUnauthorizedProcessing : Boolean
+
+  definition mustTakePracticalStepsToSafeguardData equals true
+  definition includesProtectionAgainstUnauthorizedAccess equals true
+  definition includesProtectionAgainstUnauthorizedProcessing equals true
+
+# --- DPP5: Openness ---
+
+scope HKDPP5Openness =
+  output mustInformPublicOfPoliciesAndPractices : Boolean
+  output mustInformOfTypesOfDataHeld : Boolean
+  output mustInformOfPurposesOfUse : Boolean
+
+  definition mustInformPublicOfPoliciesAndPractices equals true
+  definition mustInformOfTypesOfDataHeld equals true
+  definition mustInformOfPurposesOfUse equals true
+
+# --- DPP6: Access and Correction ---
+
+scope HKDPP6AccessCorrection =
+  output rightToAccessPersonalData : Boolean
+  output rightToCorrectionOfPersonalData : Boolean
+  output accessRequestWithin40Days : Boolean
+  output correctionRequestWithin40Days : Boolean
+  output feeMayBeChargedForAccess : Boolean
+
+  definition rightToAccessPersonalData equals true
+  definition rightToCorrectionOfPersonalData equals true
+  definition accessRequestWithin40Days equals true
+  definition correctionRequestWithin40Days equals true
+  definition feeMayBeChargedForAccess equals true
+
+# --- HK Cross-Border Transfer ---
+
+scope HKCrossBorderTransfer =
+  output noGeneralRestrictionOnCrossBorderTransfer : Boolean
+  output dpp4AppliesToOverseasRecipients : Boolean
+
+  definition noGeneralRestrictionOnCrossBorderTransfer equals true
+  definition dpp4AppliesToOverseasRecipients equals true
+
+# --- HK PCPD Complaint ---
+
+scope HKPCPDComplaint =
+  output rightToComplainToPCPD : Boolean
+  output complaintFreeOfCharge : Boolean
+
+  definition rightToComplainToPCPD equals true
+  definition complaintFreeOfCharge equals true

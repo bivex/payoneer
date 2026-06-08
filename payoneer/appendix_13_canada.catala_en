@@ -1,0 +1,135 @@
+# Payoneer Privacy Policy - Appendix 13: Canada
+# Last updated: May 2026
+
+# --- Canada PIPEDA Applicability ---
+
+scope CanadaPIPEDAApplicability =
+  input dataSubjectInCanada : Boolean
+  input organizationSubjectToPIPEDA : Boolean
+  output pipedaApplies : Boolean
+
+  definition pipedaApplies equals dataSubjectInCanada and organizationSubjectToPIPEDA
+
+# --- PIPEDA 10 Fair Information Principles ---
+
+scope CanadaFairInformationPrinciples =
+  output principle1Accountability : Boolean
+  output principle2IdentifyingPurposes : Boolean
+  output principle3Consent : Boolean
+  output principle4LimitingCollection : Boolean
+  output principle5LimitingUseDisclosureRetention : Boolean
+  output principle6Accuracy : Boolean
+  output principle7Safeguards : Boolean
+  output principle8Openness : Boolean
+  output principle9IndividualAccess : Boolean
+  output principle10ChallengingCompliance : Boolean
+
+  definition principle1Accountability equals true
+  definition principle2IdentifyingPurposes equals true
+  definition principle3Consent equals true
+  definition principle4LimitingCollection equals true
+  definition principle5LimitingUseDisclosureRetention equals true
+  definition principle6Accuracy equals true
+  definition principle7Safeguards equals true
+  definition principle8Openness equals true
+  definition principle9IndividualAccess equals true
+  definition principle10ChallengingCompliance equals true
+
+# --- PIPEDA Consent ---
+
+scope CanadaConsent =
+  output consentRequiredForCollectionUseDisclosure : Boolean
+  output consentCanBeExpressOrImplied : Boolean
+  output consentMustBeMeaningful : Boolean
+  output consentMustBeInformed : Boolean
+  output consentCanNotBeConditionOfService : Boolean
+  output mayCollectWithoutConsentForLegalInvestigation : Boolean
+
+  definition consentRequiredForCollectionUseDisclosure equals true
+  definition consentCanBeExpressOrImplied equals true
+  definition consentMustBeMeaningful equals true
+  definition consentMustBeInformed equals true
+  definition consentCanNotBeConditionOfService equals true
+  definition mayCollectWithoutConsentForLegalInvestigation equals true
+
+# --- PIPEDA Individual Access ---
+
+scope CanadaIndividualAccess =
+  output rightToAccessPersonalInformation : Boolean
+  output rightToKnowUseAndDisclosure : Boolean
+  output rightToChallengeAccuracy : Boolean
+  output rightToCorrection : Boolean
+  output responseWithin30Days : Boolean
+  output extensionNoticeIfNecessary : Boolean
+  output feeMayApplyForCopies : Boolean
+
+  definition rightToAccessPersonalInformation equals true
+  definition rightToKnowUseAndDisclosure equals true
+  definition rightToChallengeAccuracy equals true
+  definition rightToCorrection equals true
+  definition responseWithin30Days equals true
+  definition extensionNoticeIfNecessary equals true
+  definition feeMayApplyForCopies equals true
+
+# --- PIPEDA Safeguards ---
+
+scope CanadaSafeguards =
+  output mustImplementAppropriateSafeguards : Boolean
+  output safeguardsProportionalToSensitivity : Boolean
+  output includesPhysicalSafeguards : Boolean
+  output includesOrganizationalSafeguards : Boolean
+  output includesTechnologicalSafeguards : Boolean
+
+  definition mustImplementAppropriateSafeguards equals true
+  definition safeguardsProportionalToSensitivity equals true
+  definition includesPhysicalSafeguards equals true
+  definition includesOrganizationalSafeguards equals true
+  definition includesTechnologicalSafeguards equals true
+
+# --- PIPEDA Breach Notification ---
+
+scope CanadaBreachNotification =
+  input breachCreatesRealRiskOfSignificantHarm : Boolean
+  output mustNotifyAffectedIndividuals : Boolean
+  output mustNotifyOPC : Boolean
+  output notificationAsSoonAsFeasible : Boolean
+  output mustKeepRecordsOfAllBreaches : Boolean
+
+  definition mustNotifyAffectedIndividuals equals breachCreatesRealRiskOfSignificantHarm
+  definition mustNotifyOPC equals breachCreatesRealRiskOfSignificantHarm
+  definition notificationAsSoonAsFeasible equals breachCreatesRealRiskOfSignificantHarm
+  definition mustKeepRecordsOfAllBreaches equals true
+
+# --- PIPEDA Cross-Border Transfer ---
+
+scope CanadaCrossBorderTransfer =
+  output mayTransferToThirdPartiesInOtherCountries : Boolean
+  output mustEnsureComparableLevelOfProtection : Boolean
+  output remainsAccountableForTransferredData : Boolean
+
+  definition mayTransferToThirdPartiesInOtherCountries equals true
+  definition mustEnsureComparableLevelOfProtection equals true
+  definition remainsAccountableForTransferredData equals true
+
+# --- PIPEDA OPC Complaint ---
+
+scope CanadaOPCComplaint =
+  output rightToComplainToOPC : Boolean
+  output complaintFreeOfCharge : Boolean
+
+  definition rightToComplainToOPC equals true
+  definition complaintFreeOfCharge equals true
+
+# --- Quebec Law 25 ---
+
+scope QuebecLaw25 =
+  input dataSubjectInQuebec : Boolean
+  output quebecLaw25Applies : Boolean
+  output stricterConsentRequirements : Boolean
+  output mustAppointDPO : Boolean
+  output mustConductPrivacyImpactAssessment : Boolean
+
+  definition quebecLaw25Applies equals dataSubjectInQuebec
+  definition stricterConsentRequirements equals dataSubjectInQuebec
+  definition mustAppointDPO equals dataSubjectInQuebec
+  definition mustConductPrivacyImpactAssessment equals dataSubjectInQuebec

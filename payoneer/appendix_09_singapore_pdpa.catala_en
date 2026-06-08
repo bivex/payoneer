@@ -1,0 +1,122 @@
+# Payoneer Privacy Policy - Appendix 9: Singapore (PDPA)
+# Last updated: May 2026
+
+# --- PDPA Applicability ---
+
+scope SingaporePDPAApplicability =
+  input dataSubjectInSingapore : Boolean
+  output pdpaApplies : Boolean
+
+  definition pdpaApplies equals dataSubjectInSingapore
+
+# --- PDPA Consent Obligation ---
+
+scope SingaporeConsentObligation =
+  output mustObtainConsentBeforeCollection : Boolean
+  output mustObtainConsentBeforeUse : Boolean
+  output mustObtainConsentBeforeDisclosure : Boolean
+  output deemedConsentMayApply : Boolean
+
+  definition mustObtainConsentBeforeCollection equals true
+  definition mustObtainConsentBeforeUse equals true
+  definition mustObtainConsentBeforeDisclosure equals true
+  definition deemedConsentMayApply equals true
+
+# --- PDPA Purpose Limitation ---
+
+scope SingaporePurposeLimitation =
+  output mustNotifyPurposeBeforeCollection : Boolean
+  output mustUseOnlyForNotifiedPurpose : Boolean
+  output newPurposeRequiresNewConsent : Boolean
+
+  definition mustNotifyPurposeBeforeCollection equals true
+  definition mustUseOnlyForNotifiedPurpose equals true
+  definition newPurposeRequiresNewConsent equals true
+
+# --- PDPA Notification Obligation ---
+
+scope SingaporeNotificationObligation =
+  output mustInformOfPurpose : Boolean
+  output mustInformOfRightToAccess : Boolean
+  output mustInformOfRightToCorrection : Boolean
+  output mustProvideContactInfo : Boolean
+
+  definition mustInformOfPurpose equals true
+  definition mustInformOfRightToAccess equals true
+  definition mustInformOfRightToCorrection equals true
+  definition mustProvideContactInfo equals true
+
+# --- PDPA Access and Correction ---
+
+scope SingaporeAccessCorrection =
+  output rightToAccess : Boolean
+  output rightToCorrection : Boolean
+  output accessRequestWithin30Days : Boolean
+  output correctionRequestWithin30Days : Boolean
+
+  definition rightToAccess equals true
+  definition rightToCorrection equals true
+  definition accessRequestWithin30Days equals true
+  definition correctionRequestWithin30Days equals true
+
+# --- PDPA Protection Obligation ---
+
+scope SingaporeProtectionObligation =
+  output mustProtectPersonalData : Boolean
+  output mustImplementSecurityArrangements : Boolean
+  output includesPhysicalSecurity : Boolean
+  output includesTechnicalSecurity : Boolean
+
+  definition mustProtectPersonalData equals true
+  definition mustImplementSecurityArrangements equals true
+  definition includesPhysicalSecurity equals true
+  definition includesTechnicalSecurity equals true
+
+# --- PDPA Retention Limitation ---
+
+scope SingaporeRetentionLimitation =
+  output mustNotRetainBeyondNecessary : Boolean
+  output mustDeleteWhenNoLongerNeeded : Boolean
+  output retentionForLegalOrBusinessPurposesPermitted : Boolean
+
+  definition mustNotRetainBeyondNecessary equals true
+  definition mustDeleteWhenNoLongerNeeded equals true
+  definition retentionForLegalOrBusinessPurposesPermitted equals true
+
+# --- PDPA Transfer Limitation ---
+
+scope SingaporeTransferLimitation =
+  input recipientProvidesComparableProtection : Boolean
+  output mayTransferOverseas : Boolean
+
+  definition mayTransferOverseas equals recipientProvidesComparableProtection
+
+# --- PDPA Data Breach Notification ---
+
+scope SingaporeDataBreachNotification =
+  input breachIsNotifiable : Boolean
+  input breachAffectsMoreThan500Individuals : Boolean
+  output mustNotifyPDPC : Boolean
+  output mustNotifyAffectedIndividuals : Boolean
+  output notificationWithin3CalendarDays : Boolean
+
+  definition mustNotifyPDPC equals breachIsNotifiable
+  definition mustNotifyAffectedIndividuals equals
+    breachIsNotifiable or breachAffectsMoreThan500Individuals
+  definition notificationWithin3CalendarDays equals breachIsNotifiable
+
+# --- PDPA Do Not Call Registry ---
+
+scope SingaporeDoNotCall =
+  output mustCheckDoNotCallRegistry : Boolean
+  output marketingMessagesConsentRequired : Boolean
+
+  definition mustCheckDoNotCallRegistry equals true
+  definition marketingMessagesConsentRequired equals true
+
+# --- PDPA Complaint ---
+
+scope SingaporePDPAComplaint =
+  output rightToComplainToPDPC : Boolean
+
+  definition rightToComplainToPDPC equals true

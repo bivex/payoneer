@@ -1,0 +1,142 @@
+# Payoneer Privacy Policy - Appendix 4: Brazil (LGPD)
+# Last updated: May 2026
+
+# --- LGPD Applicability ---
+
+scope LGPDApplicability =
+  input dataSubjectInBrazil : Boolean
+  input processingCarriedOutInBrazil : Boolean
+  input dataCollectedInBrazil : Boolean
+  output lgpdApplies : Boolean
+
+  definition lgpdApplies equals
+    dataSubjectInBrazil or
+    processingCarriedOutInBrazil or
+    dataCollectedInBrazil
+
+# --- LGPD Legal Bases ---
+
+scope LGPDLegalBases =
+  output consent : Boolean
+  output contractualNecessity : Boolean
+  output legalObligation : Boolean
+  output publicPolicy : Boolean
+  output research : Boolean
+  output legitimateInterest : Boolean
+  output creditProtection : Boolean
+  output exerciseOfRights : Boolean
+  output protectionOfLife : Boolean
+
+  definition consent equals true
+  definition contractualNecessity equals true
+  definition legalObligation equals true
+  definition publicPolicy equals true
+  definition research equals true
+  definition legitimateInterest equals true
+  definition creditProtection equals true
+  definition exerciseOfRights equals true
+  definition protectionOfLife equals true
+
+# --- LGPD Legal Basis by Purpose ---
+
+scope LGPDLegalBasisByPurpose =
+  input purpose : ProcessingPurpose
+  output legalBasis : LGPDLegalBasis
+
+  definition legalBasis equals
+    if purpose equals ServiceProvision then ContractualNecessity
+    else if purpose equals AccountManagement then ContractualNecessity
+    else if purpose equals KYCVerification then LegalObligation
+    else if purpose equals TransactionProcessing then ContractualNecessity
+    else if purpose equals FraudPrevention then LegitimateInterest
+    else if purpose equals RiskAssessment then LegitimateInterest
+    else if purpose equals LegalCompliance then LegalObligation
+    else if purpose equals Marketing then Consent
+    else if purpose equals CreditAssessment then CreditProtection
+    else LegitimateInterest
+
+# --- LGPD Sensitive Data ---
+
+scope LGPDSensitiveData =
+  output sensitiveDataRequiresSpecificConsent : Boolean
+  output sensitiveDataIncludesRacialEthnicOrigin : Boolean
+  output sensitiveDataIncludesReligiousBeliefs : Boolean
+  output sensitiveDataIncludesPoliticalOpinions : Boolean
+  output sensitiveDataIncludesTradeUnionMembership : Boolean
+  output sensitiveDataIncludesHealthData : Boolean
+  output sensitiveDataIncludesBiometricData : Boolean
+  output sensitiveDataIncludesGeneticData : Boolean
+  output sensitiveDataIncludesSexualOrientation : Boolean
+
+  definition sensitiveDataRequiresSpecificConsent equals true
+  definition sensitiveDataIncludesRacialEthnicOrigin equals true
+  definition sensitiveDataIncludesReligiousBeliefs equals true
+  definition sensitiveDataIncludesPoliticalOpinions equals true
+  definition sensitiveDataIncludesTradeUnionMembership equals true
+  definition sensitiveDataIncludesHealthData equals true
+  definition sensitiveDataIncludesBiometricData equals true
+  definition sensitiveDataIncludesGeneticData equals true
+  definition sensitiveDataIncludesSexualOrientation equals true
+
+# --- LGPD Anonymization Requirement ---
+
+scope LGPDAnonymization =
+  output anonymizationOrDeletionRequiredWhenPurposeAchieved : Boolean
+  output anonymizedDataNotSubjectToLGPD : Boolean
+
+  definition anonymizationOrDeletionRequiredWhenPurposeAchieved equals true
+  definition anonymizedDataNotSubjectToLGPD equals true
+
+# --- LGPD Rights ---
+
+scope LGPDRights =
+  output rightToConfirmationOfProcessing : Boolean
+  output rightToAccess : Boolean
+  output rightToAnonymizeOrDelete : Boolean
+  output rightToRectification : Boolean
+  output rightToDataPortability : Boolean
+  output rightToDeleteDataProcessedWithConsent : Boolean
+  output rightToInformationAboutSharing : Boolean
+  output rightToRevocationOfConsent : Boolean
+
+  definition rightToConfirmationOfProcessing equals true
+  definition rightToAccess equals true
+  definition rightToAnonymizeOrDelete equals true
+  definition rightToRectification equals true
+  definition rightToDataPortability equals true
+  definition rightToDeleteDataProcessedWithConsent equals true
+  definition rightToInformationAboutSharing equals true
+  definition rightToRevocationOfConsent equals true
+
+# --- LGPD International Transfer ---
+
+scope LGPDInternationalTransfer =
+  input transferToCountryWithAdequacyDecision : Boolean
+  input controllerOffersComplianceGuarantees : Boolean
+  input internationalCooperationAgreement : Boolean
+  output transferLawful : Boolean
+
+  definition transferLawful equals
+    transferToCountryWithAdequacyDecision or
+    controllerOffersComplianceGuarantees or
+    internationalCooperationAgreement
+
+# --- LGPD DPO ---
+
+scope LGPDDPO =
+  output mustAppointDPO : Boolean
+  output dpoContactDetailsPubliclyAvailable : Boolean
+  output dpoCanAcceptComplaints : Boolean
+
+  definition mustAppointDPO equals true
+  definition dpoContactDetailsPubliclyAvailable equals true
+  definition dpoCanAcceptComplaints equals true
+
+# --- LGPD ANPD Complaint ---
+
+scope LGPDANPDComplaint =
+  output rightToComplainToANPD : Boolean
+  output complaintFreeOfCharge : Boolean
+
+  definition rightToComplainToANPD equals true
+  definition complaintFreeOfCharge equals true

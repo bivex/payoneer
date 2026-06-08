@@ -1,0 +1,99 @@
+# Payoneer Privacy Policy - Appendix 2: Australia
+# Last updated: May 2026
+
+# --- Australian Privacy Act Applicability ---
+
+scope AustraliaPrivacyActApplicability =
+  input dataSubjectInAustralia : Boolean
+  output privacyAct1988Applies : Boolean
+  output australianAPPsApply : Boolean
+
+  definition privacyAct1988Applies equals dataSubjectInAustralia
+  definition australianAPPsApply equals dataSubjectInAustralia
+
+# --- Collection Limitation (APP 3) ---
+
+scope AustraliaCollectionLimitation =
+  output collectsOnlyReasonablyNecessaryData : Boolean
+  output collectsDirectlyFromIndividual : Boolean
+  output notifiesAtOrBeforeCollection : Boolean
+  output notificationIncludesPrivacyPolicy : Boolean
+
+  definition collectsOnlyReasonablyNecessaryData equals true
+  definition collectsDirectlyFromIndividual equals true
+  definition notifiesAtOrBeforeCollection equals true
+  definition notificationIncludesPrivacyPolicy equals true
+
+# --- Use and Disclosure (APP 6) ---
+
+scope AustraliaUseAndDisclosure =
+  input hasConsent : Boolean
+  input relatedToPrimaryPurpose : Boolean
+  input requiredByLaw : Boolean
+  output mayUseOrDisclose : Boolean
+
+  definition mayUseOrDisclose equals
+    hasConsent or relatedToPrimaryPurpose or requiredByLaw
+
+# --- Direct Marketing (APP 7) ---
+
+scope AustraliaDirectMarketing =
+  input hasConsentForDirectMarketing : Boolean
+  output mayUseForDirectMarketing : Boolean
+  output mustIncludeOptOutMechanism : Boolean
+  output mustNotChargeForOptOut : Boolean
+
+  definition mayUseForDirectMarketing equals hasConsentForDirectMarketing
+  definition mustIncludeOptOutMechanism equals true
+  definition mustNotChargeForOptOut equals true
+
+# --- Cross-Border Disclosure (APP 8) ---
+
+scope AustraliaCrossBorderDisclosure =
+  input recipientInCountryWithComparableProtection : Boolean
+  input contractualSafeguardsInPlace : Boolean
+  input individualHasConsented : Boolean
+  output mayDiscloseOverseas : Boolean
+
+  definition mayDiscloseOverseas equals
+    recipientInCountryWithComparableProtection or
+    contractualSafeguardsInPlace or
+    individualHasConsented
+
+# --- Australian Rights ---
+
+scope AustraliaIndividualRights =
+  output rightToAccess : Boolean
+  output rightToCorrection : Boolean
+  output complaintToOAIC : Boolean
+  output complaintToPrivacyCommissioner : Boolean
+
+  definition rightToAccess equals true
+  definition rightToCorrection equals true
+  definition complaintToOAIC equals true
+  definition complaintToPrivacyCommissioner equals true
+
+# --- Australian Data Breach Notification ---
+
+scope AustraliaDataBreachNotification =
+  input breachLikelyToResultInSeriousHarm : Boolean
+  output mustNotifyOAIC : Boolean
+  output mustNotifyAffectedIndividuals : Boolean
+  output notificationAsSoonAsPracticable : Boolean
+
+  definition mustNotifyOAIC equals breachLikelyToResultInSeriousHarm
+  definition mustNotifyAffectedIndividuals equals breachLikelyToResultInSeriousHarm
+  definition notificationAsSoonAsPracticable equals breachLikelyToResultInSeriousHarm
+
+# --- Australian Credit Reporting ---
+
+scope AustraliaCreditReporting =
+  output creditInformationMayBeCollected : Boolean
+  output creditInformationUsedForCreditAssessment : Boolean
+  output creditReportingCodeCompliance : Boolean
+  output retentionPeriodPerCreditReportingAct : Boolean
+
+  definition creditInformationMayBeCollected equals true
+  definition creditInformationUsedForCreditAssessment equals true
+  definition creditReportingCodeCompliance equals true
+  definition retentionPeriodPerCreditReportingAct equals true

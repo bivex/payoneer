@@ -1,0 +1,120 @@
+# Payoneer Privacy Policy - Appendix 8: South Africa (POPIA)
+# Last updated: May 2026
+
+# --- POPIA Applicability ---
+
+scope POPIAApplicability =
+  input dataSubjectInSouthAfrica : Boolean
+  output popiaApplies : Boolean
+  output eightConditionsApply : Boolean
+
+  definition popiaApplies equals dataSubjectInSouthAfrica
+  definition eightConditionsApply equals dataSubjectInSouthAfrica
+
+# --- POPIA Conditions ---
+
+scope POPIAConditions =
+  output condition1Accountability : Boolean
+  output condition2ProcessingLimitation : Boolean
+  output condition3PurposeSpecification : Boolean
+  output condition4FurtherProcessingLimitation : Boolean
+  output condition5InformationQuality : Boolean
+  output condition6Openness : Boolean
+  output condition7SecuritySafeguards : Boolean
+  output condition8DataSubjectParticipation : Boolean
+
+  definition condition1Accountability equals true
+  definition condition2ProcessingLimitation equals true
+  definition condition3PurposeSpecification equals true
+  definition condition4FurtherProcessingLimitation equals true
+  definition condition5InformationQuality equals true
+  definition condition6Openness equals true
+  definition condition7SecuritySafeguards equals true
+  definition condition8DataSubjectParticipation equals true
+
+# --- POPIA Lawful Processing ---
+
+scope POPIALawfulProcessing =
+  input dataSubjectConsents : Boolean
+  input processingNecessaryForContract : Boolean
+  input processingRequiredByLaw : Boolean
+  input processingProtectsLegitimateInterest : Boolean
+  input processingNecessaryForPublicInterest : Boolean
+  output processingIsLawful : Boolean
+
+  definition processingIsLawful equals
+    dataSubjectConsents or
+    processingNecessaryForContract or
+    processingRequiredByLaw or
+    processingProtectsLegitimateInterest or
+    processingNecessaryForPublicInterest
+
+# --- POPIA Special Personal Information ---
+
+scope POPIASpecialPersonalInformation =
+  output specialPIIncludesReligiousBeliefs : Boolean
+  output specialPIIncludesRace : Boolean
+  output specialPIIncludesTradeUnionMembership : Boolean
+  output specialPIIncludesPoliticalOpinions : Boolean
+  output specialPIIncludesHealthData : Boolean
+  output specialPIIncludesBiometricData : Boolean
+  output specialPIIncludesCriminalBehavior : Boolean
+  output specialPIRequiresExplicitConsent : Boolean
+
+  definition specialPIIncludesReligiousBeliefs equals true
+  definition specialPIIncludesRace equals true
+  definition specialPIIncludesTradeUnionMembership equals true
+  definition specialPIIncludesPoliticalOpinions equals true
+  definition specialPIIncludesHealthData equals true
+  definition specialPIIncludesBiometricData equals true
+  definition specialPIIncludesCriminalBehavior equals true
+  definition specialPIRequiresExplicitConsent equals true
+
+# --- POPIA Rights ---
+
+scope POPIARights =
+  output rightToRequestAccess : Boolean
+  output rightToRequestCorrection : Boolean
+  output rightToRequestDeletion : Boolean
+  output rightToObjectToProcessing : Boolean
+  output rightToComplainToInformationRegulator : Boolean
+
+  definition rightToRequestAccess equals true
+  definition rightToRequestCorrection equals true
+  definition rightToRequestDeletion equals true
+  definition rightToObjectToProcessing equals true
+  definition rightToComplainToInformationRegulator equals true
+
+# --- POPIA Cross-Border Transfer ---
+
+scope POPIACrossBorderTransfer =
+  input recipientSubjectToAdequateProtection : Boolean
+  input dataSubjectConsentObtained : Boolean
+  input transferNecessaryForContractPerformance : Boolean
+  output transferLawful : Boolean
+
+  definition transferLawful equals
+    recipientSubjectToAdequateProtection or
+    dataSubjectConsentObtained or
+    transferNecessaryForContractPerformance
+
+# --- POPIA Direct Marketing ---
+
+scope POPIADirectMarketing =
+  input hasConsentForDirectMarketing : Boolean
+  input isExistingCustomer : Boolean
+  output maySendDirectMarketing : Boolean
+  output mustProvideOptOut : Boolean
+  output mustNotChargeForOptOut : Boolean
+
+  definition maySendDirectMarketing equals
+    hasConsentForDirectMarketing or isExistingCustomer
+  definition mustProvideOptOut equals true
+  definition mustNotChargeForOptOut equals true
+
+# --- POPIA Response Timeline ---
+
+scope POPIAResponseTimeline =
+  output respondWithin30Days : Boolean
+
+  definition respondWithin30Days equals true

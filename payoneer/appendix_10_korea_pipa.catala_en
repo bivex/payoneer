@@ -1,0 +1,113 @@
+# Payoneer Privacy Policy - Appendix 10: Korea (PIPA)
+# Last updated: May 2026
+
+# --- PIPA Applicability ---
+
+scope KoreaPIPAApplicability =
+  input dataSubjectInKorea : Boolean
+  output pipaApplies : Boolean
+
+  definition pipaApplies equals dataSubjectInKorea
+
+# --- PIPA Consent Requirements ---
+
+scope KoreaConsentRequirements =
+  output mustObtainConsentForProcessing : Boolean
+  output consentMustBeSpecificToPurpose : Boolean
+  output separateConsentForSensitiveData : Boolean
+  output separateConsentForThirdPartyProvision : Boolean
+  output separateConsentForOverseasTransfer : Boolean
+  output consentMustBeInWriting : Boolean
+
+  definition mustObtainConsentForProcessing equals true
+  definition consentMustBeSpecificToPurpose equals true
+  definition separateConsentForSensitiveData equals true
+  definition separateConsentForThirdPartyProvision equals true
+  definition separateConsentForOverseasTransfer equals true
+  definition consentMustBeInWriting equals true
+
+# --- PIPA Sensitive Data ---
+
+scope KoreaSensitiveData =
+  output sensitiveDataRequiresExplicitConsent : Boolean
+  output sensitiveDataIncludesIdeology : Boolean
+  output sensitiveDataIncludesBelief : Boolean
+  output sensitiveDataIncludesTradeUnionMembership : Boolean
+  output sensitiveDataIncludesPoliticalAffiliation : Boolean
+  output sensitiveDataIncludesHealthData : Boolean
+  output sensitiveDataIncludesGeneticData : Boolean
+  output sensitiveDataIncludesCriminalRecords : Boolean
+  output purposeStrictlyNecessary : Boolean
+
+  definition sensitiveDataRequiresExplicitConsent equals true
+  definition sensitiveDataIncludesIdeology equals true
+  definition sensitiveDataIncludesBelief equals true
+  definition sensitiveDataIncludesTradeUnionMembership equals true
+  definition sensitiveDataIncludesPoliticalAffiliation equals true
+  definition sensitiveDataIncludesHealthData equals true
+  definition sensitiveDataIncludesGeneticData equals true
+  definition sensitiveDataIncludesCriminalRecords equals true
+  definition purposeStrictlyNecessary equals true
+
+# --- PIPA Unique Identification Numbers ---
+
+scope KoreaUniqueIDNumbers =
+  output processingOfResidentRegistrationNumberRestricted : Boolean
+  output requiresSpecificLegalBasis : Boolean
+  output alternativeIdentificationEncouraged : Boolean
+
+  definition processingOfResidentRegistrationNumberRestricted equals true
+  definition requiresSpecificLegalBasis equals true
+  definition alternativeIdentificationEncouraged equals true
+
+# --- PIPA Rights ---
+
+scope KoreaRights =
+  output rightToAccess : Boolean
+  output rightToCorrection : Boolean
+  output rightToDelete : Boolean
+  output rightToSuspendProcessing : Boolean
+
+  definition rightToAccess equals true
+  definition rightToCorrection equals true
+  definition rightToDelete equals true
+  definition rightToSuspendProcessing equals true
+
+# --- PIPA Overseas Transfer ---
+
+scope KoreaOverseasTransfer =
+  input dataSubjectConsentObtained : Boolean
+  input adequateProtectionInDestination : Boolean
+  input contractualSafeguardsInPlace : Boolean
+  output overseasTransferLawful : Boolean
+
+  definition overseasTransferLawful equals
+    dataSubjectConsentObtained or
+    adequateProtectionInDestination or
+    contractualSafeguardsInPlace
+
+# --- PIPA Breach Notification ---
+
+scope KoreaBreachNotification =
+  input breachOccurs : Boolean
+  output mustNotifyDataSubject : Boolean
+  output mustNotifyPIPC : Boolean
+  output notificationWithin72Hours : Boolean
+
+  definition mustNotifyDataSubject equals breachOccurs
+  definition mustNotifyPIPC equals breachOccurs
+  definition notificationWithin72Hours equals breachOccurs
+
+# --- PIPA Response Timeline ---
+
+scope KoreaResponseTimeline =
+  output respondWithin15Days : Boolean
+
+  definition respondWithin15Days equals true
+
+# --- PIPA CPO Requirement ---
+
+scope KoreaCPO =
+  output mustAppointChiefPrivacyOfficer : Boolean
+
+  definition mustAppointChiefPrivacyOfficer equals true

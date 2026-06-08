@@ -1,0 +1,99 @@
+# Payoneer Privacy Policy - Appendix 12: India
+# Last updated: May 2026
+
+# --- India DPDP Act Applicability ---
+
+scope IndiaDPDPApplicability =
+  input dataSubjectInIndia : Boolean
+  output dpdpActApplies : Boolean
+
+  definition dpdpActApplies equals dataSubjectInIndia
+
+# --- India Consent Requirements ---
+
+scope IndiaConsentRequirements =
+  output mustObtainFreeSpecificInformedConsent : Boolean
+  output consentMustBeUnambiguous : Boolean
+  output mustProvideItemizedListOfData : Boolean
+  output mustProvidePurposeInClearLanguage : Boolean
+  output rightToWithdrawConsent : Boolean
+  output withdrawalAsEasyAsGivingConsent : Boolean
+
+  definition mustObtainFreeSpecificInformedConsent equals true
+  definition consentMustBeUnambiguous equals true
+  definition mustProvideItemizedListOfData equals true
+  definition mustProvidePurposeInClearLanguage equals true
+  definition rightToWithdrawConsent equals true
+  definition withdrawalAsEasyAsGivingConsent equals true
+
+# --- India Data Fiduciary Obligations ---
+
+scope IndiaDataFiduciaryObligations =
+  output mustImplementSecuritySafeguards : Boolean
+  output mustNotifyDataBreaches : Boolean
+  output mustNotRetainBeyondNecessary : Boolean
+  output mustEnsureDataAccuracy : Boolean
+
+  definition mustImplementSecuritySafeguards equals true
+  definition mustNotifyDataBreaches equals true
+  definition mustNotRetainBeyondNecessary equals true
+  definition mustEnsureDataAccuracy equals true
+
+# --- India Data Principal Rights ---
+
+scope IndiaDataPrincipalRights =
+  output rightToAccess : Boolean
+  output rightToCorrection : Boolean
+  output rightToErasure : Boolean
+  output rightToNominate : Boolean
+  output rightToGrievanceRedressal : Boolean
+
+  definition rightToAccess equals true
+  definition rightToCorrection equals true
+  definition rightToErasure equals true
+  definition rightToNominate equals true
+  definition rightToGrievanceRedressal equals true
+
+# --- India Cross-Border Transfer ---
+
+scope IndiaCrossBorderTransfer =
+  input transferToCountryNotifiedByGovernment : Boolean
+  output transferLawful : Boolean
+
+  definition transferLawful equals transferToCountryNotifiedByGovernment
+
+# --- India Significant Data Fiduciary ---
+
+scope IndiaSignificantDataFiduciary =
+  input classifiedAsSignificantDataFiduciary : Boolean
+  output mustAppointDPO : Boolean
+  output mustAppointIndependentDataAuditor : Boolean
+  output mustConductDPIA : Boolean
+
+  definition mustAppointDPO equals classifiedAsSignificantDataFiduciary
+  definition mustAppointIndependentDataAuditor equals classifiedAsSignificantDataFiduciary
+  definition mustConductDPIA equals classifiedAsSignificantDataFiduciary
+
+# --- India Children's Data ---
+
+scope IndiaChildrensData =
+  output mustObtainVerifiableParentalConsent : Boolean
+  output mustNotTrackBehavioralProfilingOfChildren : Boolean
+  output mustNotTargetAdvertisingToChildren : Boolean
+
+  definition mustObtainVerifiableParentalConsent equals true
+  definition mustNotTrackBehavioralProfilingOfChildren equals true
+  definition mustNotTargetAdvertisingToChildren equals true
+
+# --- India Grievance Redressal ---
+
+scope IndiaGrievanceRedressal =
+  output mustHaveGrievanceRedressalMechanism : Boolean
+  output mustAcknowledgeWithin48Hours : Boolean
+  output mustResolveWithin30Days : Boolean
+  output rightToApproachDPBI : Boolean
+
+  definition mustHaveGrievanceRedressalMechanism equals true
+  definition mustAcknowledgeWithin48Hours equals true
+  definition mustResolveWithin30Days equals true
+  definition rightToApproachDPBI equals true

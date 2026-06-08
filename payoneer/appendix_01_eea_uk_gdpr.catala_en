@@ -1,0 +1,228 @@
+# Payoneer Privacy Policy - Appendix 1: EEA/UK (GDPR)
+# Last updated: May 2026
+
+# --- GDPR Applicability ---
+
+scope GDPRApplicability =
+  input dataSubjectInEEA : Boolean
+  input dataSubjectInUK : Boolean
+  output gdprApplies : Boolean
+  output ukGDRPApplies : Boolean
+
+  definition gdprApplies equals dataSubjectInEEA
+  definition ukGDRPApplies equals dataSubjectInUK
+
+# --- GDPR Legal Bases ---
+
+scope GDPRLegalBases =
+  output processingBasedOnConsent : Boolean
+  output processingBasedOnContractualNecessity : Boolean
+  output processingBasedOnLegalObligation : Boolean
+  output processingBasedOnLegitimateInterest : Boolean
+  output processingBasedOnVitalInterests : Boolean
+  output processingBasedOnPublicInterest : Boolean
+
+  definition processingBasedOnConsent equals true
+  definition processingBasedOnContractualNecessity equals true
+  definition processingBasedOnLegalObligation equals true
+  definition processingBasedOnLegitimateInterest equals true
+  definition processingBasedOnVitalInterests equals true
+  definition processingBasedOnPublicInterest equals true
+
+# --- GDPR Legal Basis by Purpose ---
+
+scope GDPRLegalBasisByPurpose =
+  input purpose : ProcessingPurpose
+  output legalBasis : GDPRLegalBasis
+
+  definition legalBasis equals
+    if purpose equals ServiceProvision then ContractualNecessity
+    else if purpose equals AccountManagement then ContractualNecessity
+    else if purpose equals KYCVerification then LegalObligation
+    else if purpose equals TransactionProcessing then ContractualNecessity
+    else if purpose equals CustomerSupport then ContractualNecessity
+    else if purpose equals FraudPrevention then LegitimateInterest
+    else if purpose equals RiskAssessment then LegitimateInterest
+    else if purpose equals Security then LegitimateInterest
+    else if purpose equals LegalCompliance then LegalObligation
+    else if purpose equals RegulatoryReporting then LegalObligation
+    else if purpose equals Marketing then Consent
+    else if purpose equals ProductImprovement then LegitimateInterest
+    else if purpose equals Analytics then LegitimateInterest
+    else if purpose equals Profiling then LegitimateInterest
+    else if purpose equals CreditAssessment then LegitimateInterest
+    else if purpose equals DebtCollection then LegitimateInterest
+    else if purpose equals DisputeResolution then LegitimateInterest
+    else if purpose equals TaxReporting then LegalObligation
+    else if purpose equals Communication then ContractualNecessity
+    else if purpose equals CookieProcessing then Consent
+    else LegitimateInterest
+
+# --- Legitimate Interest Assessment ---
+
+scope GDPRLegitimateInterestAssessment =
+  output balancingTestPerformed : Boolean
+  output dataSubjectRightsWeighed : Boolean
+  output legitimateInterestDocumented : Boolean
+  output dataSubjectCanObject : Boolean
+
+  definition balancingTestPerformed equals true
+  definition dataSubjectRightsWeighed equals true
+  definition legitimateInterestDocumented equals true
+  definition dataSubjectCanObject equals true
+
+# --- GDPR Rights ---
+
+scope GDPRRights =
+  output rightOfAccess : Boolean
+  output rightToRectification : Boolean
+  output rightToErasure : Boolean
+  output rightToRestrictProcessing : Boolean
+  output rightToDataPortability : Boolean
+  output rightToObject : Boolean
+  output rightToWithdrawConsent : Boolean
+  output rightToAutomatedDecisionMaking : Boolean
+  output rightToLodgeComplaint : Boolean
+
+  definition rightOfAccess equals true
+  definition rightToRectification equals true
+  definition rightToErasure equals true
+  definition rightToRestrictProcessing equals true
+  definition rightToDataPortability equals true
+  definition rightToObject equals true
+  definition rightToWithdrawConsent equals true
+  definition rightToAutomatedDecisionMaking equals true
+  definition rightToLodgeComplaint equals true
+
+# --- Right to Erasure Conditions ---
+
+scope GDPRRightToErasureConditions =
+  input dataNoLongerNecessary : Boolean
+  input consentWithdrawn : Boolean
+  input objectToProcessingAndNoOverridingGrounds : Boolean
+  input dataProcessedUnlawfully : Boolean
+  input erasureRequiredByLaw : Boolean
+  output erasureApplicable : Boolean
+
+  definition erasureApplicable equals
+    dataNoLongerNecessary or
+    consentWithdrawn or
+    objectToProcessingAndNoOverridingGrounds or
+    dataProcessedUnlawfully or
+    erasureRequiredByLaw
+
+# --- Right to Erasure Exceptions ---
+
+scope GDPRRightToErasureExceptions =
+  output erasureMayNotApplyForFreedomOfExpression : Boolean
+  output erasureMayNotApplyForLegalObligations : Boolean
+  output erasureMayNotApplyForPublicHealth : Boolean
+  output erasureMayNotApplyForLegalClaims : Boolean
+  output erasureMayNotApplyForArchivingPurposes : Boolean
+
+  definition erasureMayNotApplyForFreedomOfExpression equals true
+  definition erasureMayNotApplyForLegalObligations equals true
+  definition erasureMayNotApplyForPublicHealth equals true
+  definition erasureMayNotApplyForLegalClaims equals true
+  definition erasureMayNotApplyForArchivingPurposes equals true
+
+# --- Data Portability Conditions ---
+
+scope GDPRDataPortabilityConditions =
+  input processingAutomated : Boolean
+  input basedOnConsentOrContract : Boolean
+  output rightToPortabilityApplies : Boolean
+  output rightToDirectTransmission : Boolean
+
+  definition rightToPortabilityApplies equals
+    processingAutomated and basedOnConsentOrContract
+  definition rightToDirectTransmission equals rightToPortabilityApplies
+
+# --- Special Categories of Data ---
+
+scope GDPRSpecialCategories =
+  output notProcessedUnlessExceptionApplies : Boolean
+  output explicitConsentRequired : Boolean
+  output employmentLawExceptionMayApply : Boolean
+  output vitalInterestsExceptionMayApply : Boolean
+  output publicHealthExceptionMayApply : Boolean
+
+  definition notProcessedUnlessExceptionApplies equals true
+  definition explicitConsentRequired equals true
+  definition employmentLawExceptionMayApply equals true
+  definition vitalInterestsExceptionMayApply equals true
+  definition publicHealthExceptionMayApply equals true
+
+# --- Cross-Border Transfers ---
+
+scope GDPRCrossBorderTransfers =
+  input transferToCountryWithAdequacyDecision : Boolean
+  input transferUsesSCCs : Boolean
+  input transferUsesBCRs : Boolean
+  input transferBasedOnConsent : Boolean
+  input transferBasedOnContractualNecessity : Boolean
+  output transferLawful : Boolean
+
+  definition transferLawful equals
+    transferToCountryWithAdequacyDecision or
+    transferUsesSCCs or
+    transferUsesBCRs or
+    transferBasedOnConsent or
+    transferBasedOnContractualNecessity
+
+# --- Data Breach Notification ---
+
+scope GDPRDataBreachNotification =
+  input breachLikelyToResultInRiskToRights : Boolean
+  input breachLikelyToResultInHighRisk : Boolean
+  output notifySupervisoryAuthorityWithin72Hours : Boolean
+  output notifyDataSubjectWithoutUndueDelay : Boolean
+  output notifyOnlyIfHighRisk : Boolean
+
+  definition notifySupervisoryAuthorityWithin72Hours equals
+    breachLikelyToResultInRiskToRights
+  definition notifyDataSubjectWithoutUndueDelay equals
+    breachLikelyToResultInHighRisk
+  definition notifyOnlyIfHighRisk equals
+    breachLikelyToResultInHighRisk
+
+# --- Response Timeline ---
+
+scope GDPRResponseTimeline =
+  output respondWithin30Days : Boolean
+  output extensionUpTo60DaysForComplexRequests : Boolean
+  output extensionNotificationRequired : Boolean
+  output freeOfCharge : Boolean
+  output feeForExcessiveOrUnfoundedRequests : Boolean
+
+  definition respondWithin30Days equals true
+  definition extensionUpTo60DaysForComplexRequests equals true
+  definition extensionNotificationRequired equals true
+  definition freeOfCharge equals true
+  definition feeForExcessiveOrUnfoundedRequests equals true
+
+# --- Controller and Processor ---
+
+scope GDPRControllerProcessor =
+  output payoneerActsAsController : Boolean
+  output payoneerMayActAsProcessorForBusinessCustomers : Boolean
+  output processorAgreementInPlace : Boolean
+  output processorProcessesOnlyOnInstructions : Boolean
+
+  definition payoneerActsAsController equals true
+  definition payoneerMayActAsProcessorForBusinessCustomers equals true
+  definition processorAgreementInPlace equals true
+  definition processorProcessesOnlyOnInstructions equals true
+
+# --- Data Protection Impact Assessment ---
+
+source GDPRDPIA =
+  output dpiaPerformedForHighRiskProcessing : Boolean
+  output dpiaIncludesSystematicDescription : Boolean
+  output dpiaIncludesNecessityAssessment : Boolean
+  output dpiaIncludesRiskMitigationMeasures : Boolean
+
+  definition dpiaPerformedForHighRiskProcessing equals true
+  definition dpiaIncludesSystematicDescription equals true
+  definition dpiaIncludesNecessityAssessment equals true
+  definition dpiaIncludesRiskMitigationMeasures equals true

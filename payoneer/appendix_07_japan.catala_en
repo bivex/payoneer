@@ -1,0 +1,97 @@
+# Payoneer Privacy Policy - Appendix 7: Japan
+# Last updated: May 2026
+
+# --- Japan APPI Applicability ---
+
+scope JapanAPPIApplicability =
+  input dataSubjectInJapan : Boolean
+  output appliApplies : Boolean
+
+  definition appliApplies equals dataSubjectInJapan
+
+# --- Japan Purpose Specification ---
+
+scope JapanPurposeSpecification =
+  output mustSpecifyPurposeOfUse : Boolean
+  output mustNotChangePurposeBeyondReasonablyExpected : Boolean
+  output purposeMustBePublishedOrNotified : Boolean
+
+  definition mustSpecifyPurposeOfUse equals true
+  definition mustNotChangePurposeBeyondReasonablyExpected equals true
+  definition purposeMustBePublishedOrNotified equals true
+
+# --- Japan Use Limitation ---
+
+scope JapanUseLimitation =
+  input useBeyondSpecifiedPurpose : Boolean
+  input dataSubjectConsentObtained : Boolean
+  output mayUseBeyondPurpose : Boolean
+
+  definition mayUseBeyondPurpose equals
+    useBeyondSpecifiedPurpose implies dataSubjectConsentObtained
+
+# --- Japan Provision to Third Parties ---
+
+scope JapanThirdPartyProvision =
+  input dataSubjectConsentObtained : Boolean
+  input optOutNoticePublished : Boolean
+  output mayProvideToThirdParty : Boolean
+
+  definition mayProvideToThirdParty equals
+    dataSubjectConsentObtained or optOutNoticePublished
+
+# --- Japan Cross-Border Transfer ---
+
+scope JapanCrossBorderTransfer =
+  input destinationCountryHasAdequateProtection : Boolean
+  input recipientHasCompliantPrivacyPolicy : Boolean
+  input dataSubjectConsentObtained : Boolean
+  input contractualSafeguardsInPlace : Boolean
+  output transferLawful : Boolean
+
+  definition transferLawful equals
+    destinationCountryHasAdequateProtection or
+    recipientHasCompliantPrivacyPolicy or
+    dataSubjectConsentObtained or
+    contractualSafeguardsInPlace
+
+# --- Japan Individual Rights ---
+
+scope JapanRights =
+  output rightToRequestDisclosure : Boolean
+  output rightToRequestCorrection : Boolean
+  output rightToRequestCessationOfUse : Boolean
+  output rightToRequestDeletion : Boolean
+  output rightToComplainToPPC : Boolean
+
+  definition rightToRequestDisclosure equals true
+  definition rightToRequestCorrection equals true
+  definition rightToRequestCessationOfUse equals true
+  definition rightToRequestDeletion equals true
+  definition rightToComplainToPPC equals true
+
+# --- Japan Response Timeline ---
+
+scope JapanResponseTimeline =
+  output respondWithoutDelay : Boolean
+  output responseWithin30DaysTypical : Boolean
+
+  definition respondWithoutDelay equals true
+  definition responseWithin30DaysTypical equals true
+
+# --- Japan Sensitive Data ---
+
+scope JapanSensitiveData =
+  output requiresSpecialCareForSensitiveData : Boolean
+  output sensitiveDataIncludesRace : Boolean
+  output sensitiveDataIncludesCreed : Boolean
+  output sensitiveDataIncludesSocialStatus : Boolean
+  output sensitiveDataIncludesMedicalHistory : Boolean
+  output sensitiveDataIncludesCriminalRecords : Boolean
+
+  definition requiresSpecialCareForSensitiveData equals true
+  definition sensitiveDataIncludesRace equals true
+  definition sensitiveDataIncludesCreed equals true
+  definition sensitiveDataIncludesSocialStatus equals true
+  definition sensitiveDataIncludesMedicalHistory equals true
+  definition sensitiveDataIncludesCriminalRecords equals true

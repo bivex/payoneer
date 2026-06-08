@@ -1,0 +1,187 @@
+# Payoneer Privacy Policy - Appendix 3: California (CCPA)
+# Last updated: May 2026
+
+# --- CCPA Applicability ---
+
+scope CCPAApplicability =
+  input dataSubjectIsCaliforniaResident : Boolean
+  output ccpaApplies : Boolean
+  output californiaCivilCodeSection1798Applies : Boolean
+
+  definition ccpaApplies equals dataSubjectIsCaliforniaResident
+  definition californiaCivilCodeSection1798Applies equals dataSubjectIsCaliforniaResident
+
+# --- CCPA Categories of Personal Information Collected ---
+
+scope CCPACategoriesCollected =
+  output identifiersCollected : Boolean
+  output personalDataCategoriesCollected : Boolean
+  output protectedClassificationsCollected : Boolean
+  output commercialInformationCollected : Boolean
+  output internetActivityCollected : Boolean
+  output geolocationDataCollected : Boolean
+  output professionalInformationCollected : Boolean
+  output educationInformationCollected : Boolean
+  output financialInformationCollected : Boolean
+  output medicalInformationCollected : Boolean
+  output inferencesCollected : Boolean
+  output sensitivePersonalInformationCollected : Boolean
+
+  definition identifiersCollected equals true
+  definition personalDataCategoriesCollected equals true
+  definition protectedClassificationsCollected equals true
+  definition commercialInformationCollected equals true
+  definition internetActivityCollected equals true
+  definition geolocationDataCollected equals true
+  definition professionalInformationCollected equals true
+  definition educationInformationCollected equals true
+  definition financialInformationCollected equals true
+  definition medicalInformationCollected equals true
+  definition inferencesCollected equals true
+  definition sensitivePersonalInformationCollected equals true
+
+# --- CCPA Right to Know ---
+
+scope CCPARightToKnow =
+  output rightToKnowWhatDataIsCollected : Boolean
+  output rightToKnowPurposesOfCollection : Boolean
+  output rightToKnowCategoriesOfRecipients : Boolean
+  output rightToKnowWhatIsSoldOrShared : Boolean
+  output entitledToSpecificPiecesOfInfo : Boolean
+
+  definition rightToKnowWhatDataIsCollected equals true
+  definition rightToKnowPurposesOfCollection equals true
+  definition rightToKnowCategoriesOfRecipients equals true
+  definition rightToKnowWhatIsSoldOrShared equals true
+  definition entitledToSpecificPiecesOfInfo equals true
+
+# --- CCPA Right to Delete ---
+
+scope CCPARightToDelete =
+  output rightToDeletePersonalInformation : Boolean
+  output rightToDirectThirdPartiesToDelete : Boolean
+  output deletionMayBeDeniedForLegalReasons : Boolean
+
+  definition rightToDeletePersonalInformation equals true
+  definition rightToDirectThirdPartiesToDelete equals true
+  definition deletionMayBeDeniedForLegalReasons equals true
+
+# --- CCPA Right to Correct ---
+
+scope CCPARightToCorrect =
+  output rightToCorrectInaccuratePersonalInformation : Boolean
+
+  definition rightToCorrectInaccuratePersonalInformation equals true
+
+# --- CCPA Right to Opt-Out of Sale ---
+
+scope CCPARightToOptOutOfSale =
+  output rightToOptOutOfSaleOfPersonalInfo : Boolean
+  output doNotSellMyPersonalInfoLinkAvailable : Boolean
+  output noSaleOfPersonalInfoOfMinorsUnder16 : Boolean
+
+  definition rightToOptOutOfSaleOfPersonalInfo equals true
+  definition doNotSellMyPersonalInfoLinkAvailable equals true
+  definition noSaleOfPersonalInfoOfMinorsUnder16 equals true
+
+# --- CCPA Right to Limit Use of Sensitive Personal Information ---
+
+scope CCPARightToLimitSensitivePI =
+  output rightToLimitUseOfSensitivePI : Boolean
+  output sensitivePIIncludesSSN : Boolean
+  output sensitivePIIncludesDriversLicense : Boolean
+  output sensitivePIIncludesBankAccount : Boolean
+  output sensitivePIIncludesLoginCredentials : Boolean
+  output sensitivePIIncludesPreciseGeolocation : Boolean
+  output sensitivePIIncludesRacialEthnicOrigin : Boolean
+  output sensitivePIIncludesReligiousBeliefs : Boolean
+  output sensitivePIIncludesBiometricData : Boolean
+  output sensitivePIIncludesHealthData : Boolean
+  output sensitivePIIncludesSexualOrientation : Boolean
+
+  definition rightToLimitUseOfSensitivePI equals true
+  definition sensitivePIIncludesSSN equals true
+  definition sensitivePIIncludesDriversLicense equals true
+  definition sensitivePIIncludesBankAccount equals true
+  definition sensitivePIIncludesLoginCredentials equals true
+  definition sensitivePIIncludesPreciseGeolocation equals true
+  definition sensitivePIIncludesRacialEthnicOrigin equals true
+  definition sensitivePIIncludesReligiousBeliefs equals true
+  definition sensitivePIIncludesBiometricData equals true
+  definition sensitivePIIncludesHealthData equals true
+  definition sensitivePIIncludesSexualOrientation equals true
+
+# --- CCPA Non-Discrimination ---
+
+scope CCPANonDiscrimination =
+  output willNotDiscriminateForExercisingRights : Boolean
+  output willNotDenyServices : Boolean
+  output willNotChargeDifferentPrices : Boolean
+  output willNotProvideDifferentQuality : Boolean
+
+  definition willNotDiscriminateForExercisingRights equals true
+  definition willNotDenyServices equals true
+  definition willNotChargeDifferentPrices equals true
+  definition willNotProvideDifferentQuality equals true
+
+# --- CCPA Financial Incentives ---
+
+scope CCPAFinancialIncentives =
+  output financialIncentivesMayBeOffered : Boolean
+  output mustDiscloseMaterialTerms : Boolean
+  output mustAllowOptOut : Boolean
+
+  definition financialIncentivesMayBeOffered equals true
+  definition mustDiscloseMaterialTerms equals true
+  definition mustAllowOptOut equals true
+
+# --- CCPA Authorized Agent ---
+
+scope CCPAAuthorizedAgent =
+  output mayUseAuthorizedAgent : Boolean
+  output agentMustProvideProofOfAuthorization : Boolean
+
+  definition mayUseAuthorizedAgent equals true
+  definition agentMustProvideProofOfAuthorization equals true
+
+# --- CCPA Verification ---
+
+scope CCPAVerification =
+  output identityVerificationRequiredForRequests : Boolean
+  output verificationMatchesRequestType : Boolean
+
+  definition identityVerificationRequiredForRequests equals true
+  definition verificationMatchesRequestType equals true
+
+# --- CCPA Response Timeline ---
+
+scope CCPAResponseTimeline =
+  output respondWithin45Days : Boolean
+  output extensionUpTo45AdditionalDays : Boolean
+  output extensionNoticeRequired : Boolean
+
+  definition respondWithin45Days equals true
+  definition extensionUpTo45AdditionalDays equals true
+  definition extensionNoticeRequired equals true
+
+# --- CCPA Sale and Sharing Disclosure ---
+
+scope CCPASaleAndSharing =
+  output personalInfoSoldInLast12Months : Boolean
+  output personalInfoSharedInLast12Months : Boolean
+  output categoriesOfPartiesSoldTo : Boolean
+  output categoriesOfPartiesSharedWith : Boolean
+
+  definition personalInfoSoldInLast12Months equals false
+  definition personalInfoSharedInLast12Months equals true
+  definition categoriesOfPartiesSoldTo equals true
+  definition categoriesOfPartiesSharedWith equals true
+
+# --- CCPA Do Not Track ---
+
+scope CCPADoNotTrack =
+  output respondsToDoNotTrackSignals : Boolean
+  output honorsGlobalPrivacyControl : Boolean
+
+  definition respondsToDoNotTrackSignals equals true
+  definition honorsGlobalPrivacyControl equals true

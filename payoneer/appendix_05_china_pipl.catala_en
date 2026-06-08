@@ -1,0 +1,125 @@
+# Payoneer Privacy Policy - Appendix 5: China (PIPL)
+# Last updated: May 2026
+
+# --- PIPL Applicability ---
+
+scope PIPLApplicability =
+  input dataSubjectInChina : Boolean
+  input processingInChina : Boolean
+  output piplApplies : Boolean
+
+  definition piplApplies equals dataSubjectInChina or processingInChina
+
+# --- PIPL Legal Bases ---
+
+scope PIPLLegalBases =
+  output consent : Boolean
+  output contractualNecessity : Boolean
+  output legalObligation : Boolean
+  output publicHealthEmergency : Boolean
+  output publicInterest : Boolean
+  output publicSourceProcessing : Boolean
+
+  definition consent equals true
+  definition contractualNecessity equals true
+  definition legalObligation equals true
+  definition publicHealthEmergency equals true
+  definition publicInterest equals true
+  definition publicSourceProcessing equals true
+
+# --- PIPL Consent Requirements ---
+
+scope PIPLConsentRequirements =
+  output consentMustBeFreelyGiven : Boolean
+  output consentMustBeSpecific : Boolean
+  output consentMustBeExplicit : Boolean
+  output consentCanBeWithdrawn : Boolean
+  output withdrawalMustBeEasy : Boolean
+  output separateConsentForSensitiveData : Boolean
+  output separateConsentForCrossBorderTransfer : Boolean
+
+  definition consentMustBeFreelyGiven equals true
+  definition consentMustBeSpecific equals true
+  definition consentMustBeExplicit equals true
+  definition consentCanBeWithdrawn equals true
+  definition withdrawalMustBeEasy equals true
+  definition separateConsentForSensitiveData equals true
+  definition separateConsentForCrossBorderTransfer equals true
+
+# --- PIPL Sensitive Data ---
+
+scope PIPLSensitiveData =
+  output sensitiveDataIncludesBiometric : Boolean
+  output sensitiveDataIncludesReligiousBeliefs : Boolean
+  output sensitiveDataIncludesMedicalData : Boolean
+  output sensitiveDataIncludesFinancialData : Boolean
+  output sensitiveDataIncludesLocationData : Boolean
+  output sensitiveDataIncludesUnderageData : Boolean
+  output processingSensitiveDataRequiresStrictNecessity : Boolean
+  output processingSensitiveDataRequiresEnhancedProtection : Boolean
+
+  definition sensitiveDataIncludesBiometric equals true
+  definition sensitiveDataIncludesReligiousBeliefs equals true
+  definition sensitiveDataIncludesMedicalData equals true
+  definition sensitiveDataIncludesFinancialData equals true
+  definition sensitiveDataIncludesLocationData equals true
+  definition sensitiveDataIncludesUnderageData equals true
+  definition processingSensitiveDataRequiresStrictNecessity equals true
+  definition processingSensitiveDataRequiresEnhancedProtection equals true
+
+# --- PIPL Cross-Border Transfer ---
+
+scope PIPLCrossBorderTransfer =
+  input passingSecurityAssessment : Boolean
+  input obtainingPIPCertification : Boolean
+  input concludingStandardContract : Boolean
+  input otherConditionsSpecifiedByCAC : Boolean
+  output crossBorderTransferLawful : Boolean
+
+  definition crossBorderTransferLawful equals
+    passingSecurityAssessment or
+    obtainingPIPCertification or
+    concludingStandardContract or
+    otherConditionsSpecifiedByCAC
+
+# --- PIPL Rights ---
+
+scope PIPLRights =
+  output rightToAccess : Boolean
+  output rightToCopy : Boolean
+  output rightToCorrection : Boolean
+  output rightToDelete : Boolean
+  output rightToWithdrawConsent : Boolean
+  output rightToDataPortability : Boolean
+  output rightToExplanationOfAutomatedDecisions : Boolean
+  output rightToRefuseAutomatedDecisionOnly : Boolean
+
+  definition rightToAccess equals true
+  definition rightToCopy equals true
+  definition rightToCorrection equals true
+  definition rightToDelete equals true
+  definition rightToWithdrawConsent equals true
+  definition rightToDataPortability equals true
+  definition rightToExplanationOfAutomatedDecisions equals true
+  definition rightToRefuseAutomatedDecisionOnly equals true
+
+# --- PIPL Data Localization ---
+
+scope PIPLDataLocalization =
+  input meetsThresholdForCriticalInformationInfrastructure : Boolean
+  input processesMoreThanOneMillionPersonalInfo : Boolean
+  output mustStoreDataInChina : Boolean
+  output crossBorderTransferRequiresSecurityAssessment : Boolean
+
+  definition mustStoreDataInChina equals
+    meetsThresholdForCriticalInformationInfrastructure
+  definition crossBorderTransferRequiresSecurityAssessment equals
+    meetsThresholdForCriticalInformationInfrastructure or
+    processesMoreThanOneMillionPersonalInfo
+
+# --- PIPL Response Timeline ---
+
+scope PIPLResponseTimeline =
+  output respondWithin15Days : Boolean
+
+  definition respondWithin15Days equals true

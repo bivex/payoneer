@@ -1,0 +1,84 @@
+# Payoneer Privacy Policy - Appendix 11: UK
+# Last updated: May 2026
+
+# --- UK Data Protection Applicability ---
+
+scope UKDataProtectionApplicability =
+  input dataSubjectInUK : Boolean
+  output ukGDRPApplies : Boolean
+  output dataProtectionAct2018Applies : Boolean
+
+  definition ukGDRPApplies equals dataSubjectInUK
+  definition dataProtectionAct2018Applies equals dataSubjectInUK
+
+# --- UK GDPR Provisions ---
+
+scope UKGDPRProvisions =
+  output mirrorsEEAGDPRRights : Boolean
+  output sameLegalBasesApply : Boolean
+  output sameRightsApply : Boolean
+  output sameObligationsApply : Boolean
+
+  definition mirrorsEEAGDPRRights equals true
+  definition sameLegalBasesApply equals true
+  definition sameRightsApply equals true
+  definition sameObligationsApply equals true
+
+# --- UK International Transfers ---
+
+scope UKInternationalTransfers =
+  input transferToCountryWithUKAdequacyDecision : Boolean
+  input transferUsesUKSCCs : Boolean
+  input transferUsesUKBCRs : Boolean
+  output transferLawful : Boolean
+
+  definition transferLawful equals
+    transferToCountryWithUKAdequacyDecision or
+    transferUsesUKSCCs or
+    transferUsesUKBCRs
+
+# --- UK Data Bridge ---
+
+scope UKDataBridge =
+  output ukEUDataBridgeInEffect : Boolean
+  output facilitatesTransfersBetweenUKAndEEA : Boolean
+
+  definition ukEUDataBridgeInEffect equals true
+  definition facilitatesTransfersBetweenUKAndEEA equals true
+
+# --- UK ICO Complaint ---
+
+scope UKICOComplaint =
+  output rightToComplainToICO : Boolean
+  output complaintFreeOfCharge : Boolean
+
+  definition rightToComplainToICO equals true
+  definition complaintFreeOfCharge equals true
+
+# --- UK DPA 2018 Schedule 1 Conditions ---
+
+scope UKDPA2018Schedule1 =
+  output schedule1ProvidesConditionsForProcessing : Boolean
+  output includesEmploymentSocialProtectionCondition : Boolean
+  output includesLegalClaimsCondition : Boolean
+  output includesSubstantialPublicInterestCondition : Boolean
+
+  definition schedule1ProvidesConditionsForProcessing equals true
+  definition includesEmploymentSocialProtectionCondition equals true
+  definition includesLegalClaimsCondition equals true
+  definition includesSubstantialPublicInterestCondition equals true
+
+# --- UK Automated Decision Making ---
+
+scope UKAutomatedDecisionMaking =
+  output article22UKGDPRAPplies : Boolean
+  output rightToHumanIntervention : Boolean
+  output rightToExpressPointOfView : Boolean
+  output rightToContestDecision : Boolean
+  output mustProvideMeaningfulInformationAboutLogic : Boolean
+
+  definition article22UKGDPRAPplies equals true
+  definition rightToHumanIntervention equals true
+  definition rightToExpressPointOfView equals true
+  definition rightToContestDecision equals true
+  definition mustProvideMeaningfulInformationAboutLogic equals true
