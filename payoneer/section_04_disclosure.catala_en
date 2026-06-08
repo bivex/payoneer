@@ -1,0 +1,127 @@
+# Payoneer Privacy Policy - Section 4: When We Disclose Personal Data
+# Last updated: May 2026
+
+# --- Disclosure to Affiliates ---
+
+scope DisclosureAffiliates =
+  output sharedWithPayoneerAffiliates : Boolean
+  output sharedForGlobalServiceProvision : Boolean
+  output subjectToSamePrivacyStandards : Boolean
+
+  definition sharedWithPayoneerAffiliates equals true
+  definition sharedForGlobalServiceProvision equals true
+  definition subjectToSamePrivacyStandards equals true
+
+# --- Disclosure to Service Providers ---
+
+scope DisclosureServiceProviders =
+  output sharedWithITServiceProviders : Boolean
+  output sharedWithCloudProviders : Boolean
+  output sharedWithCustomerSupportProviders : Boolean
+  output sharedWithAnalyticsProviders : Boolean
+  output sharedWithMarketingPartners : Boolean
+  output sharedWithPaymentNetworks : Boolean
+  output sharedWithBankingPartners : Boolean
+  output sharedWithIdentityVerificationProviders : Boolean
+  output subjectToConfidentialityObligations : Boolean
+
+  definition sharedWithITServiceProviders equals true
+  definition sharedWithCloudProviders equals true
+  definition sharedWithCustomerSupportProviders equals true
+  definition sharedWithAnalyticsProviders equals true
+  definition sharedWithMarketingPartners equals true
+  definition sharedWithPaymentNetworks equals true
+  definition sharedWithBankingPartners equals true
+  definition sharedWithIdentityVerificationProviders equals true
+  definition subjectToConfidentialityObligations equals true
+
+# --- Disclosure for Legal Purposes ---
+
+scope DisclosureLegalPurposes =
+  output disclosedToRegulatoryAuthorities : Boolean
+  output disclosedToLawEnforcement : Boolean
+  output disclosedForCourtOrders : Boolean
+  output disclosedForLegalProceedings : Boolean
+  output disclosedToProfessionalAdvisors : Boolean
+
+  definition disclosedToRegulatoryAuthorities equals true
+  definition disclosedToLawEnforcement equals true
+  definition disclosedForCourtOrders equals true
+  definition disclosedForLegalProceedings equals true
+  definition disclosedToProfessionalAdvisors equals true
+
+# --- Disclosure to Fraud Prevention Agencies ---
+
+scope DisclosureFraudPrevention =
+  output sharedWithFraudPreventionAgencies : Boolean
+  output sharedWithCreditReferenceAgencies : Boolean
+  output sharedForSanctionsScreening : Boolean
+  output sharedForAntiMoneyLaundering : Boolean
+
+  definition sharedWithFraudPreventionAgencies equals true
+  definition sharedWithCreditReferenceAgencies equals true
+  definition sharedForSanctionsScreening equals true
+  definition sharedForAntiMoneyLaundering equals true
+
+# --- Disclosure to Business Partners ---
+
+scope DisclosureBusinessPartners =
+  output sharedWithThirdPartyPayers : Boolean
+  output sharedWithThirdPartyPayees : Boolean
+  output sharedWithBusinessPartners : Boolean
+  output limitedToNecessaryInformation : Boolean
+
+  definition sharedWithThirdPartyPayers equals true
+  definition sharedWithThirdPartyPayees equals true
+  definition sharedWithBusinessPartners equals true
+  definition limitedToNecessaryInformation equals true
+
+# --- Disclosure in Corporate Transactions ---
+
+scope DisclosureCorporateTransactions =
+  output disclosedInMergerOrAcquisition : Boolean
+  output disclosedInAssetSale : Boolean
+  output disclosedToProspectiveBuyers : Boolean
+  output subjectToConfidentialityInTransaction : Boolean
+
+  definition disclosedInMergerOrAcquisition equals true
+  definition disclosedInAssetSale equals true
+  definition disclosedToProspectiveBuyers equals true
+  definition subjectToConfidentialityInTransaction equals true
+
+# --- Cross-Border Transfers ---
+
+scope DisclosureCrossBorderTransfers =
+  input dataSubjectInEEA : Boolean
+  input dataSubjectInUK : Boolean
+  output dataMayBeTransferredGlobally : Boolean
+  output appropriateSafeguardsApplied : Boolean
+  output transferMechanismsUsed : Boolean
+
+  definition dataMayBeTransferredGlobally equals true
+  definition appropriateSafeguardsApplied equals true
+  definition transferMechanismsUsed equals
+    dataSubjectInEEA or dataSubjectInUK or
+    not dataSubjectInEEA and not dataSubjectInUK
+
+# --- Social Media Integration ---
+
+scope DisclosureSocialMedia =
+  output sharedWithSocialMediaPlatforms : Boolean
+  output sharedWhenUsingSocialMediaLogin : Boolean
+  output subjectToSocialMediaPrivacyPolicy : Boolean
+
+  definition sharedWithSocialMediaPlatforms equals true
+  definition sharedWhenUsingSocialMediaLogin equals true
+  definition subjectToSocialMediaPrivacyPolicy equals true
+
+# --- Disclosure for Debt Collection ---
+
+scope DisclosureDebtCollection =
+  output sharedWithDebtCollectionAgencies : Boolean
+  output sharedForCreditAssessment : Boolean
+  output limitedToAmountOwedAndContactInfo : Boolean
+
+  definition sharedWithDebtCollectionAgencies equals true
+  definition sharedForCreditAssessment equals true
+  definition limitedToAmountOwedAndContactInfo equals true

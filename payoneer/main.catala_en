@@ -1,0 +1,30 @@
+# Payoneer Privacy Policy
+# Last updated: May 2026
+# Source: https://www.payoneer.com/privacy-policy/
+# Translated into Catala
+
+include "declarations.catala_en"
+include "section_01_general.catala_en"
+include "section_02_collection.catala_en"
+include "section_03_use.catala_en"
+include "section_04_disclosure.catala_en"
+include "section_05_storage.catala_en"
+include "section_06_changes.catala_en"
+include "section_07_automated_decisions.catala_en"
+include "section_08_requests.catala_en"
+include "section_09_contact.catala_en"
+include "section_10_governing_law.catala_en"
+include "section_11_data_retention.catala_en"
+include "appendix_01_eea_uk_gdpr.catala_en"
+include "appendix_02_australia.catala_en"
+include "appendix_03_california_ccpa.catala_en"
+include "appendix_04_brazil_lgpd.catala_en"
+include "appendix_05_china_pipl.catala_en"
+include "appendix_06_hong_kong_pdpo.catala_en"
+include "appendix_07_japan.catala_en"
+include "appendix_08_south_africa_popia.catala_en"
+include "appendix_09_singapore_pdpa.catala_en"
+include "appendix_10_korea_pipa.catala_en"
+include "appendix_11_uk.catala_en"
+include "appendix_12_india.catala_en"
+include "appendix_13_canada.catala_en"

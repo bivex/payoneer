@@ -1,0 +1,139 @@
+# Payoneer Privacy Policy - Section 3: How and Why We Use Personal Data
+# Last updated: May 2026
+
+# --- Service Provision ---
+
+scope UseServiceProvision =
+  output usedForAccountOpening : Boolean
+  output usedForKYCVerification : Boolean
+  output usedForTransactionProcessing : Boolean
+  output usedForPaymentProcessing : Boolean
+  output usedForCustomerSupport : Boolean
+
+  definition usedForAccountOpening equals true
+  definition usedForKYCVerification equals true
+  definition usedForTransactionProcessing equals true
+  definition usedForPaymentProcessing equals true
+  definition usedForCustomerSupport equals true
+
+# --- Security and Fraud Prevention ---
+
+scope UseSecurityFraudPrevention =
+  output usedForFraudPrevention : Boolean
+  output usedForRiskAssessment : Boolean
+  output usedForSecurityPurposes : Boolean
+  output usedForAntiMoneyLaundering : Boolean
+  output usedForSanctionsScreening : Boolean
+  output usedForIdentityVerification : Boolean
+
+  definition usedForFraudPrevention equals true
+  definition usedForRiskAssessment equals true
+  definition usedForSecurityPurposes equals true
+  definition usedForAntiMoneyLaundering equals true
+  definition usedForSanctionsScreening equals true
+  definition usedForIdentityVerification equals true
+
+# --- Legal and Regulatory Compliance ---
+
+scope UseLegalCompliance =
+  output usedForLegalCompliance : Boolean
+  output usedForRegulatoryReporting : Boolean
+  output usedForTaxReporting : Boolean
+  output usedForLawEnforcementRequests : Boolean
+  output usedForCourtOrders : Boolean
+
+  definition usedForLegalCompliance equals true
+  definition usedForRegulatoryReporting equals true
+  definition usedForTaxReporting equals true
+  definition usedForLawEnforcementRequests equals true
+  definition usedForCourtOrders equals true
+
+# --- Marketing and Communications ---
+
+scope UseMarketing =
+  input hasMarketingConsent : Boolean
+  output usedForMarketingCommunications : Boolean
+  output usedForProductUpdates : Boolean
+  output usedForPromotionalOffers : Boolean
+  output marketingRequiresConsent : Boolean
+  output canOptOutAtAnyTime : Boolean
+
+  definition usedForMarketingCommunications equals hasMarketingConsent
+  definition usedForProductUpdates equals true
+  definition usedForPromotionalOffers equals hasMarketingConsent
+  definition marketingRequiresConsent equals true
+  definition canOptOutAtAnyTime equals true
+
+# --- Product Improvement ---
+
+scope UseProductImprovement =
+  output usedForAnalytics : Boolean
+  output usedForProductImprovement : Boolean
+  output usedForServiceEnhancement : Boolean
+  output usedForUserExperienceOptimization : Boolean
+
+  definition usedForAnalytics equals true
+  definition usedForProductImprovement equals true
+  definition usedForServiceEnhancement equals true
+  definition usedForUserExperienceOptimization equals true
+
+# --- Credit Assessment ---
+
+scope UseCreditAssessment =
+  output usedForCreditAssessment : Boolean
+  output usedForDebtCollection : Boolean
+  output sharedWithCreditReferenceAgencies : Boolean
+
+  definition usedForCreditAssessment equals true
+  definition usedForDebtCollection equals true
+  definition sharedWithCreditReferenceAgencies equals true
+
+# --- Profiling ---
+
+scope UseProfiling =
+  output usedForProfiling : Boolean
+  output usedForAutomatedDecisionMaking : Boolean
+  output usedForRiskScoring : Boolean
+
+  definition usedForProfiling equals true
+  definition usedForAutomatedDecisionMaking equals true
+  definition usedForRiskScoring equals true
+
+# --- Communication ---
+
+scope UseCommunication =
+  output usedForServiceNotifications : Boolean
+  output usedForAccountAlerts : Boolean
+  output usedForSecurityAlerts : Boolean
+  output usedForTermsUpdateNotifications : Boolean
+
+  definition usedForServiceNotifications equals true
+  definition usedForAccountAlerts equals true
+  definition usedForSecurityAlerts equals true
+  definition usedForTermsUpdateNotifications equals true
+
+# --- Cookies Usage Purposes ---
+
+scope UseCookiesPurposes =
+  output cookiesForSiteFunctionality : Boolean
+  output cookiesForAnalytics : Boolean
+  output cookiesForPersonalization : Boolean
+  output cookiesForAdvertising : Boolean
+  output cookiesForThirdPartyServices : Boolean
+
+  definition cookiesForSiteFunctionality equals true
+  definition cookiesForAnalytics equals true
+  definition cookiesForPersonalization equals true
+  definition cookiesForAdvertising equals true
+  definition cookiesForThirdPartyServices equals true
+
+# --- Purpose Limitation ---
+
+scope UsePurposeLimitation =
+  output usedOnlyForSpecifiedPurposes : Boolean
+  output newPurposeRequiresConsentOrLawfulBasis : Boolean
+  output compatiblePurposeAssessmentPerformed : Boolean
+
+  definition usedOnlyForSpecifiedPurposes equals true
+  definition newPurposeRequiresConsentOrLawfulBasis equals true
+  definition compatiblePurposeAssessmentPerformed equals true

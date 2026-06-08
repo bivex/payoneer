@@ -1,0 +1,56 @@
+# Payoneer Privacy Policy - Section 10: Governing Law
+# Last updated: May 2026
+
+# --- General Governing Law ---
+
+scope GoverningLawGeneral =
+  output governedByApplicableLaw : Boolean
+  output jurisdictionSpecificAppendicesApply : Boolean
+  output userAgreementTermsAlsoApply : Boolean
+
+  definition governedByApplicableLaw equals true
+  definition jurisdictionSpecificAppendicesApply equals true
+  definition userAgreementTermsAlsoApply equals true
+
+# --- EU/EEA Governing Law ---
+
+scope GoverningLawEU =
+  input dataSubjectInEEA : Boolean
+  output gdprApplies : Boolean
+  output malteseLawApplies : Boolean
+  output malteseDPAHasJurisdiction : Boolean
+
+  definition gdprApplies equals dataSubjectInEEA
+  definition malteseLawApplies equals dataSubjectInEEA
+  definition malteseDPAHasJurisdiction equals dataSubjectInEEA
+
+# --- UK Governing Law ---
+
+scope GoverningLawUK =
+  input dataSubjectInUK : Boolean
+  output ukGDRPApplies : Boolean
+  output icoHasJurisdiction : Boolean
+
+  definition ukGDRPApplies equals dataSubjectInUK
+  definition icoHasJurisdiction equals dataSubjectInUK
+
+# --- US Governing Law ---
+
+scope GoverningLawUS =
+  input dataSubjectInUS : Boolean
+  output applicableUSFederalAndStateLawsApply : Boolean
+  output ccpaAppliesIfCaliforniaResident : Boolean
+
+  definition applicableUSFederalAndStateLawsApply equals dataSubjectInUS
+  definition ccpaAppliesIfCaliforniaResident equals dataSubjectInUS
+
+# --- Dispute Resolution ---
+
+scope GoverningLawDisputeResolution =
+  output disputesResolvedThroughArbitrationOrCourt : Boolean
+  output classActionWaiverMayApply : Boolean
+  output jurisdictionSpecificResolutionMayVary : Boolean
+
+  definition disputesResolvedThroughArbitrationOrCourt equals true
+  definition classActionWaiverMayApply equals true
+  definition jurisdictionSpecificResolutionMayVary equals true

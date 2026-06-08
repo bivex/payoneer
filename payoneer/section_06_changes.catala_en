@@ -1,0 +1,55 @@
+# Payoneer Privacy Policy - Section 6: Changes to Privacy Policy
+# Last updated: May 2026
+
+# --- Right to Change ---
+
+scope ChangesRightToChange =
+  output payoneerMayUpdatePrivacyPolicy : Boolean
+  output changesPostedOnWebsite : Boolean
+  output changesEffectiveWhenPosted : Boolean
+
+  definition payoneerMayUpdatePrivacyPolicy equals true
+  definition changesPostedOnWebsite equals true
+  definition changesEffectiveWhenPosted equals true
+
+# --- Material Changes ---
+
+scope ChangesMaterialChanges =
+  input isMaterialChange : Boolean
+  output willProvideAdvanceNotice : Boolean
+  output mayNotifyViaEmail : Boolean
+  output mayNotifyViaWebsiteBanner : Boolean
+  output mayNotifyViaAccountMessage : Boolean
+
+  definition willProvideAdvanceNotice equals isMaterialChange
+  definition mayNotifyViaEmail equals isMaterialChange
+  definition mayNotifyViaWebsiteBanner equals isMaterialChange
+  definition mayNotifyViaAccountMessage equals isMaterialChange
+
+# --- Continued Use as Acceptance ---
+
+scope ChangesContinuedUse =
+  output continuedUseConstitutesAcceptance : Boolean
+  output reviewDateIndicatedAtTopOfPolicy : Boolean
+
+  definition continuedUseConstitutesAcceptance equals true
+  definition reviewDateIndicatedAtTopOfPolicy equals true
+
+# --- Disagreement with Changes ---
+
+scope ChangesDisagreement =
+  input disagreesWithChanges : Boolean
+  output mayCloseAccount : Boolean
+  output mustStopUsingServices : Boolean
+
+  definition mayCloseAccount equals disagreesWithChanges
+  definition mustStopUsingServices equals disagreesWithChanges
+
+# --- Version History ---
+
+scope ChangesVersionHistory =
+  output lastUpdatedDateAvailable : Boolean
+  output previousVersionsMayBeAvailable : Boolean
+
+  definition lastUpdatedDateAvailable equals true
+  definition previousVersionsMayBeAvailable equals true

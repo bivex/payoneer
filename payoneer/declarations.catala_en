@@ -1,0 +1,346 @@
+# Payoneer Privacy Policy - Type Declarations
+# Last updated: May 2026
+# Source: https://www.payoneer.com/privacy-policy/
+
+# --- Data Subject Categories ---
+
+declaration enumeration DataSubjectCategory =
+  -- Customer
+  -- ProspectiveCustomer
+  -- FormerCustomer
+  -- WebsiteVisitor
+  -- BusinessContact
+  -- Employee
+  -- JobApplicant
+  -- Contractor
+  -- AuthorizedRepresentative
+
+# --- Personal Data Categories ---
+
+declaration enumeration PersonalDataCategory =
+  -- IdentityData
+  -- ContactData
+  -- FinancialData
+  -- TransactionData
+  -- TechnicalData
+  -- UsageData
+  -- MarketingData
+  -- EmploymentData
+  -- EducationData
+  -- GovernmentIdData
+  -- BiometricData
+  -- GeolocationData
+  -- DeviceData
+  -- CookieData
+  -- CommunicationData
+  -- TaxData
+  -- BusinessData
+  -- SocialMediaData
+  -- ReferralData
+  -- SurveyData
+  -- CustomerSupportData
+  -- RiskAssessmentData
+  -- ComplianceData
+  -- FraudPreventionData
+  -- CreditAssessmentData
+  -- profilingData
+
+# --- Processing Purposes ---
+
+declaration enumeration ProcessingPurpose =
+  -- ServiceProvision
+  -- AccountManagement
+  -- KYCVerification
+  -- TransactionProcessing
+  -- CustomerSupport
+  -- FraudPrevention
+  -- RiskAssessment
+  -- Security
+  -- LegalCompliance
+  -- RegulatoryReporting
+  -- Marketing
+  -- ProductImprovement
+  -- Analytics
+  -- Profiling
+  -- CreditAssessment
+  -- DebtCollection
+  -- DisputeResolution
+  -- TaxReporting
+  -- ThirdPartyPaymentProcessing
+  -- Communication
+  -- CookieProcessing
+  -- AutomatedDecisionMaking
+
+# --- Legal Bases (GDPR) ---
+
+declaration enumeration GDPRLegalBasis =
+  -- Consent
+  -- ContractualNecessity
+  -- LegalObligation
+  -- VitalInterests
+  -- PublicInterest
+  -- LegitimateInterest
+  -- ExplicitConsentSpecialCategory
+
+# --- CCPA Legal Bases ---
+
+declaration enumeration CCPAProcessingPurpose =
+  -- BusinessPurpose
+  -- SaleOfPersonalInformation
+  -- ShareForCrossContextBehavioralAdvertising
+  -- ProfilingInFurtheranceOfDecisions
+
+# --- Data Recipient Categories ---
+
+declaration enumeration DataRecipientCategory =
+  -- PayoneerAffiliates
+  -- ServiceProviders
+  -- PaymentNetworks
+  -- BankingPartners
+  -- RegulatoryAuthorities
+  -- LawEnforcement
+  -- FraudPreventionAgencies
+  -- CreditReferenceAgencies
+  -- BusinessPartners
+  -- MarketingPartners
+  -- AnalyticsProviders
+  -- CloudProviders
+  -- ITServiceProvider
+  -- CustomerSupportProvider
+  -- ProfessionalAdvisors
+  -- ProspectiveBuyerOrSeller
+  -- ThirdPartyPayerOrPayee
+  -- SocialMediaPlatforms
+  -- IdentityVerificationProviders
+
+# --- Retention Periods ---
+
+declaration enumeration RetentionBasis =
+  -- DurationOfRelationship
+  -- LegalRequirement
+  -- RegulatoryRequirement
+  -- DisputeResolutionPeriod
+  -- StatuteOfLimitations
+  -- ConsentPeriod
+  -- BusinessNeed
+
+# --- Jurisdictions ---
+
+declaration enumeration DataProtectionJurisdiction =
+  -- EEA
+  -- UK
+  -- Australia
+  -- California
+  -- Brazil
+  -- China
+  -- HongKong
+  -- Japan
+  -- SouthAfrica
+  -- Singapore
+  -- Korea
+  -- India
+  -- Canada
+  -- UnitedStates
+
+# --- Data Transfer Mechanisms ---
+
+declaration enumeration DataTransferMechanism =
+  -- AdequacyDecision
+  -- StandardContractualClauses
+  -- BindingCorporateRules
+  -- Consent
+  -- PublicInterestException
+  -- ContractualNecessity
+  -- LegalClaimException
+  -- PIPLCrossBorderTransferMechanism
+  -- APECPRPSystem
+  -- PIPANationalSecurityException
+  -- PIDARestrictedTransferConsent
+
+# --- Rights ---
+
+declaration enumeration DataSubjectRight =
+  -- Access
+  -- Rectification
+  -- Erasure
+  -- RestrictionOfProcessing
+  -- DataPortability
+  -- Objection
+  -- WithdrawConsent
+  -- AutomatedDecisionMakingRights
+  -- NonDiscrimination
+  -- LimitProcessing
+  -- KnowProcessingActivities
+  -- DeletePersonalInformation
+  -- OptOutOfSale
+  -- OptOutOfSharing
+  -- CorrectInaccuracy
+
+# --- Automated Decision Types ---
+
+declaration enumeration AutomatedDecisionType =
+  -- CreditAssessment
+  -- FraudDetection
+  -- RiskScoring
+  -- AccountLimitation
+  -- TransactionBlocking
+  -- KYCVerificationResult
+  -- ProfilingForMarketing
+
+# --- Cookie Types ---
+
+declaration enumeration CookieType =
+  -- StrictlyNecessary
+  -- Performance
+  -- Functional
+  -- Targeting
+  -- Analytical
+  -- SocialMedia
+  -- Advertising
+
+# --- Collection Methods ---
+
+declaration enumeration CollectionMethod =
+  -- DirectlyFromDataSubject
+  -- FromThirdParties
+  -- AutomaticallyFromDevices
+  -- FromCookiesAndSimilarTech
+  -- FromPublicSources
+  -- FromGovernmentDatabases
+  -- FromSocialMedia
+  -- FromBusinessPartners
+  -- FromPaymentNetworks
+
+# --- Special Categories of Data ---
+
+declaration enumeration SpecialDataCategory =
+  -- RacialOrEthnicOrigin
+  -- PoliticalOpinions
+  -- ReligiousBeliefs
+  -- TradeUnionMembership
+  -- GeneticData
+  -- BiometricDataForIdentification
+  -- HealthData
+  -- SexLifeOrOrientation
+  -- CriminalConvictions
+
+# --- Sensitivity Levels ---
+
+declaration enumeration DataSensitivityLevel =
+  -- NonSensitive
+  -- Sensitive
+  -- SpecialCategoryGDPR
+  -- PreciseGeolocation
+  -- GovernmentIdentifier
+  -- FinancialAccountData
+
+# --- CCPA Notice Categories ---
+
+declaration enumeration CCPANoticeCategory =
+  -- AtOrBeforeCollection
+  -- PrivacyPolicy
+  -- NoticeAtCollection
+  -- RightToKnowDisclosure
+
+# --- PIPL Processing Bases ---
+
+declaration enumeration PIPLLegalBasis =
+  -- Consent
+  -- ContractualNecessity
+  -- LegalObligation
+  -- PublicHealthEmergency
+  -- PublicInterest
+  -- PublicSourceProcessing
+
+# --- LGPD Legal Bases ---
+
+declaration enumeration LGPDLegalBasis =
+  -- Consent
+  -- ContractualNecessity
+  -- LegalObligation
+  -- PublicPolicy
+  -- Research
+  -- LegitimateInterest
+  -- CreditProtection
+  -- ExerciseOfRights
+  -- ProtectionOfLife
+
+# --- Australian Privacy Principles ---
+
+declaration enumeration AustralianAPPReason =
+  -- APP6Consent
+  -- APP6RelatedPurpose
+  -- APP6DirectMarketing
+  -- APP6ReasonableExpectation
+  -- APP6RequiredByLaw
+  -- APP6SafetyOrLessSerious
+
+# --- Numeric Structures ---
+
+declaration structure DataRetentionPeriod =
+  data purpose : RetentionBasis
+  data minimumYears : Integer
+  data maximumYears : Integer
+  data legalRequirementYears : Integer
+
+declaration structure CCPADisclosureDetail =
+  data purpose : ProcessingPurpose
+  data categoriesOfPersonalData : PersonalDataCategory list
+  data categoriesOfRecipients : DataRecipientCategory list
+  data soldInLast12Months : Boolean
+  data sharedInLast12Months : Boolean
+
+declaration structure AutomatedDecisionImpact =
+  data decisionType : AutomatedDecisionType
+  data producesLegalEffects : Boolean
+  data significantlyAffectsDataSubject : Boolean
+  data humanInterventionAvailable : Boolean
+  data rightToContest : Boolean
+
+declaration structure CookieConsentRule =
+  data cookieType : CookieType
+  data requiresConsent : Boolean
+  data canBeRefused : Boolean
+  data durationMaximumDays : Integer
+
+declaration structure CrossBorderTransferRule =
+  data destinationJurisdiction : DataProtectionJurisdiction
+  data mechanism : DataTransferMechanism
+  data requiresAdditionalSafeguards : Boolean
+  data supplementaryMeasuresRequired : Boolean
+
+declaration structure DataSubjectRequestTimeline =
+  data initialResponseDays : Integer
+  data extensionDays : Integer
+  data extensionReason : String
+  data identityVerificationRequired : Boolean
+
+declaration structure GDPRRightAvailability =
+  data right : DataSubjectRight
+  data appliesToDataSubject : Boolean
+  data limitationReason : String
+  data feeMayApply : Boolean
+
+declaration structure PIPLCrossBorderCondition =
+  data passingSecurityAssessment : Boolean
+  data obtainingPersonalInformationProtectionCertification : Boolean
+  data concludingStandardContract : Boolean
+  data otherConditionsSpecifiedByCAC : Boolean
+
+declaration structure PIPASensitiveDataRule =
+  data requiresExplicitConsent : Boolean
+  data purposeStrictlyNecessary : Boolean
+  data additionalSafeguards : Boolean
+
+declaration structure LGPDSensitiveDataRule =
+  data requiresSpecificExplicitConsent : Boolean
+  data requiresAnonymization : Boolean
+  data healthDataOnlyForSpecificPurposes : Boolean
+  data creditProtectionException : Boolean
+
+declaration structure CreditReportingData =
+  data collected : Boolean
+  data usedForCreditAssessment : Boolean
+  data retainedForYears : Integer
+  data accessibleToDataSubject : Boolean
+  data correctionAvailable : Boolean

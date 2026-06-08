@@ -1,0 +1,126 @@
+# Payoneer Privacy Policy - Section 8: Requests Regarding Personal Data
+# Last updated: May 2026
+
+# --- General Request Rights ---
+
+scope RequestsGeneralRights =
+  output rightToAccess : Boolean
+  output rightToRectification : Boolean
+  output rightToErasure : Boolean
+  output rightToRestrictionOfProcessing : Boolean
+  output rightToDataPortability : Boolean
+  output rightToObject : Boolean
+  output rightToWithdrawConsent : Boolean
+
+  definition rightToAccess equals true
+  definition rightToRectification equals true
+  definition rightToErasure equals true
+  definition rightToRestrictionOfProcessing equals true
+  definition rightToDataPortability equals true
+  definition rightToObject equals true
+  definition rightToWithdrawConsent equals true
+
+# --- Access Right Details ---
+
+scope RequestsAccessDetails =
+  output entitledToCopyOfPersonalData : Boolean
+  output entitledToProcessingDetails : Boolean
+  output entitledToPurposesOfProcessing : Boolean
+  output entitledToRecipientsOfData : Boolean
+  output entitledToRetentionPeriod : Boolean
+  output entitledToSourceOfData : Boolean
+  output entitledToExistenceOfAutomatedDecisionMaking : Boolean
+
+  definition entitledToCopyOfPersonalData equals true
+  definition entitledToProcessingDetails equals true
+  definition entitledToPurposesOfProcessing equals true
+  definition entitledToRecipientsOfData equals true
+  definition entitledToRetentionPeriod equals true
+  definition entitledToSourceOfData equals true
+  definition entitledToExistenceOfAutomatedDecisionMaking equals true
+
+# --- Erasure Right Details ---
+
+scope RequestsErasureDetails =
+  input dataNoLongerNecessary : Boolean
+  input consentWithdrawn : Boolean
+  input objectToProcessing : Boolean
+  input processingUnlawful : Boolean
+  output entitledToErasure : Boolean
+  output erasureMayBeRefusedForLegalReasons : Boolean
+
+  definition entitledToErasure equals
+    dataNoLongerNecessary or
+    consentWithdrawn or
+    objectToProcessing or
+    processingUnlawful
+  definition erasureMayBeRefusedForLegalReasons equals true
+
+# --- Data Portability Details ---
+
+scope RequestsPortabilityDetails =
+  input dataSubjectInEEAOrUK : Boolean
+  input processingBasedOnConsentOrContract : Boolean
+  input processingIsAutomated : Boolean
+  output entitledToDataPortability : Boolean
+  output entitledToDirectTransmission : Boolean
+
+  definition entitledToDataPortability equals
+    dataSubjectInEEAOrUK and
+    processingBasedOnConsentOrContract and
+    processingIsAutomated
+  definition entitledToDirectTransmission equals
+    entitledToDataPortability
+
+# --- Right to Object ---
+
+scope RequestsObjectDetails =
+  input processingBasedOnLegitimateInterest : Boolean
+  output entitledToObject : Boolean
+  output mustCeaseProcessingUnlessCompellingReasons : Boolean
+  output entitledToObjectToDirectMarketing : Boolean
+  output directMarketingObjectionAbsolute : Boolean
+
+  definition entitledToObject equals processingBasedOnLegitimateInterest
+  definition mustCeaseProcessingUnlessCompellingReasons equals processingBasedOnLegitimateInterest
+  definition entitledToObjectToDirectMarketing equals true
+  definition directMarketingObjectionAbsolute equals true
+
+# --- How to Submit Requests ---
+
+scope RequestsSubmission =
+  output submitThroughPrivacyPortal : Boolean
+  output submitViaEmail : Boolean
+  output submitViaCustomerSupport : Boolean
+  output identityVerificationRequired : Boolean
+
+  definition submitThroughPrivacyPortal equals true
+  definition submitViaEmail equals true
+  definition submitViaCustomerSupport equals true
+  definition identityVerificationRequired equals true
+
+# --- Request Response Timeline ---
+
+scope RequestsTimeline =
+  output initialResponseWithin30Days : Boolean
+  output extensionPossibleUpTo60Days : Boolean
+  output extensionNotificationRequired : Boolean
+  output feeGenerallyNotCharged : Boolean
+  output feeMayApplyForExcessiveRequests : Boolean
+
+  definition initialResponseWithin30Days equals true
+  definition extensionPossibleUpTo60Days equals true
+  definition extensionNotificationRequired equals true
+  definition feeGenerallyNotCharged equals true
+  definition feeMayApplyForExcessiveRequests equals true
+
+# --- Right to Lodge Complaint ---
+
+scope RequestsComplaint =
+  output rightToLodgeComplaintWithDPA : Boolean
+  output canLodgeComplaintInMemberStateOfResidence : Boolean
+  output canLodgeComplaintInMemberStateOfAllegedViolation : Boolean
+
+  definition rightToLodgeComplaintWithDPA equals true
+  definition canLodgeComplaintInMemberStateOfResidence equals true
+  definition canLodgeComplaintInMemberStateOfAllegedViolation equals true

@@ -1,0 +1,90 @@
+# Payoneer Privacy Policy - Section 7: Automated Decision Making
+# Last updated: May 2026
+
+# --- Use of Automated Decisions ---
+
+scope AutomatedDecisionsUse =
+  output usesAutomatedDecisionMaking : Boolean
+  output includesProfiling : Boolean
+  output includesAlgorithmicAnalysis : Boolean
+  output includesMachineLearning : Boolean
+
+  definition usesAutomatedDecisionMaking equals true
+  definition includesProfiling equals true
+  definition includesAlgorithmicAnalysis equals true
+  definition includesMachineLearning equals true
+
+# --- Types of Automated Decisions ---
+
+scope AutomatedDecisionTypes =
+  output usedForCreditAssessment : Boolean
+  output usedForFraudDetection : Boolean
+  output usedForRiskScoring : Boolean
+  output usedForAccountLimitation : Boolean
+  output usedForTransactionMonitoring : Boolean
+  output usedForKYCVerification : Boolean
+
+  definition usedForCreditAssessment equals true
+  definition usedForFraudDetection equals true
+  definition usedForRiskScoring equals true
+  definition usedForAccountLimitation equals true
+  definition usedForTransactionMonitoring equals true
+  definition usedForKYCVerification equals true
+
+# --- Legal Effects ---
+
+scope AutomatedDecisionsLegalEffects =
+  output mayProduceLegalEffects : Boolean
+  output maySignificantlyAffectDataSubject : Boolean
+  output includesAccountSuspension : Boolean
+  output includesTransactionBlocking : Boolean
+  output includesCreditDecisions : Boolean
+
+  definition mayProduceLegalEffects equals true
+  definition maySignificantlyAffectDataSubject equals true
+  definition includesAccountSuspension equals true
+  definition includesTransactionBlocking equals true
+  definition includesCreditDecisions equals true
+
+# --- Right to Human Intervention ---
+
+scope AutomatedDecisionsHumanIntervention =
+  input dataSubjectRequestsHumanReview : Boolean
+  input dataSubjectInEEA : Boolean
+  output entitledToHumanIntervention : Boolean
+  output entitledToExpressPointOfView : Boolean
+  output entitledToContestDecision : Boolean
+
+  definition entitledToHumanIntervention equals
+    dataSubjectRequestsHumanReview and dataSubjectInEEA
+  definition entitledToExpressPointOfView equals
+    dataSubjectRequestsHumanReview and dataSubjectInEEA
+  definition entitledToContestDecision equals
+    dataSubjectRequestsHumanReview and dataSubjectInEEA
+
+# --- Meaningful Information About Logic ---
+
+scope AutomatedDecisionsTransparency =
+  input dataSubjectRequestsInformation : Boolean
+  output mustProvideMeaningfulInformation : Boolean
+  output mustExplainSignificanceAndEnvisagedConsequences : Boolean
+
+  definition mustProvideMeaningfulInformation equals dataSubjectRequestsInformation
+  definition mustExplainSignificanceAndEnvisagedConsequences equals dataSubjectRequestsInformation
+
+# --- Data Used for Automated Decisions ---
+
+scope AutomatedDecisionsDataUsed =
+  output usesTransactionHistory : Boolean
+  output usesIdentityData : Boolean
+  output usesBehavioralPatterns : Boolean
+  output usesDeviceData : Boolean
+  output usesGeolocationData : Boolean
+  output usesCreditData : Boolean
+
+  definition usesTransactionHistory equals true
+  definition usesIdentityData equals true
+  definition usesBehavioralPatterns equals true
+  definition usesDeviceData equals true
+  definition usesGeolocationData equals true
+  definition usesCreditData equals true

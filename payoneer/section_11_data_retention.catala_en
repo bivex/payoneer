@@ -1,0 +1,97 @@
+# Payoneer Privacy Policy - Section 11: Data Retention
+# Last updated: May 2026
+
+# --- General Retention Principles ---
+
+scope RetentionGeneralPrinciples =
+  output retainedOnlyAsLongAsNecessary : Boolean
+  output retentionPeriodVariesByPurpose : Boolean
+  output retentionConsidersLegalObligations : Boolean
+  output retentionConsidersRegulatoryRequirements : Boolean
+
+  definition retainedOnlyAsLongAsNecessary equals true
+  definition retentionPeriodVariesByPurpose equals true
+  definition retentionConsidersLegalObligations equals true
+  definition retentionConsidersRegulatoryRequirements equals true
+
+# --- Retention for Account Management ---
+
+scope RetentionAccountManagement =
+  output retainedForDurationOfAccountRelationship : Boolean
+  output retainedAfterAccountClosureForLegalReasons : Boolean
+  output accountDataRetainedMinimum5YearsAfterClosure : Boolean
+
+  definition retainedForDurationOfAccountRelationship equals true
+  definition retainedAfterAccountClosureForLegalReasons equals true
+  definition accountDataRetainedMinimum5YearsAfterClosure equals true
+
+# --- Retention for Legal Compliance ---
+
+scope RetentionLegalCompliance =
+  output retainedForAntiMoneyLaundering : Boolean
+  output amlRetentionMinimum5Years : Boolean
+  output retainedForTaxReporting : Boolean
+  output taxRetentionMinimum7Years : Boolean
+  output retainedForRegulatoryExaminations : Boolean
+
+  definition retainedForAntiMoneyLaundering equals true
+  definition amlRetentionMinimum5Years equals true
+  definition retainedForTaxReporting equals true
+  definition taxRetentionMinimum7Years equals true
+  definition retainedForRegulatoryExaminations equals true
+
+# --- Retention for Dispute Resolution ---
+
+scope RetentionDisputeResolution =
+  output retainedDuringPendingDisputes : Boolean
+  output retainedForStatuteOfLimitationsPeriod : Boolean
+  output statuteOfLimitationsVariesByJurisdiction : Boolean
+
+  definition retainedDuringPendingDisputes equals true
+  definition retainedForStatuteOfLimitationsPeriod equals true
+  definition statuteOfLimitationsVariesByJurisdiction equals true
+
+# --- Retention for Fraud Prevention ---
+
+scope RetentionFraudPrevention =
+  output retainedForFraudPreventionPurposes : Boolean
+  output retainedForSecurityPurposes : Boolean
+  output retentionPeriodBasedOnRiskAssessment : Boolean
+
+  definition retainedForFraudPreventionPurposes equals true
+  definition retainedForSecurityPurposes equals true
+  definition retentionPeriodBasedOnRiskAssessment equals true
+
+# --- Retention for Marketing ---
+
+scope RetentionMarketing =
+  input hasMarketingConsent : Boolean
+  output retainedForMarketingUntilConsentWithdrawn : Boolean
+  output deletedUponConsentWithdrawal : Boolean
+
+  definition retainedForMarketingUntilConsentWithdrawn equals hasMarketingConsent
+  definition deletedUponConsentWithdrawal equals not hasMarketingConsent
+
+# --- Retention for Cookies ---
+
+scope RetentionCookies =
+  output cookieRetentionVariesByType : Boolean
+  output strictlyNecessaryCookiesSessionBased : Boolean
+  output analyticalCookiesUpTo13Months : Boolean
+  output advertisingCookiesUpTo13Months : Boolean
+
+  definition cookieRetentionVariesByType equals true
+  definition strictlyNecessaryCookiesSessionBased equals true
+  definition analyticalCookiesUpTo13Months equals true
+  definition advertisingCookiesUpTo13Months equals true
+
+# --- Deletion and Anonymization ---
+
+scope RetentionDeletionAnonymization =
+  output dataDeletedWhenNoLongerNeeded : Boolean
+  output dataAnonymizedForStatisticalPurposes : Boolean
+  output anonymizedDataMayBeRetainedIndefinitely : Boolean
+
+  definition dataDeletedWhenNoLongerNeeded equals true
+  definition dataAnonymizedForStatisticalPurposes equals true
+  definition anonymizedDataMayBeRetainedIndefinitely equals true

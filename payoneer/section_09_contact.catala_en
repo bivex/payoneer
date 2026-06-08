@@ -1,0 +1,61 @@
+# Payoneer Privacy Policy - Section 9: Contact Information
+# Last updated: May 2026
+
+# --- Primary Contact ---
+
+scope ContactPrimary =
+  output dataControllerIsPayoneerInc : Boolean
+  output addressInNewYork : Boolean
+  output privacyEmailAvailable : Boolean
+  output customerSupportAvailable : Boolean
+
+  definition dataControllerIsPayoneerInc equals true
+  definition addressInNewYork equals true
+  definition privacyEmailAvailable equals true
+  definition customerSupportAvailable equals true
+
+# --- EU Representative ---
+
+scope ContactEURepresentative =
+  input dataSubjectInEEA : Boolean
+  output euRepresentativeAvailable : Boolean
+  output euRepresentativeAddressInEU : Boolean
+  output canBeContactedForGDPRMatters : Boolean
+
+  definition euRepresentativeAvailable equals true
+  definition euRepresentativeAddressInEU equals true
+  definition canBeContactedForGDPRMatters equals dataSubjectInEEA
+
+# --- UK Representative ---
+
+scope ContactUKRepresentative =
+  input dataSubjectInUK : Boolean
+  output ukRepresentativeAvailable : Boolean
+  output ukRepresentativeAddressInUK : Boolean
+  output canBeContactedForUKDataProtectionMatters : Boolean
+
+  definition ukRepresentativeAvailable equals true
+  definition ukRepresentativeAddressInUK equals true
+  definition canBeContactedForUKDataProtectionMatters equals dataSubjectInUK
+
+# --- DPO Contact ---
+
+scope ContactDPO =
+  output dataProtectionOfficerAvailable : Boolean
+  output dpoContactableViaEmail : Boolean
+  output dpoContactableForGDPRRequests : Boolean
+
+  definition dataProtectionOfficerAvailable equals true
+  definition dpoContactableViaEmail equals true
+  definition dpoContactableForGDPRRequests equals true
+
+# --- Supervisory Authority ---
+
+scope ContactSupervisoryAuthority =
+  output dataSubjectCanContactDPA : Boolean
+  output malteseDPAForPayoneerEU : Boolean
+  output icoForPayoneerUK : Boolean
+
+  definition dataSubjectCanContactDPA equals true
+  definition malteseDPAForPayoneerEU equals true
+  definition icoForPayoneerUK equals true

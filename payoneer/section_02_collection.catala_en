@@ -1,0 +1,229 @@
+# Payoneer Privacy Policy - Section 2: How, When and What We Collect
+# Last updated: May 2026
+
+# --- Information Provided Directly ---
+
+scope CollectionDirectlyProvided =
+  output identityData : Boolean
+  output contactData : Boolean
+  output financialData : Boolean
+  output businessData : Boolean
+  output governmentIdData : Boolean
+  output employmentData : Boolean
+  output educationData : Boolean
+  output taxData : Boolean
+  output socialMediaData : Boolean
+  output referralData : Boolean
+  output communicationData : Boolean
+  output customerSupportData : Boolean
+
+  definition identityData equals true
+  definition contactData equals true
+  definition financialData equals true
+  definition businessData equals true
+  definition governmentIdData equals true
+  definition employmentData equals true
+  definition educationData equals true
+  definition taxData equals true
+  definition socialMediaData equals true
+  definition referralData equals true
+  definition communicationData equals true
+  definition customerSupportData equals true
+
+# --- Identity Data Details ---
+
+scope CollectionIdentityData =
+  output includesFullName : Boolean
+  output includesDateOfBirth : Boolean
+  output includesNationality : Boolean
+  output includesPhotograph : Boolean
+  output includesSignature : Boolean
+  output includesGender : Boolean
+
+  definition includesFullName equals true
+  definition includesDateOfBirth equals true
+  definition includesNationality equals true
+  definition includesPhotograph equals true
+  definition includesSignature equals true
+  definition includesGender equals true
+
+# --- Contact Data Details ---
+
+scope CollectionContactData =
+  output includesEmailAddress : Boolean
+  output includesPhoneNumber : Boolean
+  output includesMailingAddress : Boolean
+  output includesBillingAddress : Boolean
+
+  definition includesEmailAddress equals true
+  definition includesPhoneNumber equals true
+  definition includesMailingAddress equals true
+  definition includesBillingAddress equals true
+
+# --- Financial Data Details ---
+
+scope CollectionFinancialData =
+  output includesBankAccountDetails : Boolean
+  output includesPaymentCardDetails : Boolean
+  output includesTransactionHistory : Boolean
+  output includesBalanceInformation : Boolean
+  output includesCreditScoreData : Boolean
+
+  definition includesBankAccountDetails equals true
+  definition includesPaymentCardDetails equals true
+  definition includesTransactionHistory equals true
+  definition includesBalanceInformation equals true
+  definition includesCreditScoreData equals true
+
+# --- Government ID Data Details ---
+
+scope CollectionGovernmentIdData =
+  output includesPassportNumber : Boolean
+  output includesNationalIdNumber : Boolean
+  output includesDriversLicenseNumber : Boolean
+  output includesDocumentVerificationData : Boolean
+
+  definition includesPassportNumber equals true
+  definition includesNationalIdNumber equals true
+  definition includesDriversLicenseNumber equals true
+  definition includesDocumentVerificationData equals true
+
+# --- Information Collected Automatically ---
+
+scope CollectionAutomaticCollection =
+  output technicalData : Boolean
+  output usageData : Boolean
+  output deviceData : Boolean
+  output cookieData : Boolean
+  output geolocationData : Boolean
+
+  definition technicalData equals true
+  definition usageData equals true
+  definition deviceData equals true
+  definition cookieData equals true
+  definition geolocationData equals true
+
+# --- Technical Data Details ---
+
+scope CollectionTechnicalData =
+  output includesIPAddress : Boolean
+  output includesBrowserType : Boolean
+  output includesOperatingSystem : Boolean
+  output includesDeviceIdentifiers : Boolean
+  output includesPagesVisited : Boolean
+  output includesReferringURL : Boolean
+
+  definition includesIPAddress equals true
+  definition includesBrowserType equals true
+  definition includesOperatingSystem equals true
+  definition includesDeviceIdentifiers equals true
+  definition includesPagesVisited equals true
+  definition includesReferringURL equals true
+
+# --- Information from Third Parties ---
+
+scope CollectionFromThirdParties =
+  output fromGovernmentDatabases : Boolean
+  output fromBusinessPartners : Boolean
+  output fromPaymentNetworks : Boolean
+  output fromSocialMediaPlatforms : Boolean
+  output fromPublicSources : Boolean
+  output fromIdentityVerificationProviders : Boolean
+  output fromFraudPreventionAgencies : Boolean
+  output fromCreditReferenceAgencies : Boolean
+  output fromReferencingOrReferreedCustomers : Boolean
+
+  definition fromGovernmentDatabases equals true
+  definition fromBusinessPartners equals true
+  definition fromPaymentNetworks equals true
+  definition fromSocialMediaPlatforms equals true
+  definition fromPublicSources equals true
+  definition fromIdentityVerificationProviders equals true
+  definition fromFraudPreventionAgencies equals true
+  definition fromCreditReferenceAgencies equals true
+  definition fromReferencingOrReferreedCustomers equals true
+
+# --- Cookies and Tracking Technologies ---
+
+scope CollectionCookies =
+  output usesCookies : Boolean
+  output usesWebBeacons : Boolean
+  output usesPixelTags : Boolean
+  output usesLocalStorage : Boolean
+  output usesAnalyticsTools : Boolean
+
+  definition usesCookies equals true
+  definition usesWebBeacons equals true
+  definition usesPixelTags equals true
+  definition usesLocalStorage equals true
+  definition usesAnalyticsTools equals true
+
+# --- Cookie Types Used ---
+
+scope CollectionCookieTypes =
+  output strictlyNecessaryCookies : Boolean
+  output performanceCookies : Boolean
+  output functionalCookies : Boolean
+  output targetingCookies : Boolean
+  output analyticalCookies : Boolean
+  output socialMediaCookies : Boolean
+  output advertisingCookies : Boolean
+
+  definition strictlyNecessaryCookies equals true
+  definition performanceCookies equals true
+  definition functionalCookies equals true
+  definition targetingCookies equals true
+  definition analyticalCookies equals true
+  definition socialMediaCookies equals true
+  definition advertisingCookies equals true
+
+# --- Collection During Specific Activities ---
+
+scope CollectionDuringAccountOpening =
+  output collectedWhenOpeningAccount : Boolean
+  output includesKYCInformation : Boolean
+  output includesBusinessDocumentation : Boolean
+
+  definition collectedWhenOpeningAccount equals true
+  definition includesKYCInformation equals true
+  definition includesBusinessDocumentation equals true
+
+scope CollectionDuringTransactions =
+  output collectedDuringPaymentProcessing : Boolean
+  output includesTransactionDetails : Boolean
+  output includesSenderAndRecipientInfo : Boolean
+
+  definition collectedDuringPaymentProcessing equals true
+  definition includesTransactionDetails equals true
+  definition includesSenderAndRecipientInfo equals true
+
+scope CollectionDuringCustomerSupport =
+  output collectedDuringSupportInteractions : Boolean
+  output includesCallRecordings : Boolean
+  output includesChatLogs : Boolean
+  output includesEmailCorrespondence : Boolean
+
+  definition collectedDuringSupportInteractions equals true
+  definition includesCallRecordings equals true
+  definition includesChatLogs equals true
+  definition includesEmailCorrespondence equals true
+
+scope CollectionDuringMarketing =
+  output collectedForMarketingCommunications : Boolean
+  output includesMarketingPreferences : Boolean
+  output includesSurveyResponses : Boolean
+
+  definition collectedForMarketingCommunications equals true
+  definition includesMarketingPreferences equals true
+  definition includesSurveyResponses equals true
+
+# --- Children's Data ---
+
+scope CollectionChildrenData =
+  output servicesNotDirectedAtChildren : Boolean
+  output doesNotKnowinglyCollectFromChildrenUnder16 : Boolean
+  output parentalConsentRequiredIfCollectedInadvertently : Boolean
+
+  definition servicesNotDirectedAtChildren equals true
+  definition doesNotKnowinglyCollectFromChildrenUnder16 equals true
+  definition parentalConsentRequiredIfCollectedInadvertently equals true

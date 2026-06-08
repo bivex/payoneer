@@ -1,0 +1,58 @@
+# Payoneer Privacy Policy - Section 1: General
+# Last updated: May 2026
+
+# --- Policy Applicability ---
+
+scope PrivacyPolicyApplicability =
+  output appliesToPayoneerCustomers : Boolean
+  output appliesToPayoneerAffiliates : Boolean
+  output appliesToThirdPartyWebsites : Boolean
+  output incorporatesJurisdictionSpecificAppendices : Boolean
+
+  definition appliesToPayoneerCustomers equals true
+  definition appliesToPayoneerAffiliates equals true
+  definition appliesToThirdPartyWebsites equals false
+  definition incorporatesJurisdictionSpecificAppendices equals true
+
+# --- Payoneer Entity ---
+
+scope PayoneerDataController =
+  output payoneerIncIsController : Boolean
+  output locatedInNewYork : Boolean
+  output actsAsDataProcessorWhenProcessingForBusinessCustomers : Boolean
+  output businessCustomerIsControllerOfEndUserData : Boolean
+
+  definition payoneerIncIsController equals true
+  definition locatedInNewYork equals true
+  definition actsAsDataProcessorWhenProcessingForBusinessCustomers equals true
+  definition businessCustomerIsControllerOfEndUserData equals true
+
+# --- Definitions ---
+
+scope PrivacyPolicyDefinitions =
+  output personalDataIncludesIdentityData : Boolean
+  output personalDataIncludesFinancialData : Boolean
+  output personalDataIncludesTechnicalData : Boolean
+  output personalDataIncludesUsageData : Boolean
+  output dataSubjectIncludesCustomers : Boolean
+  output dataSubjectIncludesProspectiveCustomers : Boolean
+  output dataSubjectIncludesWebsiteVisitors : Boolean
+
+  definition personalDataIncludesIdentityData equals true
+  definition personalDataIncludesFinancialData equals true
+  definition personalDataIncludesTechnicalData equals true
+  definition personalDataIncludesUsageData equals true
+  definition dataSubjectIncludesCustomers equals true
+  definition dataSubjectIncludesProspectiveCustomers equals true
+  definition dataSubjectIncludesWebsiteVisitors equals true
+
+# --- Relationship to Other Terms ---
+
+scope PrivacyPolicyRelationship =
+  output supplementsTermsOfService : Boolean
+  output partOfAgreementWithPayoneer : Boolean
+  output doesNotOverrideJurisdictionSpecificRights : Boolean
+
+  definition supplementsTermsOfService equals true
+  definition partOfAgreementWithPayoneer equals true
+  definition doesNotOverrideJurisdictionSpecificRights equals true

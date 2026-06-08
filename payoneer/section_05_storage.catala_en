@@ -1,0 +1,73 @@
+# Payoneer Privacy Policy - Section 5: Storage of Personal Data
+# Last updated: May 2026
+
+# --- General Storage Principles ---
+
+scope StoragePrinciples =
+  output storedOnSecureServers : Boolean
+  output storedInCloudInfrastructure : Boolean
+  output mayBeStoredOutsideCountryOfResidence : Boolean
+  output appropriateSecurityMeasuresApplied : Boolean
+
+  definition storedOnSecureServers equals true
+  definition storedInCloudInfrastructure equals true
+  definition mayBeStoredOutsideCountryOfResidence equals true
+  definition appropriateSecurityMeasuresApplied equals true
+
+# --- Security Measures ---
+
+scope StorageSecurityMeasures =
+  output usesEncryption : Boolean
+  output usesAccessControls : Boolean
+  output usesFirewalls : Boolean
+  output usesIntrusionDetection : Boolean
+  output usesPhysicalSecurity : Boolean
+  output usesEmployeeTraining : Boolean
+  output usesRegularSecurityAudits : Boolean
+
+  definition usesEncryption equals true
+  definition usesAccessControls equals true
+  definition usesFirewalls equals true
+  definition usesIntrusionDetection equals true
+  definition usesPhysicalSecurity equals true
+  definition usesEmployeeTraining equals true
+  definition usesRegularSecurityAudits equals true
+
+# --- Data Breach Notification ---
+
+scope StorageDataBreach =
+  input breachOccurred : Boolean
+  input breachLikelyToResultInRisk : Boolean
+  output willNotifyAffectedIndividuals : Boolean
+  output willNotifySupervisoryAuthority : Boolean
+  output notificationWithoutUndueDelay : Boolean
+  output notificationWithin72Hours : Boolean
+
+  definition willNotifyAffectedIndividuals equals
+    breachOccurred and breachLikelyToResultInRisk
+  definition willNotifySupervisoryAuthority equals
+    breachOccurred and breachLikelyToResultInRisk
+  definition notificationWithoutUndueDelay equals
+    breachOccurred and breachLikelyToResultInRisk
+  definition notificationWithin72Hours equals
+    breachOccurred and breachLikelyToResultInRisk
+
+# --- No Guarantee of Security ---
+
+scope StorageNoGuarantee =
+  output noMethodOfTransmissionIsFullySecure : Boolean
+  output userProvidesDataAtOwnRisk : Boolean
+
+  definition noMethodOfTransmissionIsFullySecure equals true
+  definition userProvidesDataAtOwnRisk equals true
+
+# --- Data Minimization in Storage ---
+
+scope StorageDataMinimization =
+  output storesOnlyWhatIsNecessary : Boolean
+  output regularlyReviewsStoredData : Boolean
+  output anonymizesOrDeletesWhenNoLongerNeeded : Boolean
+
+  definition storesOnlyWhatIsNecessary equals true
+  definition regularlyReviewsStoredData equals true
+  definition anonymizesOrDeletesWhenNoLongerNeeded equals true
