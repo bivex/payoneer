@@ -1,0 +1,163 @@
+# Payoneer Australia Financial Services Guide - Premium Business Debit Mastercard
+# Last updated: May 2026
+# Source: Payoneer Australia Pty Ltd FSG, November 2022
+
+# --- Section 1: Our Services ---
+
+scope AustraliaFSGProvider =
+  output providerIsPayoneerAustralia : Boolean
+  output acn : Integer
+  output afslNumber : Integer
+  output authorisedUnderCorporationsAct : Boolean
+
+  definition providerIsPayoneerAustralia equals true
+  definition acn equals 621926501
+  definition afslNumber equals 504803
+  definition authorisedUnderCorporationsAct equals true
+
+scope AustraliaFSGServiceScope =
+  output authorisedToDealInFinancialProducts : Boolean
+  output dealingLimitedToNonCashPaymentProducts : Boolean
+  output servesRetailClients : Boolean
+  output servesWholesaleClients : Boolean
+  output notAuthorisedForFinancialProductAdvice : Boolean
+  output permittedForGeneralAdviceOnOwnProducts : Boolean
+  output generalAdviceDoesNotAccountForCircumstances : Boolean
+
+  definition authorisedToDealInFinancialProducts equals true
+  definition dealingLimitedToNonCashPaymentProducts equals true
+  definition servesRetailClients equals true
+  definition servesWholesaleClients equals true
+  definition notAuthorisedForFinancialProductAdvice equals true
+  definition permittedForGeneralAdviceOnOwnProducts equals true
+  definition generalAdviceDoesNotAccountForCircumstances equals true
+
+scope AustraliaFSGPaymentService =
+  output providesPayoneerPaymentService : Boolean
+  output receivesPaymentsForCommercialTransactions : Boolean
+  output multipleCurrencies : Boolean
+  output includesUSD : Boolean
+  output includesEUR : Boolean
+  output includesGBP : Boolean
+  output includesJPY : Boolean
+  output detailsInPDS : Boolean
+
+  definition providesPayoneerPaymentService equals true
+  definition receivesPaymentsForCommercialTransactions equals true
+  definition multipleCurrencies equals true
+  definition includesUSD equals true
+  definition includesEUR equals true
+  definition includesGBP equals true
+  definition includesJPY equals true
+  definition detailsInPDS equals true
+
+scope AustraliaFSGCardIssuance =
+  output authorisedPELUnderAFSL : Boolean
+  output pelIssuesPremiumBusinessDebitCards : Boolean
+  output cardsAllowAccessToPayoneerAccountFunds : Boolean
+  output payoneerDistributesCards : Boolean
+  output payoneerActsOnBehalfOfPEL : Boolean
+
+  definition authorisedPELUnderAFSL equals true
+  definition pelIssuesPremiumBusinessDebitCards equals true
+  definition cardsAllowAccessToPayoneerAccountFunds equals true
+  definition payoneerDistributesCards equals true
+  definition payoneerActsOnBehalfOfPEL equals true
+
+# --- Section 2: How You Can Give Us Instructions ---
+
+scope AustraliaFSGInstructions =
+  output instructionsViaContactDetails : Boolean
+  output applicationViaWebsite : Boolean
+  output shouldConsiderPDS : Boolean
+
+  definition instructionsViaContactDetails equals true
+  definition applicationViaWebsite equals true
+  definition shouldConsiderPDS equals true
+
+# --- Section 3: How We Are Paid ---
+
+scope AustraliaFSGRemuneration =
+  output receivesFeesForPaymentService : Boolean
+  output receivesFeesForCardUsage : Boolean
+  output receivesFeesForActivation : Boolean
+  output receivesFeesForLoading : Boolean
+  output feesAvailableOnWebsite : Boolean
+  output feesAvailableAfterLogin : Boolean
+
+  definition receivesFeesForPaymentService equals true
+  definition receivesFeesForCardUsage equals true
+  definition receivesFeesForActivation equals true
+  definition receivesFeesForLoading equals true
+  definition feesAvailableOnWebsite equals true
+  definition feesAvailableAfterLogin equals true
+
+scope AustraliaFSGEmployeeRemuneration =
+  output employeesReceiveSalary : Boolean
+  output mayReceivePerformanceBenefits : Boolean
+
+  definition employeesReceiveSalary equals true
+  definition mayReceivePerformanceBenefits equals true
+
+# --- Section 4: Associations ---
+
+scope AustraliaFSGAssociations =
+  output payoneerDistributesCardsIssuedByPEL : Boolean
+  output payoneerIsProgramManager : Boolean
+  output providesOnlineInterface : Boolean
+  output providesCardBalanceViewing : Boolean
+  output providesCustomerSupport : Boolean
+  output providesAdditionalCardServices : Boolean
+
+  definition payoneerDistributesCardsIssuedByPEL equals true
+  definition payoneerIsProgramManager equals true
+  definition providesOnlineInterface equals true
+  definition providesCardBalanceViewing equals true
+  definition providesCustomerSupport equals true
+  definition providesAdditionalCardServices equals true
+
+# --- Section 5: Professional Indemnity Insurance ---
+
+scope AustraliaFSGIndemnityInsurance =
+  output hasProfessionalIndemnityInsurance : Boolean
+  output satisfiesSection912B_CorporationsAct : Boolean
+
+  definition hasProfessionalIndemnityInsurance equals true
+  definition satisfiesSection912B_CorporationsAct equals true
+
+# --- Section 6: Complaints ---
+
+scope AustraliaFSGComplaints =
+  output contactPayoneerForComplaints : Boolean
+  output willAcknowledgeReceipt : Boolean
+  output willAttemptPromptResolution : Boolean
+  output memberOfAFCA : Boolean
+  output afcaIsExternalDisputeResolution : Boolean
+  output canEscalateToAFCA : Boolean
+
+  definition contactPayoneerForComplaints equals true
+  definition willAcknowledgeReceipt equals true
+  definition willAttemptPromptResolution equals true
+  definition memberOfAFCA equals true
+  definition afcaIsExternalDisputeResolution equals true
+  definition canEscalateToAFCA equals true
+
+scope AustraliaFSGAFCA_Contact =
+  output afcaPhoneAvailable : Boolean
+  output afcaEmailAvailable : Boolean
+  output afcaMailAvailable : Boolean
+
+  definition afcaPhoneAvailable equals true
+  definition afcaEmailAvailable equals true
+  definition afcaMailAvailable equals true
+
+# --- Section 7: Contact Details ---
+
+scope AustraliaFSGContactDetails =
+  output contactAddressNorthSydney : Boolean
+  output webFormAvailable : Boolean
+  output emailAvailable : Boolean
+
+  definition contactAddressNorthSydney equals true
+  definition webFormAvailable equals true
+  definition emailAvailable equals true

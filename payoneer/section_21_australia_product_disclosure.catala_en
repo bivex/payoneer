@@ -1,0 +1,471 @@
+# Payoneer Australia Product Disclosure Statement
+# Last updated: May 2026
+# Source: Payoneer Australia Pty Ltd PDS
+
+# --- General: Issuer Information ---
+
+scope AustraliaPDSIssuer =
+  output issuerIsPayoneerAustralia : Boolean
+  output afslNumber : Integer
+  output authorisesNonCashPaymentFacilities : Boolean
+  output notAuthorisedForFinancialProductAdvice : Boolean
+  output addressNorthSydney : Boolean
+
+  definition issuerIsPayoneerAustralia equals true
+  definition afslNumber equals 504803
+  definition authorisesNonCashPaymentFacilities equals true
+  definition notAuthorisedForFinancialProductAdvice equals true
+  definition addressNorthSydney equals true
+
+scope AustraliaPDSContact =
+  output phoneContact : Boolean
+  output webFormContact : Boolean
+  output physicalCopyFree : Boolean
+
+  definition phoneContact equals true
+  definition webFormContact equals true
+  definition physicalCopyFree equals true
+
+# --- General: PDS About ---
+
+scope AustraliaPDSAbout =
+  output isGeneralAdviceOnly : Boolean
+  output doesNotAccountForIndividualCircumstances : Boolean
+  output shouldConsiderAppropriateness : Boolean
+  output shouldReadCarefully : Boolean
+  output shouldSeekIndependentAdvice : Boolean
+
+  definition isGeneralAdviceOnly equals true
+  definition doesNotAccountForIndividualCircumstances equals true
+  definition shouldConsiderAppropriateness equals true
+  definition shouldReadCarefully equals true
+  definition shouldSeekIndependentAdvice equals true
+
+# --- General: Changes to PDS ---
+
+scope AustraliaPDSChanges =
+  output nonMaterialAdverseChangesOnWebsite : Boolean
+  output physicallyAdverseChangesNotMentioned : Boolean
+  output currentPDSAvailableFree : Boolean
+
+  definition nonMaterialAdverseChangesOnWebsite equals true
+  definition physicallyAdverseChangesNotMentioned equals true
+  definition currentPDSAvailableFree equals true
+
+# --- Product 1: Payoneer Account ---
+
+scope AustraliaAccountOverview =
+  output allowsReceivingPaymentsInMultipleCurrencies : Boolean
+  output currenciesIncludeUSD : Boolean
+  output currenciesIncludeEUR : Boolean
+  output currenciesIncludeGBP : Boolean
+  output currenciesIncludeJPY : Boolean
+  output canFundFromOwnBankAccount : Boolean
+  output designedForBusinesses : Boolean
+
+  definition allowsReceivingPaymentsInMultipleCurrencies equals true
+  definition currenciesIncludeUSD equals true
+  definition currenciesIncludeEUR equals true
+  definition currenciesIncludeGBP equals true
+  definition currenciesIncludeJPY equals true
+  definition canFundFromOwnBankAccount equals true
+  definition designedForBusinesses equals true
+
+scope AustraliaAccountFundUsage =
+  output withdrawToDesignatedBankAccount : Boolean
+  output makeVATPayments : Boolean
+  output transferToOtherPayoneerUsers : Boolean
+  output allocateForPayoneerCard : Boolean
+  output payPreApprovedCorporateClients : Boolean
+
+  definition withdrawToDesignatedBankAccount equals true
+  definition makeVATPayments equals true
+  definition transferToOtherPayoneerUsers equals true
+  definition allocateForPayoneerCard equals true
+  definition payPreApprovedCorporateClients equals true
+
+scope AustraliaAccountFundsHolding =
+  output fundsHeldInSegregatedBankAccounts : Boolean
+  output heldByPayoneerAndRelatedEntities : Boolean
+  output heldInMultipleJurisdictions : Boolean
+
+  definition fundsHeldInSegregatedBankAccounts equals true
+  definition heldByPayoneerAndRelatedEntities equals true
+  definition heldInMultipleJurisdictions equals true
+
+scope AustraliaAccountBenefits =
+  output receiveFromCorporateClients : Boolean
+  output receiveFromMarketplaces : Boolean
+  output receiveFromOnlinePlatforms : Boolean
+  output loadFromOwnBankAccount : Boolean
+  output multiCurrencyManagement : Boolean
+  output flexibleWithdrawalTiming : Boolean
+  output shopAtMastercardMerchants : Boolean
+  output withdrawAtATMs : Boolean
+  output offerLocalBankTransferPayment : Boolean
+  output requestPaymentFromCustomers : Boolean
+  output sendPaymentsToOtherPayoneerUsers : Boolean
+  output apiIntegrationAvailable : Boolean
+  output support24_7_in35Languages : Boolean
+
+  definition receiveFromCorporateClients equals true
+  definition receiveFromMarketplaces equals true
+  definition receiveFromOnlinePlatforms equals true
+  definition loadFromOwnBankAccount equals true
+  definition multiCurrencyManagement equals true
+  definition flexibleWithdrawalTiming equals true
+  definition shopAtMastercardMerchants equals true
+  definition withdrawAtATMs equals true
+  definition offerLocalBankTransferPayment equals true
+  definition requestPaymentFromCustomers equals true
+  definition sendPaymentsToOtherPayoneerUsers equals true
+  definition apiIntegrationAvailable equals true
+  definition support24_7_in35Languages equals true
+
+# --- Product 1: Significant Risks ---
+
+scope AustraliaAccountRiskAbilityToPay =
+  output reliesOnPayoneerAbilityToMeetObligations : Boolean
+  output reliesOnRelatedEntities : Boolean
+  output reliesOnBanksAndPaymentProviders : Boolean
+
+  definition reliesOnPayoneerAbilityToMeetObligations equals true
+  definition reliesOnRelatedEntities equals true
+  definition reliesOnBanksAndPaymentProviders equals true
+
+scope AustraliaAccountRiskServiceUnavailability =
+  output serviceMayBeTemporarilyUnavailable : Boolean
+  output payoneerMakesReasonableEfforts : Boolean
+
+  definition serviceMayBeTemporarilyUnavailable equals true
+  definition payoneerMakesReasonableEfforts equals true
+
+scope AustraliaAccountRiskUnauthorisedTransactions =
+  output accountMayBeCompromised : Boolean
+  output userResponsibleForUnauthorisedTransactions : Boolean
+  output userResponsibleForLoginSecurity : Boolean
+
+  definition accountMayBeCompromised equals true
+  definition userResponsibleForUnauthorisedTransactions equals true
+  definition userResponsibleForLoginSecurity equals true
+
+scope AustraliaAccountRiskCurrencyFluctuations =
+  output transactionsMayInvolveCurrencyConversion : Boolean
+  output retailRateBasedOnWholesaleRate : Boolean
+  output wholesaleRatesFromFinancialInstitutions : Boolean
+  output ratesAdjustedRegularly : Boolean
+  output mayIncludeConversionFeeOrCommission : Boolean
+  output rateInfoMayNotBeAvailableBeforeConversion : Boolean
+
+  definition transactionsMayInvolveCurrencyConversion equals true
+  definition retailRateBasedOnWholesaleRate equals true
+  definition wholesaleRatesFromFinancialInstitutions equals true
+  definition ratesAdjustedRegularly equals true
+  definition mayIncludeConversionFeeOrCommission equals true
+  definition rateInfoMayNotBeAvailableBeforeConversion equals true
+
+# --- Product 1: Fees, Termination, Disputes ---
+
+scope AustraliaAccountFees =
+  output feesAvailableOnWebsite : Boolean
+  output viewableBeforeRegistration : Boolean
+  output viewableAfterLogin : Boolean
+  output feesMayChange : Boolean
+  output feeChangeNoticePeriodDays : Integer
+
+  definition feesAvailableOnWebsite equals true
+  definition viewableBeforeRegistration equals true
+  definition viewableAfterLogin equals true
+  definition feesMayChange equals true
+  definition feeChangeNoticePeriodDays equals 30
+
+scope AustraliaAccountTermination =
+  output payoneerCanTerminateOrSuspendAtAnyTime : Boolean
+  output immediateNotice : Boolean
+
+  definition payoneerCanTerminateOrSuspendAtAnyTime equals true
+  definition immediateNotice equals true
+
+scope AustraliaAccountDisputes =
+  output aimToResolveAsSoonAsPossible : Boolean
+  output maxResolutionDays : Integer
+  output escalationToAFCA : Boolean
+  output afcaIndependentScheme : Boolean
+
+  definition aimToResolveAsSoonAsPossible equals true
+  definition maxResolutionDays equals 30
+  definition escalationToAFCA equals true
+  definition afcaIndependentScheme equals true
+
+scope AustraliaAccountAFCA =
+  output afcaPhoneAvailable : Boolean
+  output afcaMailAvailable : Boolean
+
+  definition afcaPhoneAvailable equals true
+  definition afcaMailAvailable equals true
+
+scope AustraliaAccountPrivacy =
+  output mayCollectPersonalInformation : Boolean
+  output privacyPolicyAvailable : Boolean
+
+  definition mayCollectPersonalInformation equals true
+  definition privacyPolicyAvailable equals true
+
+# --- Product 2: Payoneer Business Premium Debit Mastercard ---
+
+scope AustraliaBusinessCardIssuer =
+  output issuerIsPEL : Boolean
+  output intermediaryAgreementWithPayoneerAustralia : Boolean
+  output underSection911A_CorporationsAct : Boolean
+  output payoneerIsProgramManager : Boolean
+  output acn : Integer
+  output afsl : Integer
+
+  definition issuerIsPEL equals true
+  definition intermediaryAgreementWithPayoneerAustralia equals true
+  definition underSection911A_CorporationsAct equals true
+  definition payoneerIsProgramManager equals true
+  definition acn equals 621926501
+  definition afsl equals 504803
+
+scope AustraliaBusinessCardOverview =
+  output isDebitCard : Boolean
+  output notACreditCard : Boolean
+  output noInterestOnFunds : Boolean
+  output notABankAccount : Boolean
+  output connectedToPayoneerAccount : Boolean
+  output usableAtMerchantsWorldwide : Boolean
+  output usableAtATMsWorldwide : Boolean
+
+  definition isDebitCard equals true
+  definition notACreditCard equals true
+  definition noInterestOnFunds equals true
+  definition notABankAccount equals true
+  definition connectedToPayoneerAccount equals true
+  definition usableAtMerchantsWorldwide equals true
+  definition usableAtATMsWorldwide equals true
+
+scope AustraliaBusinessCardBenefits =
+  output purchasesAtMastercardMerchants : Boolean
+  output useInPersonOnlineByPhone : Boolean
+  output cashAtATMs : Boolean
+  output balanceEnquiryAtATMs : Boolean
+  output sendPaymentService : Boolean
+  output cardToBankService : Boolean
+  output monthlyStatementsAvailable : Boolean
+
+  definition purchasesAtMastercardMerchants equals true
+  definition useInPersonOnlineByPhone equals true
+  definition cashAtATMs equals true
+  definition balanceEnquiryAtATMs equals true
+  definition sendPaymentService equals true
+  definition cardToBankService equals true
+  definition monthlyStatementsAvailable equals true
+
+scope AustraliaBusinessCardLiability =
+  output maxLiabilityGBP : Integer
+  output liabilityConditionKeptCardDetailsSafe : Boolean
+  output liabilityConditionPromptNotification : Boolean
+  output liabilityAppliesToPreNotificationTransactions : Boolean
+
+  definition maxLiabilityGBP equals 50
+  definition liabilityConditionKeptCardDetailsSafe equals true
+  definition liabilityConditionPromptNotification equals true
+  definition liabilityAppliesToPreNotificationTransactions equals true
+
+# --- Product 2: Significant Risks ---
+
+scope AustraliaBusinessCardRiskUnauthorised =
+  output riskOfUnauthorisedTransactions : Boolean
+  output liableForFraudulentBehaviour : Boolean
+  output liableForGrossNegligence : Boolean
+  output replacementDependsOnContribution : Boolean
+  output replacementDependsOnDelayInNotification : Boolean
+
+  definition riskOfUnauthorisedTransactions equals true
+  definition liableForFraudulentBehaviour equals true
+  definition liableForGrossNegligence equals true
+  definition replacementDependsOnContribution equals true
+  definition replacementDependsOnDelayInNotification equals true
+
+scope AustraliaBusinessCardRiskDisputes =
+  output disputedChargesDependOnPromptInforming : Boolean
+
+  definition disputedChargesDependOnPromptInforming equals true
+
+scope AustraliaBusinessCardRiskNegativeBalance =
+  output feesMayCauseNegativeBalance : Boolean
+  output liableForNegativeBalance : Boolean
+  output mustPayPELPromptly : Boolean
+
+  definition feesMayCauseNegativeBalance equals true
+  definition liableForNegativeBalance equals true
+  definition mustPayPELPromptly equals true
+
+scope AustraliaBusinessCardRiskInsolvency =
+  output isElectronicMoneyProduct : Boolean
+  output regulatedByCentralBankOfIreland : Boolean
+  output notCoveredByFinancialClaimsScheme : Boolean
+  output fundsMayBecomeValuelessOnInsolvency : Boolean
+  output mayLoseMoneyOnInsolvency : Boolean
+
+  definition isElectronicMoneyProduct equals true
+  definition regulatedByCentralBankOfIreland equals true
+  definition notCoveredByFinancialClaimsScheme equals true
+  definition fundsMayBecomeValuelessOnInsolvency equals true
+  definition mayLoseMoneyOnInsolvency equals true
+
+# --- Product 2: Fees, Termination, Disputes ---
+
+scope AustraliaBusinessCardFees =
+  output feesAvailableOnWebsite : Boolean
+  output viewableBeforeRegistration : Boolean
+  output viewableAfterLogin : Boolean
+  output feesMayChange : Boolean
+  output feeChangeNoticePeriodDays : Integer
+
+  definition feesAvailableOnWebsite equals true
+  definition viewableBeforeRegistration equals true
+  definition viewableAfterLogin equals true
+  definition feesMayChange equals true
+  definition feeChangeNoticePeriodDays equals 30
+
+scope AustraliaBusinessCardTermination =
+  output pelAndPayoneerCanTerminateOrSuspend : Boolean
+  output immediateNotice : Boolean
+
+  definition pelAndPayoneerCanTerminateOrSuspend equals true
+  definition immediateNotice equals true
+
+scope AustraliaBusinessCardDisputes =
+  output aimToResolveAsSoonAsPossible : Boolean
+  output maxResolutionDays : Integer
+  output escalationToAFCA : Boolean
+
+  definition aimToResolveAsSoonAsPossible equals true
+  definition maxResolutionDays equals 30
+  definition escalationToAFCA equals true
+
+scope AustraliaBusinessCardPrivacy =
+  output pelAndPayoneerMayCollectPersonalInfo : Boolean
+  output privacyPolicyAvailable : Boolean
+
+  definition pelAndPayoneerMayCollectPersonalInfo equals true
+  definition privacyPolicyAvailable equals true
+
+# --- Product 3: Payoneer Corporate Purchasing Mastercard ---
+
+scope AustraliaCorporateCardIssuer =
+  output issuerIsPINC : Boolean
+  output intermediaryAgreementWithPayoneerAustralia : Boolean
+  output underSection911A_CorporationsAct : Boolean
+  output payoneerIsProgramManager : Boolean
+
+  definition issuerIsPINC equals true
+  definition intermediaryAgreementWithPayoneerAustralia equals true
+  definition underSection911A_CorporationsAct equals true
+  definition payoneerIsProgramManager equals true
+
+scope AustraliaCorporateCardOverview =
+  output providesVirtualCardCredentials : Boolean
+  output forOnlineTransactions : Boolean
+  output notACreditCard : Boolean
+  output noInterestOnFunds : Boolean
+  output notABankAccount : Boolean
+  output connectedToPayoneerAccount : Boolean
+
+  definition providesVirtualCardCredentials equals true
+  definition forOnlineTransactions equals true
+  definition notACreditCard equals true
+  definition noInterestOnFunds equals true
+  definition notABankAccount equals true
+  definition connectedToPayoneerAccount equals true
+
+scope AustraliaCorporateCardBenefits =
+  output onlinePurchasesAtMastercardMerchants : Boolean
+  output useOnlineOrByPhone : Boolean
+  output topUpFeatureAvailable : Boolean
+  output monthlyStatementsAvailable : Boolean
+
+  definition onlinePurchasesAtMastercardMerchants equals true
+  definition useOnlineOrByPhone equals true
+  definition topUpFeatureAvailable equals true
+  definition monthlyStatementsAvailable equals true
+
+# --- Product 3: Significant Risks ---
+
+scope AustraliaCorporateCardRiskUnauthorised =
+  output riskOfUnauthorisedTransactions : Boolean
+  output liableForFraudulentBehaviour : Boolean
+  output liableForGrossNegligence : Boolean
+  output replacementDependsOnContribution : Boolean
+  output replacementDependsOnDelayInNotification : Boolean
+
+  definition riskOfUnauthorisedTransactions equals true
+  definition liableForFraudulentBehaviour equals true
+  definition liableForGrossNegligence equals true
+  definition replacementDependsOnContribution equals true
+  definition replacementDependsOnDelayInNotification equals true
+
+scope AustraliaCorporateCardRiskDisputes =
+  output disputedChargesDependOnPromptInforming : Boolean
+
+  definition disputedChargesDependOnPromptInforming equals true
+
+scope AustraliaCorporateCardRiskNegativeBalance =
+  output feesMayCauseNegativeBalance : Boolean
+  output liableForNegativeBalance : Boolean
+  output mustPayPINCPromptly : Boolean
+
+  definition feesMayCauseNegativeBalance equals true
+  definition liableForNegativeBalance equals true
+  definition mustPayPINCPromptly equals true
+
+scope AustraliaCorporateCardRiskInsolvency =
+  output isElectronicMoneyProduct : Boolean
+  output notCoveredByFinancialClaimsScheme : Boolean
+  output fundsMayBecomeValuelessOnInsolvency : Boolean
+  output mayLoseMoneyOnInsolvency : Boolean
+
+  definition isElectronicMoneyProduct equals true
+  definition notCoveredByFinancialClaimsScheme equals true
+  definition fundsMayBecomeValuelessOnInsolvency equals true
+  definition mayLoseMoneyOnInsolvency equals true
+
+# --- Product 3: Fees, Termination, Disputes ---
+
+scope AustraliaCorporateCardFees =
+  output feesAvailableOnWebsite : Boolean
+  output viewableBeforeRegistration : Boolean
+  output viewableAfterLogin : Boolean
+  output feesMayChange : Boolean
+  output feeChangeNoticePeriodDays : Integer
+
+  definition feesAvailableOnWebsite equals true
+  definition viewableBeforeRegistration equals true
+  definition viewableAfterLogin equals true
+  definition feesMayChange equals true
+  definition feeChangeNoticePeriodDays equals 30
+
+scope AustraliaCorporateCardTermination =
+  output pincAndPayoneerCanTerminateOrSuspend : Boolean
+  output immediateNotice : Boolean
+
+  definition pincAndPayoneerCanTerminateOrSuspend equals true
+  definition immediateNotice equals true
+
+scope AustraliaCorporateCardDisputes =
+  output aimToResolveAsSoonAsPossible : Boolean
+  output maxResolutionDays : Integer
+  output escalationToAFCA : Boolean
+
+  definition aimToResolveAsSoonAsPossible equals true
+  definition maxResolutionDays equals 30
+  definition escalationToAFCA equals true
+
+scope AustraliaCorporateCardPrivacy =
+  output pincAndPayoneerMayCollectPersonalInfo : Boolean
+  output privacyPolicyAvailable : Boolean
+
+  definition pincAndPayoneerMayCollectPersonalInfo equals true
+  definition privacyPolicyAvailable equals true
