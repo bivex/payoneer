@@ -1,0 +1,540 @@
+# Payoneer Prohibited Transaction List
+# Last updated: May 2026
+# Source: https://www.payoneer.com/legal/prohibited-transactions/
+
+# --- General Eligibility ---
+
+scope ProhibitedTransactionEligibility =
+  output servicesSubjectToEligibilityRequirements : Boolean
+  output dependsOnLineOfBusiness : Boolean
+  output dependsOnCountryOfResidency : Boolean
+  output dependsOnAMLRregulations : Boolean
+  output dependsOnPayoneerRiskPolicies : Boolean
+  output payoneerHasSoleDiscretion : Boolean
+
+  definition servicesSubjectToEligibilityRequirements equals true
+  definition dependsOnLineOfBusiness equals true
+  definition dependsOnCountryOfResidency equals true
+  definition dependsOnAMLRregulations equals true
+  definition dependsOnPayoneerRiskPolicies equals true
+  definition payoneerHasSoleDiscretion equals true
+
+# --- Adult Services ---
+
+scope ProhibitedAdultServices =
+  output prostitution : Boolean
+  output escorts : Boolean
+  output payPerView : Boolean
+  output sexualMassages : Boolean
+  output adultLiveChat : Boolean
+  output adultPicturesVideosGames : Boolean
+  output pornographicOrMatureContent : Boolean
+  output datingServices : Boolean
+  output gentlemansClubs : Boolean
+  output toplessBars : Boolean
+  output stripClubs : Boolean
+  output adultVideoStores : Boolean
+
+  definition prostitution equals true
+  definition escorts equals true
+  definition payPerView equals true
+  definition sexualMassages equals true
+  definition adultLiveChat equals true
+  definition adultPicturesVideosGames equals true
+  definition pornographicOrMatureContent equals true
+  definition datingServices equals true
+  definition gentlemansClubs equals true
+  definition toplessBars equals true
+  definition stripClubs equals true
+  definition adultVideoStores equals true
+
+# --- Animals and Wildlife ---
+
+scope ProhibitedAnimalsWildlife =
+  output liveAnimals : Boolean
+  output productsFromSnakeCrocodileSealSkin : Boolean
+  output taxidermy : Boolean
+  output nationalProtectedFloraFauna : Boolean
+  output biologicalOrganisms : Boolean
+
+  definition liveAnimals equals true
+  definition productsFromSnakeCrocodileSealSkin equals true
+  definition taxidermy equals true
+  definition nationalProtectedFloraFauna equals true
+  definition biologicalOrganisms equals true
+
+# --- Certain Legal Services ---
+
+scope ProhibitedLegalServices =
+  output trustsAndAssetManagement : Boolean
+  output superannuationFunds : Boolean
+  output shellBanks : Boolean
+  output syndicates : Boolean
+  output travelVisas : Boolean
+  output businessVisaApplicationServices : Boolean
+
+  definition trustsAndAssetManagement equals true
+  definition superannuationFunds equals true
+  definition shellBanks equals true
+  definition syndicates equals true
+  definition travelVisas equals true
+  definition businessVisaApplicationServices equals true
+
+# --- Financial Services ---
+
+scope ProhibitedFinancialServices =
+  output biddingFeeAuctions : Boolean
+  output brokerageInvestmentServices : Boolean
+  output insuranceServices : Boolean
+  output medicalBenefitPackages : Boolean
+  output debtCollectionAgencies : Boolean
+  output debtEliminationConsolidationReduction : Boolean
+  output paymentProcessing : Boolean
+  output otherFinancialInstitutions : Boolean
+  output unlicensedEscrowServices : Boolean
+  output moneyTransmitters : Boolean
+  output unlicensedMSBs : Boolean
+  output currencyExchangeServices : Boolean
+  output otherMoneyServicesBusinesses : Boolean
+  output loansIncludingPaydayLoans : Boolean
+  output bankingStyleServices : Boolean
+  output binaryOptions : Boolean
+  output ventureCapitalAndInvestments : Boolean
+
+  definition biddingFeeAuctions equals true
+  definition brokerageInvestmentServices equals true
+  definition insuranceServices equals true
+  definition medicalBenefitPackages equals true
+  definition debtCollectionAgencies equals true
+  definition debtEliminationConsolidationReduction equals true
+  definition paymentProcessing equals true
+  definition otherFinancialInstitutions equals true
+  definition unlicensedEscrowServices equals true
+  definition moneyTransmitters equals true
+  definition unlicensedMSBs equals true
+  definition currencyExchangeServices equals true
+  definition otherMoneyServicesBusinesses equals true
+  definition loansIncludingPaydayLoans equals true
+  definition bankingStyleServices equals true
+  definition binaryOptions equals true
+  definition ventureCapitalAndInvestments equals true
+
+# --- Banking Style Services Detail ---
+
+scope ProhibitedBankingStyleServices =
+  output billPaymentServices : Boolean
+  output cashStorage : Boolean
+  output cashback : Boolean
+  output checkCashing : Boolean
+  output currencyExchange : Boolean
+  output monetaryInstrumentSales : Boolean
+  output wireTransferMoneyOrders : Boolean
+
+  definition billPaymentServices equals true
+  definition cashStorage equals true
+  definition cashback equals true
+  definition checkCashing equals true
+  definition currencyExchange equals true
+  definition monetaryInstrumentSales equals true
+  definition wireTransferMoneyOrders equals true
+
+# --- Firearms, Explosives, Dangerous Materials, Natural Resources ---
+
+scope ProhibitedFirearmsDangerousMaterials =
+  output guns : Boolean
+  output gunpowder : Boolean
+  output ammunitions : Boolean
+  output weapons : Boolean
+  output fireworks : Boolean
+  output otherExplosives : Boolean
+  output crudeOil : Boolean
+  output naturalGas : Boolean
+  output petroleum : Boolean
+  output diesel : Boolean
+  output nuclear : Boolean
+  output hazardousMaterials : Boolean
+  output radioactiveMaterials : Boolean
+  output rareEarthMinerals : Boolean
+
+  definition guns equals true
+  definition gunpowder equals true
+  definition ammunitions equals true
+  definition weapons equals true
+  definition fireworks equals true
+  definition otherExplosives equals true
+  definition crudeOil equals true
+  definition naturalGas equals true
+  definition petroleum equals true
+  definition diesel equals true
+  definition nuclear equals true
+  definition hazardousMaterials equals true
+  definition radioactiveMaterials equals true
+  definition rareEarthMinerals equals true
+
+# --- Gambling ---
+
+scope ProhibitedGambling =
+  output gamesOfChance : Boolean
+  output internetGambling : Boolean
+  output sweepstakes : Boolean
+  output contests : Boolean
+  output lotteries : Boolean
+  output offeringPrizesAsInducement : Boolean
+  output sportsForecasting : Boolean
+  output oddsMaking : Boolean
+
+  definition gamesOfChance equals true
+  definition internetGambling equals true
+  definition sweepstakes equals true
+  definition contests equals true
+  definition lotteries equals true
+  definition offeringPrizesAsInducement equals true
+  definition sportsForecasting equals true
+  definition oddsMaking equals true
+
+# --- High Value Items ---
+
+scope ProhibitedHighValueItems =
+  output preciousMetals : Boolean
+  output looseStones : Boolean
+  output highPricedProductsWithoutVerifiedChainOfCustody : Boolean
+
+  definition preciousMetals equals true
+  definition looseStones equals true
+  definition highPricedProductsWithoutVerifiedChainOfCustody equals true
+
+# --- Illegal Products and Services ---
+
+scope ProhibitedIllegalProducts =
+  output taxEvasionServices : Boolean
+  output saleOfPayoneerAccounts : Boolean
+  output saleOfOtherFinancialInstitutionAccounts : Boolean
+  output unauthorizedAccessTools : Boolean
+  output virusMalwareHacking : Boolean
+  output productsViolatingLocalLaw : Boolean
+  output productsViolatingInternationalLaw : Boolean
+  output illegalDrugs : Boolean
+  output substancesMimickingIllegalDrugs : Boolean
+  output drugMakingEquipment : Boolean
+  output drugUsingEquipment : Boolean
+  output unlawfulViolencePromotion : Boolean
+  output violenceBasedOnImmutableCharacteristics : Boolean
+  output amazonUngating : Boolean
+  output amazonAppeals : Boolean
+
+  definition taxEvasionServices equals true
+  definition saleOfPayoneerAccounts equals true
+  definition saleOfOtherFinancialInstitutionAccounts equals true
+  definition unauthorizedAccessTools equals true
+  definition virusMalwareHacking equals true
+  definition productsViolatingLocalLaw equals true
+  definition productsViolatingInternationalLaw equals true
+  definition illegalDrugs equals true
+  definition substancesMimickingIllegalDrugs equals true
+  definition drugMakingEquipment equals true
+  definition drugUsingEquipment equals true
+  definition unlawfulViolencePromotion equals true
+  definition violenceBasedOnImmutableCharacteristics equals true
+  definition amazonUngating equals true
+  definition amazonAppeals equals true
+
+# --- Marijuana and Cannabis ---
+
+scope ProhibitedMarijuanaCannabis =
+  output marijuana : Boolean
+  output cannabisProducts : Boolean
+  output cbdProducts : Boolean
+  output drugParaphernalia : Boolean
+
+  definition marijuana equals true
+  definition cannabisProducts equals true
+  definition cbdProducts equals true
+  definition drugParaphernalia equals true
+
+# --- Non-Business Use ---
+
+scope ProhibitedNonBusinessUse =
+  output personToPersonPayments : Boolean
+  output peerToPeerPaymentPlatforms : Boolean
+  output religiousResources : Boolean
+  output politicalResources : Boolean
+  output nonBusinessFinancialSettlements : Boolean
+  output personalUseGifts : Boolean
+  output personalUseDonations : Boolean
+  output personalUseLoans : Boolean
+  output personalUseFamilyPayments : Boolean
+  output personalUseFriendsPayments : Boolean
+
+  definition personToPersonPayments equals true
+  definition peerToPeerPaymentPlatforms equals true
+  definition religiousResources equals true
+  definition politicalResources equals true
+  definition nonBusinessFinancialSettlements equals true
+  definition personalUseGifts equals true
+  definition personalUseDonations equals true
+  definition personalUseLoans equals true
+  definition personalUseFamilyPayments equals true
+  definition personalUseFriendsPayments equals true
+
+# --- Non-Fiat Currency and Stored Value ---
+
+scope ProhibitedNonFiatCurrency =
+  output virtualCurrencies : Boolean
+  output cryptocurrencies : Boolean
+  output nonFungibleTokens : Boolean
+  output cryptoMining : Boolean
+  output cryptoSupportingServices : Boolean
+
+  definition virtualCurrencies equals true
+  definition cryptocurrencies equals true
+  definition nonFungibleTokens equals true
+  definition cryptoMining equals true
+  definition cryptoSupportingServices equals true
+
+# --- Counterfeit and Copyright ---
+
+scope ProhibitedCounterfeitCopyright =
+  output counterfeiting : Boolean
+  output copyrightInfringement : Boolean
+  output fileSharingWebsites : Boolean
+  output streamingWebsitesWithCopyrightedContent : Boolean
+  output unauthorizedDownloadSites : Boolean
+
+  definition counterfeiting equals true
+  definition copyrightInfringement equals true
+  definition fileSharingWebsites equals true
+  definition streamingWebsitesWithCopyrightedContent equals true
+  definition unauthorizedDownloadSites equals true
+
+# --- Government, Defense, Military ---
+
+scope ProhibitedGovernmentMilitary =
+  output governments : Boolean
+  output defense : Boolean
+  output arms : Boolean
+  output military : Boolean
+
+  definition governments equals true
+  definition defense equals true
+  definition arms equals true
+  definition military equals true
+
+# --- Credit and Identity Protection ---
+
+scope ProhibitedCreditIdentityProtection =
+  output creditProtectionServices : Boolean
+  output identityTheftProtectionServices : Boolean
+
+  definition creditProtectionServices equals true
+  definition identityTheftProtectionServices equals true
+
+# --- Pharmaceuticals, Medical Devices, Telemedicine ---
+
+scope ProhibitedPharmaceuticals =
+  output prescriptionOnlyProducts : Boolean
+  output cardNotPresentPharmaceuticals : Boolean
+  output pharmacies : Boolean
+  output pharmacyReferralServices : Boolean
+  output pseudoPharmaceuticals : Boolean
+  output steroids : Boolean
+  output supplements : Boolean
+  output vitamins : Boolean
+  output nutritionalProducts : Boolean
+  output nutraceuticals : Boolean
+  output dietPills : Boolean
+
+  definition prescriptionOnlyProducts equals true
+  definition cardNotPresentPharmaceuticals equals true
+  definition pharmacies equals true
+  definition pharmacyReferralServices equals true
+  definition pseudoPharmaceuticals equals true
+  definition steroids equals true
+  definition supplements equals true
+  definition vitamins equals true
+  definition nutritionalProducts equals true
+  definition nutraceuticals equals true
+  definition dietPills equals true
+
+# --- Unfair, Predatory, Deceptive Products ---
+
+scope ProhibitedUnfairPredatoryDeceptive =
+  output academicDishonestyPlatforms : Boolean
+  output contractCheating : Boolean
+  output predatoryMortgageConsulting : Boolean
+  output predatoryLending : Boolean
+  output creditRepairServices : Boolean
+  output predatoryCounselingServices : Boolean
+  output getRichQuickSchemes : Boolean
+  output pyramidSchemes : Boolean
+
+  definition academicDishonestyPlatforms equals true
+  definition contractCheating equals true
+  definition predatoryMortgageConsulting equals true
+  definition predatoryLending equals true
+  definition creditRepairServices equals true
+  definition predatoryCounselingServices equals true
+  definition getRichQuickSchemes equals true
+  definition pyramidSchemes equals true
+
+# --- IP Infringement and Cyber ---
+
+scope ProhibitedIPInfringementCyber =
+  output trademarkInfringement : Boolean
+  output patentInfringement : Boolean
+  output copyrightInfringementServices : Boolean
+  output tradeSecretViolation : Boolean
+  output proprietaryRightsViolation : Boolean
+  output privacyRightsViolation : Boolean
+  output stampCarving : Boolean
+  output fabricationOfGovernmentSeals : Boolean
+  output certificateIssuing : Boolean
+  output voluntarySaleOfIdentityInfo : Boolean
+  output voluntarySaleOfPersonalInfo : Boolean
+  output unauthorizedMusicSale : Boolean
+  output unauthorizedMovieSale : Boolean
+  output unauthorizedSoftwareSale : Boolean
+  output unauthorizedLicensedMaterialsSale : Boolean
+  output counterfeitMaterials : Boolean
+  output privacyInfringementObjects : Boolean
+  output privacyInfringementServices : Boolean
+  output corporateEspionageObjects : Boolean
+  output corporateEspionageServices : Boolean
+  output unauthorizedBrandNameSale : Boolean
+  output unauthorizedDesignerProductSale : Boolean
+  output documentForgery : Boolean
+  output resellingEventTickets : Boolean
+
+  definition trademarkInfringement equals true
+  definition patentInfringement equals true
+  definition copyrightInfringementServices equals true
+  definition tradeSecretViolation equals true
+  definition proprietaryRightsViolation equals true
+  definition privacyRightsViolation equals true
+  definition stampCarving equals true
+  definition fabricationOfGovernmentSeals equals true
+  definition certificateIssuing equals true
+  definition voluntarySaleOfIdentityInfo equals true
+  definition voluntarySaleOfPersonalInfo equals true
+  definition unauthorizedMusicSale equals true
+  definition unauthorizedMovieSale equals true
+  definition unauthorizedSoftwareSale equals true
+  definition unauthorizedLicensedMaterialsSale equals true
+  definition counterfeitMaterials equals true
+  definition privacyInfringementObjects equals true
+  definition privacyInfringementServices equals true
+  definition corporateEspionageObjects equals true
+  definition corporateEspionageServices equals true
+  definition unauthorizedBrandNameSale equals true
+  definition unauthorizedDesignerProductSale equals true
+  definition documentForgery equals true
+  definition resellingEventTickets equals true
+
+# --- Tobacco and Alcohol ---
+
+scope ProhibitedTobaccoAlcohol =
+  output tobaccoProducts : Boolean
+  output eCigarettes : Boolean
+  output eLiquid : Boolean
+  output alcohol : Boolean
+
+  definition tobaccoProducts equals true
+  definition eCigarettes equals true
+  definition eLiquid equals true
+  definition alcohol equals true
+
+# --- Travel, Real Estate and Rentals ---
+
+scope ProhibitedRealEstate =
+  output realEstateSales : Boolean
+  output realEstateInvestments : Boolean
+  output realEstateTrading : Boolean
+  output realEstateTrusts : Boolean
+  output otherRealEstateServices : Boolean
+
+  definition realEstateSales equals true
+  definition realEstateInvestments equals true
+  definition realEstateTrading equals true
+  definition realEstateTrusts equals true
+  definition otherRealEstateServices equals true
+
+# --- India Restricted Transactions ---
+
+scope ProhibitedIndiaRestricted =
+  input transactionInvolvesIndia : Boolean
+  output indiaForeignTradePolicyApplies : Boolean
+  output prohibitedItemsPerFTP : Boolean
+  output restrictedItemsPerFTP : Boolean
+  output STEItemsPerFTP : Boolean
+  output scometItemsRestricted : Boolean
+  output specialChemicalsOrganismsMaterials : Boolean
+  output scometAppliesToImportAndExport : Boolean
+
+  definition indiaForeignTradePolicyApplies equals transactionInvolvesIndia
+  definition prohibitedItemsPerFTP equals transactionInvolvesIndia
+  definition restrictedItemsPerFTP equals transactionInvolvesIndia
+  definition STEItemsPerFTP equals transactionInvolvesIndia
+  definition scometItemsRestricted equals transactionInvolvesIndia
+  definition specialChemicalsOrganismsMaterials equals transactionInvolvesIndia
+  definition scometAppliesToImportAndExport equals transactionInvolvesIndia
+
+# --- Pre-Approval Exception ---
+
+scope ProhibitedPreApproval =
+  output payoneerMayPreApproveSomeCategories : Boolean
+  output subjectToReviewAndExamination : Boolean
+  output subjectToSoleDiscretion : Boolean
+  output lawViolationsNeverSupported : Boolean
+
+  definition payoneerMayPreApproveSomeCategories equals true
+  definition subjectToReviewAndExamination equals true
+  definition subjectToSoleDiscretion equals true
+  definition lawViolationsNeverSupported equals true
+
+# --- Transaction Prohibition Check ---
+
+scope ProhibitedTransactionCheck =
+  input isAdultService : Boolean
+  input involvesAnimalsWildlife : Boolean
+  input isProhibitedLegalService : Boolean
+  input isProhibitedFinancialService : Boolean
+  input involvesFirearmsExplosives : Boolean
+  input isGambling : Boolean
+  input isHighValueItemWithoutCustody : Boolean
+  input isIllegalProduct : Boolean
+  input involvesMarijuanaCannabis : Boolean
+  input isNonBusinessUse : Boolean
+  input involvesNonFiatCurrency : Boolean
+  input involvesCounterfeitCopyright : Boolean
+  input involvesGovernmentMilitary : Boolean
+  input isCreditIdentityProtection : Boolean
+  input isProhibitedPharmaceutical : Boolean
+  input isUnfairPredatoryDeceptive : Boolean
+  input involvesIPInfringement : Boolean
+  input involvesTobaccoAlcohol : Boolean
+  input involvesRealEstate : Boolean
+  input involvesIndiaRestricted : Boolean
+  input hasPreApproval : Boolean
+  output transactionProhibited : Boolean
+
+  definition transactionProhibited equals
+    (isAdultService or
+     involvesAnimalsWildlife or
+     isProhibitedLegalService or
+     isProhibitedFinancialService or
+     involvesFirearmsExplosives or
+     isGambling or
+     isHighValueItemWithoutCustody or
+     isIllegalProduct or
+     involvesMarijuanaCannabis or
+     isNonBusinessUse or
+     involvesNonFiatCurrency or
+     involvesCounterfeitCopyright or
+     involvesGovernmentMilitary or
+     isCreditIdentityProtection or
+     isProhibitedPharmaceutical or
+     isUnfairPredatoryDeceptive or
+     involvesIPInfringement or
+     involvesTobaccoAlcohol or
+     involvesRealEstate or
+     involvesIndiaRestricted) and
+    not hasPreApproval
