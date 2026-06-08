@@ -1,0 +1,433 @@
+# Payoneer UK International Data Transfer Addendum
+# Last updated: May 2026
+# Source: ICO Standard Data Protection Clauses under S119A(1) DPA 2018
+# Version B1.0, in force 21 March 2022
+
+# --- Part 1: Table 1 - Parties ---
+
+scope UKTransferAddendumStartDate =
+  output addendumVersion : Boolean
+  output versionIdentifier : Boolean
+  output inForceDate : Boolean
+
+  definition addendumVersion equals true
+  definition versionIdentifier equals true
+  definition inForceDate equals true
+
+scope UKTransferAddendumExporter =
+  output exporterLegalName : Boolean
+  output exporterTradingName : Boolean
+  output exporterAddress : Boolean
+  output exporterRegistrationNumber : Boolean
+
+  definition exporterLegalName equals true
+  definition exporterTradingName equals true
+  definition exporterAddress equals true
+  definition exporterRegistrationNumber equals true
+
+scope UKTransferAddendumExporterDetails =
+  output fullLegalName : Boolean
+  output mainAddress : Boolean
+  output registrationNumber : Integer
+
+  definition fullLegalName equals true
+  definition mainAddress equals true
+  definition registrationNumber equals 12029160
+
+scope UKTransferAddendumImporter =
+  output importerIsSupplier : Boolean
+  output importerDetailsPerAgreement : Boolean
+
+  definition importerIsSupplier equals true
+  definition importerDetailsPerAgreement equals true
+
+scope UKTransferAddendumContacts =
+  output exporterDPOName : Boolean
+  output exporterDPOEmail : Boolean
+  output exporterCEOName : Boolean
+  output exporterCEOEmail : Boolean
+  output importerContactPerAgreement : Boolean
+
+  definition exporterDPOName equals true
+  definition exporterDPOEmail equals true
+  definition exporterCEOName equals true
+  definition exporterCEOEmail equals true
+  definition importerContactPerAgreement equals true
+
+# --- Part 1: Table 2 - Selected SCCs, Modules and Selected Clauses ---
+
+scope UKTransferAddendumSelectedSCCs =
+  output addendumEU_SCCs : Boolean
+  output sCCCommencementPerSection13_3 : Boolean
+  output appendixInformationIncluded : Boolean
+
+  definition addendumEU_SCCs equals true
+  definition sCCCommencementPerSection13_3 equals true
+  definition appendixInformationIncluded equals true
+
+scope UKTransferAddendumSCCReference =
+  output sCCDateIsTransferCommencement : Boolean
+  output sCCReferenceOptional : Boolean
+  output sCCOtherIdentifierOptional : Boolean
+
+  definition sCCDateIsTransferCommencement equals true
+  definition sCCReferenceOptional equals true
+  definition sCCOtherIdentifierOptional equals true
+
+scope UKTransferAddendumModuleSelection =
+  input moduleInOperation : Integer
+  output module1_ControllerToController : Boolean
+  output module2_ControllerToProcessor : Boolean
+  output module3_ProcessorToProcessor : Boolean
+  output module4_ProcessorToController : Boolean
+  output dockingClause7Applies : Boolean
+  output clause11Applies : Boolean
+  output clause9aPriorAuth : Boolean
+  output clause9aTimePeriod : Boolean
+  output dataCombinedWithImporterData : Boolean
+
+  definition module1_ControllerToController equals moduleInOperation equals 1
+  definition module2_ControllerToProcessor equals moduleInOperation equals 2
+  definition module3_ProcessorToProcessor equals moduleInOperation equals 3
+  definition module4_ProcessorToController equals moduleInOperation equals 4
+  definition dockingClause7Applies equals false
+  definition clause11Applies equals false
+  definition clause9aPriorAuth equals false
+  definition clause9aTimePeriod equals false
+  definition dataCombinedWithImporterData equals false
+
+# --- Part 1: Table 3 - Appendix Information ---
+
+scope UKTransferAddendumAppendixInfo =
+  output annex1A_ListOfParties : Boolean
+  output annex1B_DescriptionOfTransfer : Boolean
+  output annexII_TechnicalOrganisationalMeasures : Boolean
+  output annexIII_ListOfSubprocessors : Boolean
+  output annexIII_Modules2And3Only : Boolean
+
+  definition annex1A_ListOfParties equals true
+  definition annex1B_DescriptionOfTransfer equals true
+  definition annexII_TechnicalOrganisationalMeasures equals true
+  definition annexIII_ListOfSubprocessors equals true
+  definition annexIII_Modules2And3Only equals true
+
+scope UKTransferAddendumAppendixMapping =
+  output annex1A_populatedFromAddendumAnnex1 : Boolean
+  output annex1B_populatedFromAddendumAnnex1 : Boolean
+  output annexII_populatedFromAddendumAnnex2 : Boolean
+  output annexIII_populatedFromAddendumAnnex3 : Boolean
+
+  definition annex1A_populatedFromAddendumAnnex1 equals true
+  definition annex1B_populatedFromAddendumAnnex1 equals true
+  definition annexII_populatedFromAddendumAnnex2 equals true
+  definition annexIII_populatedFromAddendumAnnex3 equals true
+
+# --- Part 1: Table 4 - Ending this Addendum ---
+
+scope UKTransferAddendumEndingParties =
+  input importerMayEnd : Boolean
+  input exporterMayEnd : Boolean
+  output neitherPartyMayEnd : Boolean
+
+  definition neitherPartyMayEnd equals
+    not importerMayEnd and not exporterMayEnd
+
+# --- Part 2: Section 1 - Entering into this Addendum ---
+
+scope UKTransferAddendumFormation =
+  output eachPartyAgreesBound : Boolean
+  output mutualBindingRequired : Boolean
+  output mayEnterInAnyLegallyBindingWay : Boolean
+  output allowsDataSubjectsToEnforceRights : Boolean
+  output sameEffectAsSigningApprovedEU_SCCs : Boolean
+
+  definition eachPartyAgreesBound equals true
+  definition mutualBindingRequired equals true
+  definition mayEnterInAnyLegallyBindingWay equals true
+  definition allowsDataSubjectsToEnforceRights equals true
+  definition sameEffectAsSigningApprovedEU_SCCs equals true
+
+scope UKTransferAddendumSignatureRequirement =
+  output signatureNotStrictlyRequired : Boolean
+  output annex1A_and_clause7_reference_signature : Boolean
+  output anyBindingMethodSufficient : Boolean
+
+  definition signatureNotStrictlyRequired equals true
+  definition annex1A_and_clause7_reference_signature equals true
+  definition anyBindingMethodSufficient equals true
+
+# --- Part 2: Section 2 - Interpretation ---
+
+scope UKTransferAddendumDefinitions =
+  output addendumDefinition : Boolean
+  output addendumEU_SCCsDefinition : Boolean
+  output appendixInformationDefinition : Boolean
+  output appropriateSafeguardsDefinition : Boolean
+  output approvedAddendumDefinition : Boolean
+  output approvedEU_SCCsDefinition : Boolean
+  output iCO_Definition : Boolean
+  output restrictedTransferDefinition : Boolean
+  output uK_Definition : Boolean
+  output uKDataProtectionLawsDefinition : Boolean
+  output uKGDPR_Definition : Boolean
+
+  definition addendumDefinition equals true
+  definition addendumEU_SCCsDefinition equals true
+  definition appendixInformationDefinition equals true
+  definition appropriateSafeguardsDefinition equals true
+  definition approvedAddendumDefinition equals true
+  definition approvedEU_SCCsDefinition equals true
+  definition iCO_Definition equals true
+  definition restrictedTransferDefinition equals true
+  definition uK_Definition equals true
+  definition uKDataProtectionLawsDefinition equals true
+  definition uKGDPR_Definition equals true
+
+scope UKTransferAddendumInterpretationRules =
+  output mustBeConsistentWithUKDataProtectionLaws : Boolean
+  output mustFulfilAppropriateSafeguards : Boolean
+  output impermissibleAmendmentsNotIncorporated : Boolean
+  output uKDataProtectionLawsPrevailsOnInconsistency : Boolean
+  output unclearMeaningAlignedWithUKLaw : Boolean
+
+  definition mustBeConsistentWithUKDataProtectionLaws equals true
+  definition mustFulfilAppropriateSafeguards equals true
+  definition impermissibleAmendmentsNotIncorporated equals true
+  definition uKDataProtectionLawsPrevailsOnInconsistency equals true
+  definition unclearMeaningAlignedWithUKLaw equals true
+
+scope UKTransferAddendumImpermissibleAmendments =
+  output eu_SCCs_amendmentsCheckedAgainstApproved : Boolean
+  output nonPermittedAmendmentsReplacedWithApprovedEU_SCCs : Boolean
+
+  definition eu_SCCs_amendmentsCheckedAgainstApproved equals true
+  definition nonPermittedAmendmentsReplacedWithApprovedEU_SCCs equals true
+
+scope UKTransferAddendumLegislativeReferences =
+  output referencesIncludeConsolidatedLegislation : Boolean
+  output referencesIncludeReenactedLegislation : Boolean
+  output referencesIncludeReplacedLegislation : Boolean
+
+  definition referencesIncludeConsolidatedLegislation equals true
+  definition referencesIncludeReenactedLegislation equals true
+  definition referencesIncludeReplacedLegislation equals true
+
+# --- Part 2: Section 10 - Hierarchy ---
+
+scope UKTransferAddendumHierarchy =
+  output section10OverridesClause5OfEU_SCCs : Boolean
+  output approvedAddendumOverridesAddendumEU_SCCs : Boolean
+  output greaterProtectionOverridesApprovedAddendum : Boolean
+
+  definition section10OverridesClause5OfEU_SCCs equals true
+  definition approvedAddendumOverridesAddendumEU_SCCs equals true
+  definition greaterProtectionOverridesApprovedAddendum equals true
+
+scope UKTransferAddendumHierarchyDetail =
+  input addendumEU_SCCs_providesGreaterProtection : Boolean
+  output prevailingTerms : Boolean
+
+  definition prevailingTerms equals
+    if addendumEU_SCCs_providesGreaterProtection then
+      true
+    else
+      false
+
+scope UKTransferAddendumGDPRTransferProtection =
+  output addendumDoesNotImpactEU_SCCs : Boolean
+  output eu_SCCs_for_GDPR_transfers_unaffected : Boolean
+
+  definition addendumDoesNotImpactEU_SCCs equals true
+  definition eu_SCCs_for_GDPR_transfers_unaffected equals true
+
+# --- Part 2: Section 11 - Incorporation of and changes to the EU SCCs ---
+
+scope UKTransferAddendumIncorporation =
+  output incorporatesAddendumEU_SCCs : Boolean
+  output operatesForRestrictedTransfers : Boolean
+  output providesAppropriateSafeguards : Boolean
+  output sections9to11OverrideClause5 : Boolean
+  output governedByEnglandAndWales : Boolean
+  output disputesByEnglandAndWalesCourts : Boolean
+  output scotlandOrNI_CourtsIfExpresslySelected : Boolean
+
+  definition incorporatesAddendumEU_SCCs equals true
+  definition operatesForRestrictedTransfers equals true
+  definition providesAppropriateSafeguards equals true
+  definition sections9to11OverrideClause5 equals true
+  definition governedByEnglandAndWales equals true
+  definition disputesByEnglandAndWalesCourts equals true
+  definition scotlandOrNI_CourtsIfExpresslySelected equals true
+
+scope UKTransferAddendumIncorporationConditions =
+  input alternativeAmendmentsAgreed : Boolean
+  output section15AppliesByDefault : Boolean
+  output noOtherAmendmentsPermitted : Boolean
+
+  definition section15AppliesByDefault equals not alternativeAmendmentsAgreed
+  definition noOtherAmendmentsPermitted equals true
+
+# --- Part 2: Section 12 - Amendments to the EU SCCs ---
+
+scope UKTransferAddendumClauseAmendment_References =
+  output clausesReferenceMeansAddendum : Boolean
+
+  definition clausesReferenceMeansAddendum equals true
+
+scope UKTransferAddendumClauseAmendment_Clause2 =
+  output clause2DeletedWords : Boolean
+
+  definition clause2DeletedWords equals true
+
+scope UKTransferAddendumClauseAmendment_Clause6 =
+  output clause6Replaced : Boolean
+  output transferDetailsInAnnex1B : Boolean
+  output uKDataProtectionLawsApplyToExporter : Boolean
+
+  definition clause6Replaced equals true
+  definition transferDetailsInAnnex1B equals true
+  definition uKDataProtectionLawsApplyToExporter equals true
+
+scope UKTransferAddendumClauseAmendment_Clause8_7 =
+  output clause8_7_Module1_Replaced : Boolean
+  output onwardTransferToAdequateCountryUK : Boolean
+
+  definition clause8_7_Module1_Replaced equals true
+  definition onwardTransferToAdequateCountryUK equals true
+
+scope UKTransferAddendumClauseAmendment_Clause8_8 =
+  output clause8_8_Modules2And3_Replaced : Boolean
+
+  definition clause8_8_Modules2And3_Replaced equals true
+
+scope UKTransferAddendumClauseAmendment_RegulationReferences =
+  output eu_GDPR_ReplacedWithUKDataProtectionLaws : Boolean
+  output specificArticlesReplacedWithUKEquivalent : Boolean
+  output regulation2018_1725ReferencesRemoved : Boolean
+
+  definition eu_GDPR_ReplacedWithUKDataProtectionLaws equals true
+  definition specificArticlesReplacedWithUKEquivalent equals true
+  definition regulation2018_1725ReferencesRemoved equals true
+
+scope UKTransferAddendumClauseAmendment_EUReferences =
+  output eU_ReplacedWithUK : Boolean
+  output union_ReplacedWithUK : Boolean
+  output eU_MemberState_ReplacedWithUK : Boolean
+  output memberState_ReplacedWithUK : Boolean
+
+  definition eU_ReplacedWithUK equals true
+  definition union_ReplacedWithUK equals true
+  definition eU_MemberState_ReplacedWithUK equals true
+  definition memberState_ReplacedWithUK equals true
+
+scope UKTransferAddendumClauseAmendment_Clause10 =
+  output clause10Clause12_replacedWithClause11 : Boolean
+
+  definition clause10Clause12_replacedWithClause11 equals true
+
+scope UKTransferAddendumClauseAmendment_Clause13 =
+  output clause13_a_NotUsed : Boolean
+  output partCOfAnnex1_NotUsed : Boolean
+
+  definition clause13_a_NotUsed equals true
+  definition partCOfAnnex1_NotUsed equals true
+
+scope UKTransferAddendumClauseAmendment_SupervisoryAuthority =
+  output supervisoryAuthorityReplacedWithICO : Boolean
+  output competentSupervisoryAuthorityReplacedWithICO : Boolean
+
+  definition supervisoryAuthorityReplacedWithICO equals true
+  definition competentSupervisoryAuthorityReplacedWithICO equals true
+
+scope UKTransferAddendumClauseAmendment_Clause16 =
+  output clause16_e_Replaced : Boolean
+  output secretaryOfStateRegulations : Boolean
+
+  definition clause16_e_Replaced equals true
+  definition secretaryOfStateRegulations equals true
+
+scope UKTransferAddendumClauseAmendment_Clause17 =
+  output clause17_Replaced : Boolean
+  output governedByEnglandAndWales : Boolean
+
+  definition clause17_Replaced equals true
+  definition governedByEnglandAndWales equals true
+
+scope UKTransferAddendumClauseAmendment_Clause18 =
+  output clause18_Replaced : Boolean
+  output disputesByEnglandAndWalesCourts : Boolean
+  output dataSubjectMayBringProceedingsInAnyUKCountry : Boolean
+  output partiesSubmitToJurisdiction : Boolean
+
+  definition clause18_Replaced equals true
+  definition disputesByEnglandAndWalesCourts equals true
+  definition dataSubjectMayBringProceedingsInAnyUKCountry equals true
+  definition partiesSubmitToJurisdiction equals true
+
+scope UKTransferAddendumClauseAmendment_Footnotes =
+  output footnotesDoNotFormPartOfAddendum : Boolean
+  output footnotes8_9_10_11Excepted : Boolean
+
+  definition footnotesDoNotFormPartOfAddendum equals true
+  definition footnotes8_9_10_11Excepted equals true
+
+# --- Part 2: Section 16 - Amendments to this Addendum ---
+
+scope UKTransferAddendumAmendments =
+  output mayChangeClause17And18 : Boolean
+  output mayChangeToScotlandOrNI_Courts : Boolean
+  output formatChangesPermittedInWriting : Boolean
+  output formatChangesMustNotReduceSafeguards : Boolean
+
+  definition mayChangeClause17And18 equals true
+  definition mayChangeToScotlandOrNI_Courts equals true
+  definition formatChangesPermittedInWriting equals true
+  definition formatChangesMustNotReduceSafeguards equals true
+
+# --- Part 2: Section 18 - ICO Revisions ---
+
+scope UKTransferAddendumICORevisions =
+  output iCO_MayIssueRevisedAddendum : Boolean
+  output revisionsMayCorrectErrors : Boolean
+  output revisionsMayReflectUKLawChanges : Boolean
+  output revisedAddendumSpecifiesStartDate : Boolean
+  output revisedAddendumMayRequireReview : Boolean
+  output automaticAmendmentFromStartDate : Boolean
+
+  definition iCO_MayIssueRevisedAddendum equals true
+  definition revisionsMayCorrectErrors equals true
+  definition revisionsMayReflectUKLawChanges equals true
+  definition revisedAddendumSpecifiesStartDate equals true
+  definition revisedAddendumMayRequireReview equals true
+  definition automaticAmendmentFromStartDate equals true
+
+# --- Part 2: Section 19 - Ending this Addendum ---
+
+scope UKTransferAddendumEndingConditions =
+  input partySelectedInTable4 : Boolean
+  input directCostIncreaseSubstantial : Boolean
+  input riskIncreaseSubstantial : Boolean
+  input takenReasonableStepsToReduce : Boolean
+  output mayEndAddendum : Boolean
+
+  definition mayEndAddendum equals
+    partySelectedInTable4 and
+    (directCostIncreaseSubstantial or riskIncreaseSubstantial) and
+    takenReasonableStepsToReduce
+
+scope UKTransferAddendumEndingProcess =
+  input entitledToEnd : Boolean
+  output mustProvideWrittenNotice : Boolean
+  output noticeBeforeRevisedAddendumStartDate : Boolean
+  output reasonableNoticePeriod : Boolean
+
+  definition mustProvideWrittenNotice equals entitledToEnd
+  definition noticeBeforeRevisedAddendumStartDate equals entitledToEnd
+  definition reasonableNoticePeriod equals entitledToEnd
+
+scope UKTransferAddendumThirdPartyConsent =
+  output noThirdPartyConsentRequired : Boolean
+  output changesMustFollowAddendumTerms : Boolean
+
+  definition noThirdPartyConsentRequired equals true
+  definition changesMustFollowAddendumTerms equals true
