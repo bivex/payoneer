@@ -1,0 +1,142 @@
+# Payoneer Republic of Korea - Third Party Vendors
+# Last updated: May 2026
+# Source: Payoneer Korea PIPA Third Party Vendor Disclosure
+
+# --- Overseas Processing Overview ---
+
+scope KoreaThirdPartyOverseasProcessing =
+  input dataSubjectInKorea : Boolean
+  output collectsAndProcessesInUS : Boolean
+  output collectsAndProcessesInIsrael : Boolean
+  output entrustsPersonalInfoOverseas : Boolean
+
+  definition collectsAndProcessesInUS equals dataSubjectInKorea
+  definition collectsAndProcessesInIsrael equals dataSubjectInKorea
+  definition entrustsPersonalInfoOverseas equals dataSubjectInKorea
+
+# --- Provision of Personal Information ---
+
+scope KoreaThirdPartyProvision =
+  output providingPIIsOptionalInMostCases : Boolean
+  output certainInfoRequiredForServices : Boolean
+  output nameRequiredForPaymentServices : Boolean
+  output addressRequiredForPaymentServices : Boolean
+  output bankAccountDetailsRequiredForPaymentServices : Boolean
+  output canRefuseOverseasTransfer : Boolean
+  output dpoContactEmailAvailable : Boolean
+
+  definition providingPIIsOptionalInMostCases equals true
+  definition certainInfoRequiredForServices equals true
+  definition nameRequiredForPaymentServices equals true
+  definition addressRequiredForPaymentServices equals true
+  definition bankAccountDetailsRequiredForPaymentServices equals true
+  definition canRefuseOverseasTransfer equals true
+  definition dpoContactEmailAvailable equals true
+
+# --- PI Types Shared with Third Parties ---
+
+scope KoreaThirdPartyPersonalInfoTypes =
+  output name : Boolean
+  output email : Boolean
+  output physicalAddress : Boolean
+  output gender : Boolean
+  output dateOfBirth : Boolean
+  output nationality : Boolean
+  output namesOfParents : Boolean
+  output photo : Boolean
+  output includesGovIdCardInfo : Boolean
+  output includesPassportInfo : Boolean
+
+  definition name equals true
+  definition email equals true
+  definition physicalAddress equals true
+  definition gender equals true
+  definition dateOfBirth equals true
+  definition nationality equals true
+  definition namesOfParents equals true
+  definition photo equals true
+  definition includesGovIdCardInfo equals true
+  definition includesPassportInfo equals true
+
+# --- Vendor 1: AU10TIX ---
+
+scope KoreaThirdPartyVendorAu10tix =
+  output vendorName : Boolean
+  output legalBasisPIPA28_8_1_3 : Boolean
+  output purposeDocumentValidation : Boolean
+  output purposeForgeryDetection : Boolean
+  output contactEmail : Boolean
+  output retentionPeriodDays : Integer
+  output transferMethod : Boolean
+  output databaseLocation : Boolean
+  output subprocessorListAvailable : Boolean
+
+  definition vendorName equals true
+  definition legalBasisPIPA28_8_1_3 equals true
+  definition purposeDocumentValidation equals true
+  definition purposeForgeryDetection equals true
+  definition contactEmail equals true
+  definition retentionPeriodDays equals 90
+  definition transferMethod equals true
+  definition databaseLocation equals true
+  definition subprocessorListAvailable equals true
+
+scope KoreaVendorAu10tixDetails =
+  output contactInfo : Boolean
+  output subprocessorUrl : Boolean
+  output transferViaAPI : Boolean
+  output databaseInNetherlands : Boolean
+
+  definition contactInfo equals true
+  definition subprocessorUrl equals true
+  definition transferViaAPI equals true
+  definition databaseInNetherlands equals true
+
+# --- Vendor 2: EverCompliant ---
+
+scope KoreaThirdPartyVendorEvercompliant =
+  output vendorName : Boolean
+  output legalBasisPIPA28_8_1_3 : Boolean
+  output purposeMerchantRiskAssessment : Boolean
+  output contactEmail : Boolean
+  output retentionPeriodYears : Integer
+  output transferMethod : Boolean
+  output databaseLocation : Boolean
+  output subprocessorContactRequired : Boolean
+
+  definition vendorName equals true
+  definition legalBasisPIPA28_8_1_3 equals true
+  definition purposeMerchantRiskAssessment equals true
+  definition contactEmail equals true
+  definition retentionPeriodYears equals 7
+  definition transferMethod equals true
+  definition databaseLocation equals true
+  definition subprocessorContactRequired equals true
+
+scope KoreaVendorEvercompliantDetails =
+  output contactInfo : Boolean
+  output transferViaAPI : Boolean
+  output databaseInNorthVirginiaUSA : Boolean
+
+  definition contactInfo equals true
+  definition transferViaAPI equals true
+  definition databaseInNorthVirginiaUSA equals true
+
+# --- Transfer Timing ---
+
+scope KoreaThirdPartyTransferTiming =
+  output transferredDuringOnboarding : Boolean
+  output transferredViaAPI : Boolean
+
+  definition transferredDuringOnboarding equals true
+  definition transferredViaAPI equals true
+
+# --- DPO Contact for Refusal ---
+
+scope KoreaThirdPartyDPOContact =
+  input wishesToRefuseOverseasTransfer : Boolean
+  output mustContactDPO : Boolean
+  output dpoEmail : Boolean
+
+  definition mustContactDPO equals wishesToRefuseOverseasTransfer
+  definition dpoEmail equals true
