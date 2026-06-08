@@ -1,0 +1,491 @@
+# Payoneer Controller to Controller DPA - Approved Users Variant
+# Last updated: May 2026
+# Source: Payoneer Controller to Controller DPA (Approved Users)
+# Note: Sections 1-14 are identical to section_19; Annex 1 differs in data subjects and categories
+
+# --- Section 1: Definitions (identical to C2C DPA) ---
+
+scope C2CDPA2Definitions =
+  output dataProtectionLawsDefined : Boolean
+  output euGDPR_Included : Boolean
+  output uKGDPR_Included : Boolean
+  output cCPA_Included : Boolean
+  output chinaDSL_CSL_PIIPL_Included : Boolean
+  output singaporePDPA_Included : Boolean
+  output hongKongPDPO_Included : Boolean
+  output canadianPrivacyLawsIncluded : Boolean
+  output allOtherApplicableLawsIncluded : Boolean
+
+  definition dataProtectionLawsDefined equals true
+  definition euGDPR_Included equals true
+  definition uKGDPR_Included equals true
+  definition cCPA_Included equals true
+  definition chinaDSL_CSL_PIIPL_Included equals true
+  definition singaporePDPA_Included equals true
+  definition hongKongPDPO_Included equals true
+  definition canadianPrivacyLawsIncluded equals true
+  definition allOtherApplicableLawsIncluded equals true
+
+scope C2CDPA2GDPRDefinedTerms =
+  output dataController : Boolean
+  output dataProcessor : Boolean
+  output dataSubject : Boolean
+  output personalDataBreach : Boolean
+  output specialCategoriesOfPersonalData : Boolean
+  output processing : Boolean
+  output termsConstruedPerGDPR : Boolean
+
+  definition dataController equals true
+  definition dataProcessor equals true
+  definition dataSubject equals true
+  definition personalDataBreach equals true
+  definition specialCategoriesOfPersonalData equals true
+  definition processing equals true
+  definition termsConstruedPerGDPR equals true
+
+scope C2CDPA2KeyDefinitions =
+  output dataSubjectRequest : Boolean
+  output eURestrictedTransfer : Boolean
+  output eUStandardContractualClauses : Boolean
+  output payoneerAffiliate : Boolean
+  output personalData : Boolean
+  output restrictedTransfer : Boolean
+  output standardContractualClauses : Boolean
+  output supervisoryAuthority : Boolean
+  output uKRestrictedTransfer : Boolean
+  output uKStandardContractualClauses : Boolean
+
+  definition dataSubjectRequest equals true
+  definition eURestrictedTransfer equals true
+  definition eUStandardContractualClauses equals true
+  definition payoneerAffiliate equals true
+  definition personalData equals true
+  definition restrictedTransfer equals true
+  definition standardContractualClauses equals true
+  definition supervisoryAuthority equals true
+  definition uKRestrictedTransfer equals true
+  definition uKStandardContractualClauses equals true
+
+# --- Section 2: Controller Relationship ---
+
+scope C2CDPA2ControllerRelationship =
+  output eachPartyIndependentController : Boolean
+  output mustComplyWithRespectiveDataProtectionLaws : Boolean
+
+  definition eachPartyIndependentController equals true
+  definition mustComplyWithRespectiveDataProtectionLaws equals true
+
+# --- Section 3: Discloser Obligations ---
+
+scope C2CDPA2DiscloserObligations =
+  output discloseOnlyForPermittedPurposes : Boolean
+  output consistentWithAddendumTerms : Boolean
+  output mustProvideNoticeToDataSubjects : Boolean
+  output noticeMustInformAboutDisclosure : Boolean
+  output mustObtainNecessaryConsents : Boolean
+  output mustObtainNecessaryAuthorisations : Boolean
+  output consentsPermitProcessingForPermittedPurposes : Boolean
+
+  definition discloseOnlyForPermittedPurposes equals true
+  definition consistentWithAddendumTerms equals true
+  definition mustProvideNoticeToDataSubjects equals true
+  definition noticeMustInformAboutDisclosure equals true
+  definition mustObtainNecessaryConsents equals true
+  definition mustObtainNecessaryAuthorisations equals true
+  definition consentsPermitProcessingForPermittedPurposes equals true
+
+scope C2CDPA2DiscloserSpecialCategories =
+  output onlyDiscloseSpecialCategoriesWhereNecessary : Boolean
+  output requiresExplicitPriorConsent : Boolean
+  output orAlternativeLawfulBasisToSatisfactionOfRecipient : Boolean
+  output discloserResponsibleForTransmissionSecurity : Boolean
+
+  definition onlyDiscloseSpecialCategoriesWhereNecessary equals true
+  definition requiresExplicitPriorConsent equals true
+  definition orAlternativeLawfulBasisToSatisfactionOfRecipient equals true
+  definition discloserResponsibleForTransmissionSecurity equals true
+
+# --- Section 4: Recipient Obligations ---
+
+scope C2CDPA2RecipientObligations =
+  output notProcessIncompatiblyWithPermittedPurposes : Boolean
+  output exceptionForLegalRequirement : Boolean
+  output notProcessLongerThanNecessary : Boolean
+  output retentionExceptionForLegalRequirement : Boolean
+
+  definition notProcessIncompatiblyWithPermittedPurposes equals true
+  definition exceptionForLegalRequirement equals true
+  definition notProcessLongerThanNecessary equals true
+  definition retentionExceptionForLegalRequirement equals true
+
+scope C2CDPA2RecipientAIProhibition =
+  output shallNotProcessForAITraining : Boolean
+  output shallNotProcessUsingAIModels : Boolean
+  output appliesToInternalAIOrML : Boolean
+  output appliesToExternalAIOrML : Boolean
+  output exceptionForServicePerformance : Boolean
+
+  definition shallNotProcessForAITraining equals true
+  definition shallNotProcessUsingAIModels equals true
+  definition appliesToInternalAIOrML equals true
+  definition appliesToExternalAIOrML equals true
+  definition exceptionForServicePerformance equals true
+
+scope C2CDPA2RecipientSecurityMeasures =
+  output mustHaveAppropriateSecurityMeasures : Boolean
+  output considersStateOfTheArt : Boolean
+  output considersCostOfImplementation : Boolean
+  output considersNatureScopeContextPurpose : Boolean
+  output considersRiskToRightsAndFreedoms : Boolean
+  output protectsAgainstUnauthorizedProcessing : Boolean
+  output protectsAgainstAccidentalLoss : Boolean
+  output protectsAgainstDestructionOrDamage : Boolean
+
+  definition mustHaveAppropriateSecurityMeasures equals true
+  definition considersStateOfTheArt equals true
+  definition considersCostOfImplementation equals true
+  definition considersNatureScopeContextPurpose equals true
+  definition considersRiskToRightsAndFreedoms equals true
+  definition protectsAgainstUnauthorizedProcessing equals true
+  definition protectsAgainstAccidentalLoss equals true
+  definition protectsAgainstDestructionOrDamage equals true
+
+# --- Section 5: Breach Notification ---
+
+scope C2CDPA2BreachNotification =
+  output recipientMustNotifyDiscloser : Boolean
+  output notificationMustBeInWriting : Boolean
+  output notificationByEmailRequired : Boolean
+  output payoneerPrivacyEmail : Boolean
+  output companyAddressPerAgreement : Boolean
+  output notificationImmediatelyFollowingBreach : Boolean
+
+  definition recipientMustNotifyDiscloser equals true
+  definition notificationMustBeInWriting equals true
+  definition notificationByEmailRequired equals true
+  definition payoneerPrivacyEmail equals true
+  definition companyAddressPerAgreement equals true
+  definition notificationImmediatelyFollowingBreach equals true
+
+# --- Section 6: Breach Cooperation ---
+
+scope C2CDPA2BreachCooperation =
+  output eachPartyMustCooperate : Boolean
+  output cooperationToExtentReasonablyRequested : Boolean
+  output includesSupervisoryAuthorityNotifications : Boolean
+  output includesDataSubjectNotifications : Boolean
+
+  definition eachPartyMustCooperate equals true
+  definition cooperationToExtentReasonablyRequested equals true
+  definition includesSupervisoryAuthorityNotifications equals true
+  definition includesDataSubjectNotifications equals true
+
+# --- Section 7: Data Subject Rights Cooperation ---
+
+scope C2CDPA2DataSubjectRightsCooperation =
+  output mustCooperateOnDataSubjectRequests : Boolean
+  output mustCooperateOnDataSubjectCommunications : Boolean
+  output mustCooperateOnSupervisoryAuthorityCommunications : Boolean
+  output cooperationToExtentReasonablyRequested : Boolean
+
+  definition mustCooperateOnDataSubjectRequests equals true
+  definition mustCooperateOnDataSubjectCommunications equals true
+  definition mustCooperateOnSupervisoryAuthorityCommunications equals true
+  definition cooperationToExtentReasonablyRequested equals true
+
+# --- Section 8: Processing Scope ---
+
+scope C2CDPA2ProcessingScopeAcknowledgment =
+  output partiesAcknowledgeAnnex1 : Boolean
+  output annex1FairlyAndAccuratelyRecordsScope : Boolean
+
+  definition partiesAcknowledgeAnnex1 equals true
+  definition annex1FairlyAndAccuratelyRecordsScope equals true
+
+# --- Section 9: EU Standard Contractual Clauses ---
+
+scope C2CDPA2EUSCC_Applicability =
+  output appliesToEURestrictedTransfers : Boolean
+  output module1_ControllerToController : Boolean
+  output payoneerAsDataExporter : Boolean
+  output companyAsDataImporter : Boolean
+  output includesPayoneerAffiliates : Boolean
+  output includesCompanyAffiliates : Boolean
+
+  definition appliesToEURestrictedTransfers equals true
+  definition module1_ControllerToController equals true
+  definition payoneerAsDataExporter equals true
+  definition companyAsDataImporter equals true
+  definition includesPayoneerAffiliates equals true
+  definition includesCompanyAffiliates equals true
+
+scope C2CDPA2EUSCC_ClauseChanges =
+  output clause7DockingClauseNotApply : Boolean
+  output clause11aRedressOptionalNotApply : Boolean
+  output clause17GoverningLawIreland : Boolean
+  output clause18JurisdictionIreland : Boolean
+
+  definition clause7DockingClauseNotApply equals true
+  definition clause11aRedressOptionalNotApply equals true
+  definition clause17GoverningLawIreland equals true
+  definition clause18JurisdictionIreland equals true
+
+scope C2CDPA2EUSCC_Annexes =
+  output annexI_PopulatedFromAddendumAnnex1 : Boolean
+  output annexII_PopulatedFromAddendumAnnex2 : Boolean
+
+  definition annexI_PopulatedFromAddendumAnnex1 equals true
+  definition annexII_PopulatedFromAddendumAnnex2 equals true
+
+# --- Section 10: UK Standard Contractual Clauses ---
+
+scope C2CDPA2UKSCC_Applicability =
+  output appliesToUKRestrictedTransfers : Boolean
+  output entersIntoUKStandardContractualClauses : Boolean
+  output sections9_1_9_2_9_5_ApplyToUKSCC : Boolean
+  output table4NeitherPartySelected : Boolean
+
+  definition appliesToUKRestrictedTransfers equals true
+  definition entersIntoUKStandardContractualClauses equals true
+  definition sections9_1_9_2_9_5_ApplyToUKSCC equals true
+  definition table4NeitherPartySelected equals true
+
+# --- Section 11: Conflict Resolution ---
+
+scope C2CDPA2ConflictResolution =
+  output sCCsTakePrecedenceOverAddendum : Boolean
+  output addendumTakesPrecedenceOverAgreement : Boolean
+
+  definition sCCsTakePrecedenceOverAddendum equals true
+  definition addendumTakesPrecedenceOverAgreement equals true
+
+# --- Section 12: Compliance Documentation ---
+
+scope C2CDPA2ComplianceDocumentation =
+  output mustMaintainComplianceDocumentation : Boolean
+  output documentationEvidencesCompliance : Boolean
+
+  definition mustMaintainComplianceDocumentation equals true
+  definition documentationEvidencesCompliance equals true
+
+# --- Section 13: Indemnity ---
+
+scope C2CDPA2Indemnity =
+  output indemnifierIndemnifiesIndemnified : Boolean
+  output coversLossOrDamage : Boolean
+  output coversThirdPartyClaims : Boolean
+  output claimBasedOnBreachOfAddendum : Boolean
+  output includesRegulatoryActions : Boolean
+  output includesFinesAndPenalties : Boolean
+  output toExtentPermittedByApplicableLaw : Boolean
+
+  definition indemnifierIndemnifiesIndemnified equals true
+  definition coversLossOrDamage equals true
+  definition coversThirdPartyClaims equals true
+  definition claimBasedOnBreachOfAddendum equals true
+  definition includesRegulatoryActions equals true
+  definition includesFinesAndPenalties equals true
+  definition toExtentPermittedByApplicableLaw equals true
+
+# --- Section 14: Amendments ---
+
+scope C2CDPA2Amendments =
+  output payoneerMayAmendAtAnyTime : Boolean
+  output revisedVersionPostedOnLegalPage : Boolean
+  output effectiveUponPosting : Boolean
+  output orAsStatedInNotice : Boolean
+
+  definition payoneerMayAmendAtAnyTime equals true
+  definition revisedVersionPostedOnLegalPage equals true
+  definition effectiveUponPosting equals true
+  definition orAsStatedInNotice equals true
+
+# --- Annex 1: Description of Processing (DIFFERS from section_19) ---
+
+scope C2CDPA2Annex1_DataExporter =
+  output exporterName : Boolean
+  output exporterActsForPayoneerAffiliates : Boolean
+  output exporterAddressPerAgreement : Boolean
+  output exporterDPOName : Boolean
+  output exporterDPOEmail : Boolean
+  output exporterActivitiesPerAgreement : Boolean
+  output exporterRoleController : Boolean
+
+  definition exporterName equals true
+  definition exporterActsForPayoneerAffiliates equals true
+  definition exporterAddressPerAgreement equals true
+  definition exporterDPOName equals true
+  definition exporterDPOEmail equals true
+  definition exporterActivitiesPerAgreement equals true
+  definition exporterRoleController equals true
+
+scope C2CDPA2Annex1_DataExporterSignature =
+  output executionDeemedUponAgreementEntry : Boolean
+  output includesAffiliates : Boolean
+  output includesAnnexes : Boolean
+  output effectiveAsOfAgreementDate : Boolean
+
+  definition executionDeemedUponAgreementEntry equals true
+  definition includesAffiliates equals true
+  definition includesAnnexes equals true
+  definition effectiveAsOfAgreementDate equals true
+
+scope C2CDPA2Annex1_DataImporter =
+  output importerNamePerAgreement : Boolean
+  output importerTradingNamePerAgreement : Boolean
+  output importerAddressPerAgreement : Boolean
+  output importerRegistrationPerAgreement : Boolean
+  output importerContactPerAgreement : Boolean
+  output importerActivitiesPerAgreement : Boolean
+  output importerRoleController : Boolean
+
+  definition importerNamePerAgreement equals true
+  definition importerTradingNamePerAgreement equals true
+  definition importerAddressPerAgreement equals true
+  definition importerRegistrationPerAgreement equals true
+  definition importerContactPerAgreement equals true
+  definition importerActivitiesPerAgreement equals true
+  definition importerRoleController equals true
+
+scope C2CDPA2Annex1_DataImporterSignature =
+  output executionDeemedUponAgreementEntry : Boolean
+  output includesAnnexes : Boolean
+  output effectiveAsOfAgreementDate : Boolean
+
+  definition executionDeemedUponAgreementEntry equals true
+  definition includesAnnexes equals true
+  definition effectiveAsOfAgreementDate equals true
+
+# DIFFERS from section_19: data subjects are "Approved users" not "Payees"
+
+scope C2CDPA2Annex1_DataSubjects =
+  output categoriesOfDataSubjects : Boolean
+  output dataSubjectsAreApprovedUsers : Boolean
+
+  definition categoriesOfDataSubjects equals true
+  definition dataSubjectsAreApprovedUsers equals true
+
+# DIFFERS from section_19: broader data categories including ID docs, bank details, SSN
+
+scope C2CDPA2Annex1_CategoriesOfPersonalData =
+  output firstName : Boolean
+  output lastName : Boolean
+  output email : Boolean
+  output dateOfBirth : Boolean
+  output mobileNumber : Boolean
+  output address : Boolean
+  output iDDocumentType : Boolean
+  output iDDocumentNumber : Boolean
+  output iDDocumentExpirationDate : Boolean
+  output iDDocumentIssueDate : Boolean
+  output bankAccountDetails : Boolean
+  output sSN_OnlyIfApplicable : Boolean
+  output sensitiveDataNotApplicable : Boolean
+
+  definition firstName equals true
+  definition lastName equals true
+  definition email equals true
+  definition dateOfBirth equals true
+  definition mobileNumber equals true
+  definition address equals true
+  definition iDDocumentType equals true
+  definition iDDocumentNumber equals true
+  definition iDDocumentExpirationDate equals true
+  definition iDDocumentIssueDate equals true
+  definition bankAccountDetails equals true
+  definition sSN_OnlyIfApplicable equals true
+  definition sensitiveDataNotApplicable equals true
+
+scope C2CDPA2Annex1_TransferFrequency =
+  output continuousBasis : Boolean
+  output asSetOutInAgreement : Boolean
+
+  definition continuousBasis equals true
+  definition asSetOutInAgreement equals true
+
+scope C2CDPA2Annex1_NatureOfProcessing =
+  output payoneerProvidesServicesToCompany : Boolean
+  output eachPartyIndependentController : Boolean
+  output scopePerAgreement : Boolean
+
+  definition payoneerProvidesServicesToCompany equals true
+  definition eachPartyIndependentController equals true
+  definition scopePerAgreement equals true
+
+scope C2CDPA2Annex1_Purpose =
+  output purposeIsPerformanceOfAgreement : Boolean
+
+  definition purposeIsPerformanceOfAgreement equals true
+
+scope C2CDPA2Annex1_Retention =
+  output retainedForTermOfAgreement : Boolean
+  output subjectToApplicableLawRetentionPeriods : Boolean
+
+  definition retainedForTermOfAgreement equals true
+  definition subjectToApplicableLawRetentionPeriods equals true
+
+scope C2CDPA2Annex1_Subprocessors =
+  output subprocessorTransfersNotApplicable : Boolean
+
+  definition subprocessorTransfersNotApplicable equals true
+
+scope C2CDPA2Annex1_SupervisoryAuthority =
+  output competentAuthority : Boolean
+  output dataProtectionCommissionOfIreland : Boolean
+
+  definition competentAuthority equals true
+  definition dataProtectionCommissionOfIreland equals true
+
+# --- Annex 2: Technical and Organisational Measures ---
+
+scope C2CDPA2Annex2_SecurityMeasures =
+  output mustImplementTechnicalAndOrganisationalMeasures : Boolean
+  output pseudonymisationAndEncryption : Boolean
+  output confidentialityIntegrityAvailability : Boolean
+  output resilienceOfSystems : Boolean
+  output abilityToRestoreAvailability : Boolean
+  output timelyRestoration : Boolean
+  output regularTestingAndEvaluation : Boolean
+  output userIdentificationAndAuthorisation : Boolean
+
+  definition mustImplementTechnicalAndOrganisationalMeasures equals true
+  definition pseudonymisationAndEncryption equals true
+  definition confidentialityIntegrityAvailability equals true
+  definition resilienceOfSystems equals true
+  definition abilityToRestoreAvailability equals true
+  definition timelyRestoration equals true
+  definition regularTestingAndEvaluation equals true
+  definition userIdentificationAndAuthorisation equals true
+
+scope C2CDPA2Annex2_TransmissionAndStorage =
+  output protectionDuringTransmission : Boolean
+  output protectionDuringStorage : Boolean
+  output physicalSecurityOfLocations : Boolean
+  output eventsLogging : Boolean
+
+  definition protectionDuringTransmission equals true
+  definition protectionDuringStorage equals true
+  definition physicalSecurityOfLocations equals true
+  definition eventsLogging equals true
+
+scope C2CDPA2Annex2_SystemAndGovernance =
+  output systemConfigurationIncludingDefaults : Boolean
+  output internalITAndITSecurityGovernance : Boolean
+  output certificationAndAssurance : Boolean
+
+  definition systemConfigurationIncludingDefaults equals true
+  definition internalITAndITSecurityGovernance equals true
+  definition certificationAndAssurance equals true
+
+scope C2CDPA2Annex2_DataPrinciples =
+  output dataMinimisation : Boolean
+  output dataQuality : Boolean
+  output limitedDataRetention : Boolean
+  output accountability : Boolean
+  output dataPortabilityAndErasure : Boolean
+
+  definition dataMinimisation equals true
+  definition dataQuality equals true
+  definition limitedDataRetention equals true
+  definition accountability equals true
+  definition dataPortabilityAndErasure equals true
