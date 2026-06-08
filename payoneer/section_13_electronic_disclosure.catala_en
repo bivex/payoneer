@@ -1,0 +1,158 @@
+# Payoneer Electronic Disclosure Policy (US Customers Only)
+# Last updated: May 2026
+# Source: Payoneer Consent to Electronic Disclosures
+
+# --- Applicability ---
+
+scope ElectronicDisclosureApplicability =
+  input isUSCustomer : Boolean
+  output appliesOnlyToUSCustomers : Boolean
+  output appliesToAccount : Boolean
+  output includesThirdPartyProviders : Boolean
+
+  definition appliesOnlyToUSCustomers equals isUSCustomer
+  definition appliesToAccount equals true
+  definition includesThirdPartyProviders equals true
+
+# --- Consent Required ---
+
+scope ElectronicDisclosureConsent =
+  output consentToElectronicSignatures : Boolean
+  output consentToElectronicRecords : Boolean
+  output consentToElectronicDisclosures : Boolean
+  output consentTriggeredByFinishButton : Boolean
+  output acknowledgementOfReceipt : Boolean
+
+  definition consentToElectronicSignatures equals true
+  definition consentToElectronicRecords equals true
+  definition consentToElectronicDisclosures equals true
+  definition consentTriggeredByFinishButton equals true
+  definition acknowledgementOfReceipt equals true
+
+# --- Applicable Laws and Regulations ---
+
+scope ElectronicDisclosureApplicableLaws =
+  output includesEqualCreditOpportunityAct : Boolean
+  output includesRegulationB : Boolean
+  output includesElectronicFundTransfersAct : Boolean
+  output includesRegulationE : Boolean
+  output includesGrammLeachBlileyAct : Boolean
+  output includesRegulationP : Boolean
+  output includesOtherApplicableFederalStateLocalLaws : Boolean
+
+  definition includesEqualCreditOpportunityAct equals true
+  definition includesRegulationB equals true
+  definition includesElectronicFundTransfersAct equals true
+  definition includesRegulationE equals true
+  definition includesGrammLeachBlileyAct equals true
+  definition includesRegulationP equals true
+  definition includesOtherApplicableFederalStateLocalLaws equals true
+
+# --- Scope of Consent ---
+
+scope ElectronicDisclosureScope =
+  output consentAppliesOnlyToThisAccount : Boolean
+  output allDisclosuresProvidedElectronically : Boolean
+  output transactionsConductedElectronically : Boolean
+  output agentsIncluded : Boolean
+
+  definition consentAppliesOnlyToThisAccount equals true
+  definition allDisclosuresProvidedElectronically equals true
+  definition transactionsConductedElectronically equals true
+  definition agentsIncluded equals true
+
+# --- Hardware Requirements ---
+
+scope ElectronicDisclosureHardwareRequirements =
+  output requiresPCWithInternetAccess : Boolean
+  output requiresInternetBrowser : Boolean
+  output requiresMinimum128BitEncryption : Boolean
+  output requiresPDFReader : Boolean
+  output requiresPrinterOrStorageDevice : Boolean
+
+  definition requiresPCWithInternetAccess equals true
+  definition requiresInternetBrowser equals true
+  definition requiresMinimum128BitEncryption equals true
+  definition requiresPDFReader equals true
+  definition requiresPrinterOrStorageDevice equals true
+
+# --- Browser Requirements ---
+
+scope ElectronicDisclosureBrowserRequirements =
+  output ieMinimumVersion : Integer
+  output netscapeMinimumVersion : Integer
+  output firefoxMinimumVersion : Integer
+
+  definition ieMinimumVersion equals 5
+  definition netscapeMinimumVersion equals 4
+  definition firefoxMinimumVersion equals 1
+
+# --- Requirements Change Notification ---
+
+scope ElectronicDisclosureRequirementsChange =
+  input requirementsChangeMaterialRisk : Boolean
+  output willNotifyOfChanges : Boolean
+
+  definition willNotifyOfChanges equals requirementsChangeMaterialRisk
+
+# --- Withdrawing Consent ---
+
+scope ElectronicDisclosureWithdrawConsent =
+  input wishesToWithdrawConsent : Boolean
+  output canWithdrawAtAnyTime : Boolean
+  output withdrawViaContactUsLink : Boolean
+  output withdrawViaWritingToPayoneer : Boolean
+  output payoneerMailingAddress : Boolean
+  output priorDisclosuresRemainEffective : Boolean
+  output accountWillBeClosed : Boolean
+
+  definition canWithdrawAtAnyTime equals true
+  definition withdrawViaContactUsLink equals wishesToWithdrawConsent
+  definition withdrawViaWritingToPayoneer equals wishesToWithdrawConsent
+  definition payoneerMailingAddress equals true
+  definition priorDisclosuresRemainEffective equals wishesToWithdrawConsent
+  definition accountWillBeClosed equals wishesToWithdrawConsent
+
+# --- Contact Information Updates ---
+
+scope ElectronicDisclosureContactUpdates =
+  input contactInformationChanged : Boolean
+  output mustInformPayoneerOfChanges : Boolean
+  output includesElectronicAddress : Boolean
+  output includesMailingAddress : Boolean
+  output includesTelephoneNumber : Boolean
+  output updateViaContactUsLink : Boolean
+  output updateViaWritingToPayoneer : Boolean
+
+  definition mustInformPayoneerOfChanges equals contactInformationChanged
+  definition includesElectronicAddress equals true
+  definition includesMailingAddress equals true
+  definition includesTelephoneNumber equals true
+  definition updateViaContactUsLink equals true
+  definition updateViaWritingToPayoneer equals true
+
+# --- Acknowledgement of Access ---
+
+scope ElectronicDisclosureAccessAcknowledgement =
+  output acknowledgeCanAccessDisclosures : Boolean
+  output acknowledgeReadInformation : Boolean
+  output consentToAllDisclosuresInElectronicForm : Boolean
+  output consentToDoBusinessElectronically : Boolean
+  output mayNotRequestPaperCopy : Boolean
+
+  definition acknowledgeCanAccessDisclosures equals true
+  definition acknowledgeReadInformation equals true
+  definition consentToAllDisclosuresInElectronicForm equals true
+  definition consentToDoBusinessElectronically equals true
+  definition mayNotRequestPaperCopy equals true
+
+# --- Retention Advice ---
+
+scope ElectronicDisclosureRetentionAdvice =
+  output shouldPrintCopy : Boolean
+  output shouldRetainElectronically : Boolean
+  output forFutureReference : Boolean
+
+  definition shouldPrintCopy equals true
+  definition shouldRetainElectronically equals true
+  definition forFutureReference equals true
